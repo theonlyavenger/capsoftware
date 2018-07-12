@@ -1,0 +1,9 @@
+E:\c#\computronics_admission\computronics_admission\bin\Debug\computronics_admission.exe
+E:\c#\computronics_admission\computronics_admission\bin\Debug\computronics_admission.pdb
+E:\c#\computronics_admission\computronics_admission\obj\x86\Debug\computronics_admission.csprojResolveAssemblyReference.cache
+E:\c#\computronics_admission\computronics_admission\obj\x86\Debug\computronics_admission.login_pg.resources
+E:\c#\computronics_admission\computronics_admission\obj\x86\Debug\computronics_admission.Properties.Resources.resources
+E:\c#\computronics_admission\computronics_admission\obj\x86\Debug\computronics_admission.csproj.GenerateResource.Cache
+E:\c#\computronics_admission\computronics_admission\obj\x86\Debug\computronics_admission.exe
+E:\c#\computronics_admission\computronics_admission\obj\x86\Debug\computronics_admission.pdb
+E:\c#\computronics_admission\computronics_admission\bin\Debug\MySql.Data.DLL
