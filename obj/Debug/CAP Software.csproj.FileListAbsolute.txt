@@ -1,0 +1,21 @@
+C:\Users\manoj\onedrive\documents\visual studio 2015\Projects\CAP Software\CAP Software\bin\Debug\CAP Software.exe.config
+C:\Users\manoj\onedrive\documents\visual studio 2015\Projects\CAP Software\CAP Software\bin\Debug\CAP Software.exe
+C:\Users\manoj\onedrive\documents\visual studio 2015\Projects\CAP Software\CAP Software\bin\Debug\CAP Software.pdb
+C:\Users\manoj\onedrive\documents\visual studio 2015\Projects\CAP Software\CAP Software\bin\Debug\MySql.Data.dll
+C:\Users\manoj\onedrive\documents\visual studio 2015\Projects\CAP Software\CAP Software\obj\Debug\CAP Software.csprojResolveAssemblyReference.cache
+C:\Users\manoj\onedrive\documents\visual studio 2015\Projects\CAP Software\CAP Software\obj\Debug\CAP_Software.home.resources
+C:\Users\manoj\onedrive\documents\visual studio 2015\Projects\CAP Software\CAP Software\obj\Debug\CAP_Software.Properties.Resources.resources
+C:\Users\manoj\onedrive\documents\visual studio 2015\Projects\CAP Software\CAP Software\obj\Debug\CAP Software.csproj.GenerateResource.Cache
+C:\Users\manoj\onedrive\documents\visual studio 2015\Projects\CAP Software\CAP Software\obj\Debug\CAP Software.exe
+C:\Users\manoj\onedrive\documents\visual studio 2015\Projects\CAP Software\CAP Software\obj\Debug\CAP Software.pdb
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\bin\Debug\CAP Software.exe.config
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\obj\Debug\CAP Software.exe
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\obj\Debug\CAP Software.pdb
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\bin\Debug\CAP Software.exe
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\bin\Debug\CAP Software.pdb
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\obj\Debug\CAP Software.csprojResolveAssemblyReference.cache
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\obj\Debug\CAP_Software.home.resources
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\obj\Debug\CAP_Software.Properties.Resources.resources
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\obj\Debug\CAP Software.csproj.GenerateResource.Cache
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\bin\Debug\Properties.Resources.Designer.cs.dll
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\bin\Debug\Dashboard.exe.config

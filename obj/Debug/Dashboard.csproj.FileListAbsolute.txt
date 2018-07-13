@@ -1,0 +1,24 @@
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\bin\Debug\Dashboard.exe.config
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\bin\Debug\Dashboard.exe
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\bin\Debug\Dashboard.pdb
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\bin\Debug\Properties.Resources.Designer.cs.dll
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\obj\Debug\Dashboard.csprojResolveAssemblyReference.cache
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\obj\Debug\Dashboard.csproj.GenerateResource.Cache
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\obj\Debug\Dashboard.exe
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\obj\Debug\Dashboard.pdb
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\obj\Debug\Dashboard.dashboard.resources
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\obj\Debug\Dashboard.Properties.Resources.resources
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\obj\Debug\Dashboard.loginform.resources
+C:\Users\manoj\OneDrive\Documents\Visual Studio 2015\Projects\CAP Software\Dashboard\CAP Software\bin\Debug\MySql.Data.dll
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\bin\Debug\Dashboard.exe.config
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.exe
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.pdb
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.csprojResolveAssemblyReference.cache
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.dashboard.resources
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.loginform.resources
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.Properties.Resources.resources
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.csproj.GenerateResource.Cache
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\bin\Debug\Dashboard.exe
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\bin\Debug\Dashboard.pdb
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\bin\Debug\MySql.Data.dll
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\bin\Debug\Computronics.exe.config
