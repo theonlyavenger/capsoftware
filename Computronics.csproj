@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Dashboard</RootNamespace>
-    <AssemblyName>Dashboard</AssemblyName>
+    <AssemblyName>Computronics</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -68,6 +68,24 @@
     <Compile Include="dashboard.Designer.cs">
       <DependentUpon>dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="admissionform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admissionform.designer.cs">
+      <DependentUpon>admissionform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="enquiryform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="enquiryform.designer.cs">
+      <DependentUpon>enquiryform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentinfo.designer.cs">
+      <DependentUpon>studentinfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="loginform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +96,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admissionform.resx">
+      <DependentUpon>admissionform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="enquiryform.resx">
+      <DependentUpon>enquiryform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentinfo.resx">
+      <DependentUpon>studentinfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loginform.resx">
       <DependentUpon>loginform.cs</DependentUpon>

@@ -66,6 +66,27 @@ namespace Dashboard
             Application.Run(new loginform());
         }
 
+        private void btnAdmission_Click(object sender, EventArgs e)
+        {
+            admissionform admission = new admissionform();
+            admission.Show();
+        }
+
+        private void btnEnquiry_Click(object sender, EventArgs e)
+        {
+            enquiryform enquiry = new enquiryform();
+            enquiry.Show();
+        }
+
+        private void btnStudentInfo_Click(object sender, EventArgs e)
+        {
+            Studentinfo studentinfo = new Studentinfo();
+            studentinfo.Show();
+        }
+
+       
+       
+
         /*private void resize()
         {
             

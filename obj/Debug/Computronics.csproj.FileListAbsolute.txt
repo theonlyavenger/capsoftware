@@ -8,3 +8,6 @@ C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Softwar
 C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Computronics.csproj.GenerateResource.Cache
 C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Computronics.exe
 C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Computronics.pdb
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.admissionform.resources
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.enquiryform.resources
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.Studentinfo.resources

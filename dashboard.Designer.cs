@@ -40,13 +40,13 @@
             this.button11 = new System.Windows.Forms.Button();
             this.btnlogout = new System.Windows.Forms.Button();
             this.centerpanel = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnEnquiry = new System.Windows.Forms.Button();
+            this.btnAdmission = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnStudentInfo = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.bottompanel = new System.Windows.Forms.Panel();
@@ -200,13 +200,13 @@
             // 
             // centerpanel
             // 
-            this.centerpanel.Controls.Add(this.button9);
-            this.centerpanel.Controls.Add(this.button8);
+            this.centerpanel.Controls.Add(this.btnEnquiry);
+            this.centerpanel.Controls.Add(this.btnAdmission);
             this.centerpanel.Controls.Add(this.button6);
             this.centerpanel.Controls.Add(this.button5);
             this.centerpanel.Controls.Add(this.button4);
             this.centerpanel.Controls.Add(this.button3);
-            this.centerpanel.Controls.Add(this.button2);
+            this.centerpanel.Controls.Add(this.btnStudentInfo);
             this.centerpanel.Controls.Add(this.button1);
             this.centerpanel.Controls.Add(this.button7);
             this.centerpanel.Controls.Add(this.bottompanel);
@@ -216,33 +216,35 @@
             this.centerpanel.Size = new System.Drawing.Size(820, 599);
             this.centerpanel.TabIndex = 5;
             // 
-            // button9
+            // btnEnquiry
             // 
-            this.button9.AutoSize = true;
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(70, 44);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(216, 144);
-            this.button9.TabIndex = 23;
-            this.button9.Text = "ENQUIRY";
-            this.button9.UseVisualStyleBackColor = false;
+            this.btnEnquiry.AutoSize = true;
+            this.btnEnquiry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnEnquiry.FlatAppearance.BorderSize = 0;
+            this.btnEnquiry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnquiry.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnquiry.Location = new System.Drawing.Point(70, 44);
+            this.btnEnquiry.Name = "btnEnquiry";
+            this.btnEnquiry.Size = new System.Drawing.Size(216, 144);
+            this.btnEnquiry.TabIndex = 23;
+            this.btnEnquiry.Text = "ENQUIRY";
+            this.btnEnquiry.UseVisualStyleBackColor = false;
+            this.btnEnquiry.Click += new System.EventHandler(this.btnEnquiry_Click);
             // 
-            // button8
+            // btnAdmission
             // 
-            this.button8.AutoSize = true;
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(302, 44);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(216, 144);
-            this.button8.TabIndex = 24;
-            this.button8.Text = "ADMISSION";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnAdmission.AutoSize = true;
+            this.btnAdmission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnAdmission.FlatAppearance.BorderSize = 0;
+            this.btnAdmission.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmission.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmission.Location = new System.Drawing.Point(302, 44);
+            this.btnAdmission.Name = "btnAdmission";
+            this.btnAdmission.Size = new System.Drawing.Size(216, 144);
+            this.btnAdmission.TabIndex = 24;
+            this.btnAdmission.Text = "ADMISSION";
+            this.btnAdmission.UseVisualStyleBackColor = false;
+            this.btnAdmission.Click += new System.EventHandler(this.btnAdmission_Click);
             // 
             // button6
             // 
@@ -300,19 +302,20 @@
             this.button3.Text = "EXAMINATION AND\r\n CERTIFICATION";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnStudentInfo
             // 
-            this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(70, 364);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(216, 144);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "STUDENTS\r\nINFORMATION";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnStudentInfo.AutoSize = true;
+            this.btnStudentInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnStudentInfo.FlatAppearance.BorderSize = 0;
+            this.btnStudentInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudentInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudentInfo.Location = new System.Drawing.Point(70, 364);
+            this.btnStudentInfo.Name = "btnStudentInfo";
+            this.btnStudentInfo.Size = new System.Drawing.Size(216, 144);
+            this.btnStudentInfo.TabIndex = 29;
+            this.btnStudentInfo.Text = "STUDENTS\r\nINFORMATION";
+            this.btnStudentInfo.UseVisualStyleBackColor = false;
+            this.btnStudentInfo.Click += new System.EventHandler(this.btnStudentInfo_Click);
             // 
             // button1
             // 
@@ -414,13 +417,13 @@
         private System.Windows.Forms.Panel bottompanel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label about;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnEnquiry;
+        private System.Windows.Forms.Button btnAdmission;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnStudentInfo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button7;
     }
