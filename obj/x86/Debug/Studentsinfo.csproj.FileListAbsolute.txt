@@ -1,0 +1,9 @@
+C:\Users\manoj\Computronics\Studentsinfo\Studentsinfo\bin\Debug\Studentsinfo.exe
+C:\Users\manoj\Computronics\Studentsinfo\Studentsinfo\bin\Debug\Studentsinfo.pdb
+C:\Users\manoj\Computronics\Studentsinfo\Studentsinfo\obj\x86\Debug\Studentsinfo.Properties.Resources.resources
+C:\Users\manoj\Computronics\Studentsinfo\Studentsinfo\obj\x86\Debug\Studentsinfo.csproj.GenerateResource.Cache
+C:\Users\manoj\Computronics\Studentsinfo\Studentsinfo\obj\x86\Debug\Studentsinfo.exe
+C:\Users\manoj\Computronics\Studentsinfo\Studentsinfo\obj\x86\Debug\Studentsinfo.pdb
+C:\Users\manoj\Computronics\Studentsinfo\Studentsinfo\obj\x86\Debug\Studentsinfo.Studentinfo.resources
+C:\Users\manoj\Computronics\Studentsinfo\Studentsinfo\obj\x86\Debug\Studentsinfo.csprojResolveAssemblyReference.cache
+C:\Users\manoj\Computronics\Studentsinfo\Studentsinfo\bin\Debug\MySql.Data.dll
