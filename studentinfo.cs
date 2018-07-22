@@ -18,9 +18,11 @@ namespace Dashboard
         string uid;
         string pwd;
 
-        public Studentinfo()
+        int ID;
+        public Studentinfo(int id)
         {
             InitializeComponent();
+            ID = id;
         }
 
         private void InitilizeDb()
@@ -38,7 +40,7 @@ namespace Dashboard
         {
             this.MaximizeBox = false;
             InitilizeDb();
-            FetchDetails(4);
+            FetchDetails(ID);
         }
         private void FetchDetails(int Key)
         {

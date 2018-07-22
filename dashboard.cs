@@ -80,8 +80,13 @@ namespace Dashboard
 
         private void btnStudentInfo_Click(object sender, EventArgs e)
         {
-            Studentinfo studentinfo = new Studentinfo();
-            studentinfo.Show();
+            studentlist studentlist = new studentlist();
+            studentlist.Show();
+        }
+
+        private void dashboard_Load(object sender, EventArgs e)
+        {
+
         }
 
        

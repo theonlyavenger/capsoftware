@@ -113,9 +113,39 @@ namespace Dashboard.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_increase_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-increase-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_increase_641 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-increase-641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_maximize_window_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-maximize-window-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_microsoft_excel_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-microsoft-excel-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

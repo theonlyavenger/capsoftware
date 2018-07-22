@@ -31,13 +31,18 @@
             this.headerpannel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.leftpanel = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.btnlogout = new System.Windows.Forms.Button();
             this.centerpanel = new System.Windows.Forms.Panel();
             this.btnEnquiry = new System.Windows.Forms.Button();
@@ -83,57 +88,92 @@
             // leftpanel
             // 
             this.leftpanel.BackColor = System.Drawing.Color.Gainsboro;
-            this.leftpanel.Controls.Add(this.label4);
-            this.leftpanel.Controls.Add(this.label6);
             this.leftpanel.Controls.Add(this.label5);
+            this.leftpanel.Controls.Add(this.label7);
+            this.leftpanel.Controls.Add(this.label9);
+            this.leftpanel.Controls.Add(this.label8);
+            this.leftpanel.Controls.Add(this.label6);
+            this.leftpanel.Controls.Add(this.label4);
             this.leftpanel.Controls.Add(this.label2);
             this.leftpanel.Controls.Add(this.button13);
+            this.leftpanel.Controls.Add(this.button8);
             this.leftpanel.Controls.Add(this.button12);
-            this.leftpanel.Controls.Add(this.button11);
+            this.leftpanel.Controls.Add(this.button9);
+            this.leftpanel.Controls.Add(this.button2);
             this.leftpanel.Controls.Add(this.btnlogout);
             this.leftpanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftpanel.Location = new System.Drawing.Point(0, 58);
             this.leftpanel.Name = "leftpanel";
-            this.leftpanel.Size = new System.Drawing.Size(80, 599);
+            this.leftpanel.Size = new System.Drawing.Size(90, 599);
             this.leftpanel.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(8, 112);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 30);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "BACKUP\r\nRESTORE";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(8, 264);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 17);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "LOGOUT";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(8, 192);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 113);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 17);
+            this.label5.Size = new System.Drawing.Size(66, 13);
             this.label5.TabIndex = 1;
-            this.label5.Text = "ABOUT";
+            this.label5.Text = "RESTORE";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(9, 229);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "ANALYTICS";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(17, 351);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(58, 13);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "LOGOUT";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(21, 287);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(49, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "ABOUT";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(17, 171);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "EXPORT";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(17, 100);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "BACKUP";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 40);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(21, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 17);
+            this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "HOME";
             // 
@@ -145,42 +185,72 @@
             this.button13.FlatAppearance.BorderSize = 0;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(8, 0);
+            this.button13.Location = new System.Drawing.Point(13, 0);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(64, 39);
             this.button13.TabIndex = 0;
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button13.UseVisualStyleBackColor = false;
             // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.BackgroundImage = global::Dashboard.Properties.Resources.icons8_data_backup_64;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(13, 58);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(64, 39);
+            this.button8.TabIndex = 0;
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.UseVisualStyleBackColor = false;
+            // 
             // button12
             // 
             this.button12.BackColor = System.Drawing.Color.Transparent;
-            this.button12.BackgroundImage = global::Dashboard.Properties.Resources.icons8_data_backup_64;
+            this.button12.BackgroundImage = global::Dashboard.Properties.Resources.icons8_microsoft_excel_64;
             this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(8, 72);
+            this.button12.Location = new System.Drawing.Point(13, 129);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(64, 39);
             this.button12.TabIndex = 0;
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button12.UseVisualStyleBackColor = false;
             // 
-            // button11
+            // button9
             // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.BackgroundImage = global::Dashboard.Properties.Resources.icons8_high_importance_64;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(8, 152);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(64, 39);
-            this.button11.TabIndex = 0;
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.UseVisualStyleBackColor = false;
+            this.button9.BackColor = System.Drawing.Color.Transparent;
+            this.button9.BackgroundImage = global::Dashboard.Properties.Resources.icons8_increase_641;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(13, 187);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(64, 39);
+            this.button9.TabIndex = 0;
+            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = global::Dashboard.Properties.Resources.icons8_high_importance_64;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(13, 245);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(64, 39);
+            this.button2.TabIndex = 0;
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // btnlogout
             // 
@@ -190,7 +260,7 @@
             this.btnlogout.FlatAppearance.BorderSize = 0;
             this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogout.Location = new System.Drawing.Point(8, 224);
+            this.btnlogout.Location = new System.Drawing.Point(13, 309);
             this.btnlogout.Name = "btnlogout";
             this.btnlogout.Size = new System.Drawing.Size(64, 39);
             this.btnlogout.TabIndex = 0;
@@ -211,9 +281,9 @@
             this.centerpanel.Controls.Add(this.button7);
             this.centerpanel.Controls.Add(this.bottompanel);
             this.centerpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.centerpanel.Location = new System.Drawing.Point(80, 58);
+            this.centerpanel.Location = new System.Drawing.Point(90, 58);
             this.centerpanel.Name = "centerpanel";
-            this.centerpanel.Size = new System.Drawing.Size(820, 599);
+            this.centerpanel.Size = new System.Drawing.Size(810, 599);
             this.centerpanel.TabIndex = 5;
             // 
             // btnEnquiry
@@ -352,14 +422,14 @@
             this.bottompanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bottompanel.Location = new System.Drawing.Point(0, 552);
             this.bottompanel.Name = "bottompanel";
-            this.bottompanel.Size = new System.Drawing.Size(820, 47);
+            this.bottompanel.Size = new System.Drawing.Size(810, 47);
             this.bottompanel.TabIndex = 14;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(720, 16);
+            this.label3.Location = new System.Drawing.Point(705, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 20);
             this.label3.TabIndex = 1;
@@ -388,7 +458,7 @@
             this.MaximizeBox = false;
             this.Name = "dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HOME";
+            this.Load += new System.EventHandler(this.dashboard_Load);
             this.headerpannel.ResumeLayout(false);
             this.headerpannel.PerformLayout();
             this.leftpanel.ResumeLayout(false);
@@ -407,12 +477,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button btnlogout;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel centerpanel;
         private System.Windows.Forms.Panel bottompanel;
         private System.Windows.Forms.Label label3;
@@ -426,6 +491,16 @@
         private System.Windows.Forms.Button btnStudentInfo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
     }
 }
 
