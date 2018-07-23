@@ -1,0 +1,9 @@
+E:\c#\notification\notification\bin\Debug\notification.exe
+E:\c#\notification\notification\bin\Debug\notification.pdb
+E:\c#\notification\notification\bin\Debug\MySql.Data.DLL
+E:\c#\notification\notification\obj\x86\Debug\notification.notification.resources
+E:\c#\notification\notification\obj\x86\Debug\notification.Properties.Resources.resources
+E:\c#\notification\notification\obj\x86\Debug\notification.csproj.GenerateResource.Cache
+E:\c#\notification\notification\obj\x86\Debug\notification.exe
+E:\c#\notification\notification\obj\x86\Debug\notification.pdb
+E:\c#\notification\notification\obj\x86\Debug\notification.csprojResolveAssemblyReference.cache
