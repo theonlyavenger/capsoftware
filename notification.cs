@@ -68,7 +68,7 @@ namespace notification
                 while (reader.Read())
                 {
 
-                    clbstudlist.Items.Add(reader["id"].ToString() + "   " + reader["name"].ToString());
+                    clbstudlist.Items.Add(reader["id"].ToString() + "   " + reader["name"].ToString());//fetching & adding id & name to checkedlistbox
                 }
             }
             catch (Exception ex)
@@ -104,12 +104,12 @@ namespace notification
         private void btnselect_Click_1(object sender, EventArgs e)
         {
 
-            foreach (string item in clbstudlist.CheckedItems)
+            foreach (string item in clbstudlist.CheckedItems)//for each checked item in the listbox
             {
                
                
 
-               listBoxdisplay.Items.Add(item);//here
+               listBoxdisplay.Items.Add(item);//adding only the checked items from checkedlistbox to the listbox
 
             }
 
@@ -140,12 +140,12 @@ namespace notification
             {
                 rbselect.Checked = false;
                 string message = tbmessage.Text.ToString();
-                sendMail(message);
+                sendMail(message);              //selecting text from typed message and then sendmail
             }
             else if (rbselect.Checked == true)
             {
                 string message = cbmessage.SelectedItem.ToString();
-                sendMail(message);
+                sendMail(message);              //selecting text from template and then sendmail
             }
 
 
@@ -157,16 +157,16 @@ namespace notification
             foreach (string obj in listBoxdisplay.Items)
             {
                // MessageBox.Show(obj);
-                ArrayList emailArray = new ArrayList();
+                ArrayList emailArray = new ArrayList();         //array creation for storing the emails
                 con.Open();
-                string query = "SELECT email FROM student where id='"+obj+"'";
+                string query = "SELECT email FROM student where id='"+obj+"'";  //fetching emailid using object
                 MySqlCommand cmd = new MySqlCommand(query, con);
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
 
-                    emailArray.Add(reader["email"]);
+                    emailArray.Add(reader["email"]);            //adding all the emails from db to array
                 }
                 foreach (string email in emailArray)
                 {
@@ -174,7 +174,7 @@ namespace notification
 
                     try
                     {
-                        SendEmailApi(email, "Computronics: Notification", message);
+                        SendEmailApi(email, "Computronics: Notification", message); //sending mail to each emailid present in the array
                         MessageBox.Show("Mail sent");
                     }
                     catch (Exception ex)
@@ -190,7 +190,7 @@ namespace notification
 
             }
         }
-
+        //mail API for sending mails
         public static void SendEmailApi(string emailTo, string subject, string body)
         {
             var client = new SmtpClient("smtp-mail.outlook.com", 587)
