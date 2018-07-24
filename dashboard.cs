@@ -89,6 +89,12 @@ namespace Dashboard
 
         }
 
+        private void notify_Click(object sender, EventArgs e)
+        {
+            notification notify = new notification();
+            notify.Show();
+        }
+
        
        
 

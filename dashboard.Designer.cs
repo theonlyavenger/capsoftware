@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.headerpannel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.leftpanel = new System.Windows.Forms.Panel();
@@ -49,7 +50,7 @@
             this.btnAdmission = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.notify = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnStudentInfo = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -57,6 +58,7 @@
             this.bottompanel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.about = new System.Windows.Forms.Label();
+            this.enquiry = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.headerpannel.SuspendLayout();
             this.leftpanel.SuspendLayout();
             this.centerpanel.SuspendLayout();
@@ -274,7 +276,7 @@
             this.centerpanel.Controls.Add(this.btnAdmission);
             this.centerpanel.Controls.Add(this.button6);
             this.centerpanel.Controls.Add(this.button5);
-            this.centerpanel.Controls.Add(this.button4);
+            this.centerpanel.Controls.Add(this.notify);
             this.centerpanel.Controls.Add(this.button3);
             this.centerpanel.Controls.Add(this.btnStudentInfo);
             this.centerpanel.Controls.Add(this.button1);
@@ -344,19 +346,20 @@
             this.button5.Text = "BATCHES";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // notify
             // 
-            this.button4.AutoSize = true;
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(302, 204);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(216, 144);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "NOTIFY\r\nSTUDENTS\r\n";
-            this.button4.UseVisualStyleBackColor = false;
+            this.notify.AutoSize = true;
+            this.notify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.notify.FlatAppearance.BorderSize = 0;
+            this.notify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.notify.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.notify.Location = new System.Drawing.Point(302, 204);
+            this.notify.Name = "notify";
+            this.notify.Size = new System.Drawing.Size(216, 144);
+            this.notify.TabIndex = 27;
+            this.notify.Text = "NOTIFY\r\nSTUDENTS\r\n";
+            this.notify.UseVisualStyleBackColor = false;
+            this.notify.Click += new System.EventHandler(this.notify_Click);
             // 
             // button3
             // 
@@ -445,6 +448,11 @@
             this.about.TabIndex = 0;
             this.about.Text = "CAP SOFTWARE";
             // 
+            // enquiry
+            // 
+            this.enquiry.Name = "enquiry";
+            this.enquiry.Size = new System.Drawing.Size(153, 26);
+            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -486,7 +494,7 @@
         private System.Windows.Forms.Button btnAdmission;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button notify;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnStudentInfo;
         private System.Windows.Forms.Button button1;
@@ -501,6 +509,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ContextMenuStrip enquiry;
     }
 }
 

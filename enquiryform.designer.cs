@@ -257,6 +257,7 @@ namespace Dashboard
             this.lblsubmit.TabIndex = 113;
             this.lblsubmit.Text = "submit";
             this.lblsubmit.UseVisualStyleBackColor = false;
+            this.lblsubmit.Click += new System.EventHandler(this.lblsubmit_Click);
             // 
             // textboxcollege
             // 

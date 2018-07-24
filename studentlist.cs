@@ -111,10 +111,18 @@ namespace Dashboard
         private void dataTable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Select the id column from the row and store it in id variable
-            int id = Convert.ToInt32(dataTable.SelectedRows[0].Cells["id"].Value.ToString());
+            try
+            {
+                int id = Convert.ToInt32(dataTable.SelectedRows[0].Cells["id"].Value.ToString());
 
-            Studentinfo info = new Studentinfo(id);
-            info.Show();
+                Studentinfo info = new Studentinfo(id);
+                info.Show();
+            }
+            catch (Exception)
+            {
+                
+            }
+            
         }     
     }
 }
