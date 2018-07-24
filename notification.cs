@@ -45,7 +45,7 @@ namespace notification
         private void InitializeDb()
         {
             server = "localhost";
-            database = "compu";
+            database = "computronics_admission";
             uid = "root";
             pwd = " ";
 
@@ -61,14 +61,14 @@ namespace notification
             try
             {
                 con.Open();
-                string query = "SELECT id,name,age,email FROM student ";
+                string query = "SELECT stud_id,stud_name FROM student ";
                 MySqlCommand cmd = new MySqlCommand(query, con);
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
 
-                    clbstudlist.Items.Add(reader["id"].ToString() + "   " + reader["name"].ToString());//fetching & adding id & name to checkedlistbox
+                    clbstudlist.Items.Add(reader["stud_id"].ToString() + "   " + reader["stud_name"].ToString());//fetching & adding id & name to checkedlistbox
                 }
             }
             catch (Exception ex)
@@ -159,14 +159,14 @@ namespace notification
                // MessageBox.Show(obj);
                 ArrayList emailArray = new ArrayList();         //array creation for storing the emails
                 con.Open();
-                string query = "SELECT email FROM student where id='"+obj+"'";  //fetching emailid using object
+                string query = "SELECT stud_email FROM student where stud_id='"+obj+"'";  //fetching emailid using object
                 MySqlCommand cmd = new MySqlCommand(query, con);
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
 
-                    emailArray.Add(reader["email"]);            //adding all the emails from db to array
+                    emailArray.Add(reader["stud_email"]);            //adding all the emails from db to array
                 }
                 foreach (string email in emailArray)
                 {
