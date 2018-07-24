@@ -28,6 +28,7 @@ namespace notification
 
         private void notification_Load(object sender, EventArgs e)
         {
+            btnremove.Enabled = false;
 
             listBoxdisplay.HorizontalScrollbar = true;
             cbmessage.SelectedIndex = 0;
@@ -38,7 +39,7 @@ namespace notification
 
 
             displayData();
-            resize();
+            
 
 
         }
@@ -80,35 +81,7 @@ namespace notification
             }
 
         }
-        private void resize()
-        {
-            int x, y, a, b;
-            y = panel1.Size.Height;
-            x = panel1.Size.Width;
-
-            a = grpboxmessage.Size.Height;
-            b = grpboxmessage.Size.Width;
-
-
-            int halfx, halfy;
-
-            halfx = (x / 2) - (b / 2);
-            halfy = (y / 2) - (a / 2);
-
-
-            grpboxmessage.Left = halfx;
-            grpboxmessage.Top = halfy;
-        }
-
-        private void btnselect_Click_1(object sender, EventArgs e)
-        {
-
-            foreach (string item in clbstudlist.CheckedItems)//for each checked item in the listbox
-            {
-               listBoxdisplay.Items.Add(item);//adding only the checked items from checkedlistbox to the listbox
-            }
-        }
-
+        
         private void addHistory(string source,string msg)
         {
             string date = DateTime.Now.ToString();
@@ -220,21 +193,66 @@ namespace notification
 
         }
 
-        private void rbselect_CheckedChanged_1(object sender, EventArgs e)
-        {
-            cbmessage.Enabled = true;
-            tbmessage.Enabled = false;
-        }
-
-        private void rbtype_CheckedChanged_1(object sender, EventArgs e)
-        {
-            cbmessage.Enabled = false;
-            tbmessage.Enabled = true;
-        }
+      
+   
 
         private void viewHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnselect_Click(object sender, EventArgs e)
+        {
+            btnremove.Enabled = true;
+            foreach (string item in clbstudlist.CheckedItems)//for each checked item in the listbox
+            {
+                listBoxdisplay.Items.Add(item);//adding only the checked items from checkedlistbox to the listbox
+                listBoxdisplay.SelectedIndex = 0;
+            }
+        }
+
+        private void btnremove_Click(object sender, EventArgs e)
+        {
+
+            for (int v = 0; v < listBoxdisplay.SelectedItems.Count; v++)
+            {
+               
+                listBoxdisplay.Items.Remove(listBoxdisplay.SelectedItems[v]);
+               
+            }
+             
+        }
+
+        private void listBoxdisplay_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                listBoxdisplay.SelectedIndex = 0;
+            }
+            catch (Exception)
+            {
+
+                btnremove.Enabled = false;
+            }
+            
+        }
+
+        private void rbselect_CheckedChanged(object sender, EventArgs e)
+        {
+            cbmessage.Enabled = true;
+            tbmessage.Enabled = false;
+          
+        }
+
+        private void tbmessage_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbtype_CheckedChanged(object sender, EventArgs e)
+        {
+            cbmessage.Enabled = false;
+            tbmessage.Enabled = true;
         }
     }
 }
