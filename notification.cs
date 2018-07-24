@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Net.Mail;
 using System.Net;
+
 namespace notification
 {
     public partial class notification : Form
@@ -56,8 +57,6 @@ namespace notification
 
         private void displayData()
         {
-
-            
             try
             {
                 con.Open();
@@ -106,28 +105,32 @@ namespace notification
 
             foreach (string item in clbstudlist.CheckedItems)//for each checked item in the listbox
             {
-               
-               
-
                listBoxdisplay.Items.Add(item);//adding only the checked items from checkedlistbox to the listbox
-
             }
-
-
-        }
-        private void rbselect_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
 
-        private void rbtype_CheckedChanged(object sender, EventArgs e)
+        private void addHistory(string source,string msg)
         {
-
-        }
-
-
-        private void mailApi()
-        {
+            string date = DateTime.Now.ToString();
+           
+            try
+            {
+                con.Open();
+                for (int i = 0; i < listBoxdisplay.Items.Count; i++)
+                {
+                    string query = "insert into notification (notification_date,notification_source,notification_destination,notification_message)values('" + date + "','" + source + "','"+listBoxdisplay.Items[i].ToString()+"','" + msg + "')";
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
 
 
         }
@@ -141,11 +144,16 @@ namespace notification
                 rbselect.Checked = false;
                 string message = tbmessage.Text.ToString();
                 sendMail(message);              //selecting text from typed message and then sendmail
+                addHistory("mail", message);
+
             }
             else if (rbselect.Checked == true)
             {
+                
                 string message = cbmessage.SelectedItem.ToString();
                 sendMail(message);              //selecting text from template and then sendmail
+                addHistory("mail", message);
+
             }
 
 
@@ -211,16 +219,16 @@ namespace notification
 
         }
 
+        private void rbselect_CheckedChanged_1(object sender, EventArgs e)
+        {
+            cbmessage.Enabled = true;
+            tbmessage.Enabled = false;
+        }
 
-
-
-
-
-
-
-
-
-
+        private void rbtype_CheckedChanged_1(object sender, EventArgs e)
+        {
+            cbmessage.Enabled = false;
+            tbmessage.Enabled = true;
+        }
     }
 }
-

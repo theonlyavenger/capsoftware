@@ -92,9 +92,9 @@
             this.grpboxmessage.Controls.Add(this.cbmessage);
             this.grpboxmessage.Controls.Add(this.rbselect);
             this.grpboxmessage.Controls.Add(this.lblto);
-            this.grpboxmessage.Location = new System.Drawing.Point(39, 96);
+            this.grpboxmessage.Location = new System.Drawing.Point(12, 9);
             this.grpboxmessage.Name = "grpboxmessage";
-            this.grpboxmessage.Size = new System.Drawing.Size(816, 400);
+            this.grpboxmessage.Size = new System.Drawing.Size(870, 576);
             this.grpboxmessage.TabIndex = 1;
             this.grpboxmessage.TabStop = false;
             // 
@@ -103,7 +103,7 @@
             this.btnselect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.btnselect.FlatAppearance.BorderSize = 0;
             this.btnselect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnselect.Location = new System.Drawing.Point(584, 304);
+            this.btnselect.Location = new System.Drawing.Point(684, 534);
             this.btnselect.Name = "btnselect";
             this.btnselect.Size = new System.Drawing.Size(104, 23);
             this.btnselect.TabIndex = 3;
@@ -116,9 +116,10 @@
             this.btnsms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.btnsms.FlatAppearance.BorderSize = 0;
             this.btnsms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnsms.Location = new System.Drawing.Point(264, 304);
+            this.btnsms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsms.Location = new System.Drawing.Point(340, 478);
             this.btnsms.Name = "btnsms";
-            this.btnsms.Size = new System.Drawing.Size(80, 32);
+            this.btnsms.Size = new System.Drawing.Size(129, 40);
             this.btnsms.TabIndex = 7;
             this.btnsms.Text = "Send sms";
             this.btnsms.UseVisualStyleBackColor = false;
@@ -126,30 +127,34 @@
             // 
             // clbstudlist
             // 
+            this.clbstudlist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clbstudlist.FormattingEnabled = true;
             this.clbstudlist.HorizontalScrollbar = true;
-            this.clbstudlist.Location = new System.Drawing.Point(568, 48);
+            this.clbstudlist.Location = new System.Drawing.Point(616, 19);
             this.clbstudlist.MaximumSize = new System.Drawing.Size(500, 500);
             this.clbstudlist.Name = "clbstudlist";
             this.clbstudlist.ScrollAlwaysVisible = true;
-            this.clbstudlist.Size = new System.Drawing.Size(224, 229);
+            this.clbstudlist.Size = new System.Drawing.Size(236, 499);
             this.clbstudlist.TabIndex = 2;
             // 
             // tbmessage
             // 
-            this.tbmessage.Location = new System.Drawing.Point(264, 128);
+            this.tbmessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbmessage.Location = new System.Drawing.Point(219, 143);
             this.tbmessage.Multiline = true;
             this.tbmessage.Name = "tbmessage";
-            this.tbmessage.Size = new System.Drawing.Size(280, 144);
+            this.tbmessage.Size = new System.Drawing.Size(391, 251);
             this.tbmessage.TabIndex = 5;
             // 
             // listBoxdisplay
             // 
+            this.listBoxdisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxdisplay.FormattingEnabled = true;
             this.listBoxdisplay.HorizontalScrollbar = true;
-            this.listBoxdisplay.Location = new System.Drawing.Point(48, 64);
+            this.listBoxdisplay.ItemHeight = 20;
+            this.listBoxdisplay.Location = new System.Drawing.Point(10, 39);
             this.listBoxdisplay.Name = "listBoxdisplay";
-            this.listBoxdisplay.Size = new System.Drawing.Size(184, 212);
+            this.listBoxdisplay.Size = new System.Drawing.Size(203, 484);
             this.listBoxdisplay.TabIndex = 4;
             // 
             // btnsend
@@ -157,9 +162,10 @@
             this.btnsend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.btnsend.FlatAppearance.BorderSize = 0;
             this.btnsend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnsend.Location = new System.Drawing.Point(152, 304);
+            this.btnsend.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsend.Location = new System.Drawing.Point(340, 415);
             this.btnsend.Name = "btnsend";
-            this.btnsend.Size = new System.Drawing.Size(80, 32);
+            this.btnsend.Size = new System.Drawing.Size(129, 40);
             this.btnsend.TabIndex = 6;
             this.btnsend.Text = "Send Email";
             this.btnsend.UseVisualStyleBackColor = false;
@@ -168,42 +174,48 @@
             // rbtype
             // 
             this.rbtype.AutoSize = true;
-            this.rbtype.Location = new System.Drawing.Point(256, 96);
+            this.rbtype.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtype.Location = new System.Drawing.Point(219, 113);
             this.rbtype.Name = "rbtype";
-            this.rbtype.Size = new System.Drawing.Size(103, 17);
+            this.rbtype.Size = new System.Drawing.Size(143, 24);
             this.rbtype.TabIndex = 4;
             this.rbtype.TabStop = true;
             this.rbtype.Text = "Type a message";
             this.rbtype.UseVisualStyleBackColor = true;
+            this.rbtype.CheckedChanged += new System.EventHandler(this.rbtype_CheckedChanged_1);
             // 
             // cbmessage
             // 
+            this.cbmessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmessage.FormattingEnabled = true;
             this.cbmessage.Items.AddRange(new object[] {
             "fees pending",
             "exam pending"});
-            this.cbmessage.Location = new System.Drawing.Point(384, 56);
+            this.cbmessage.Location = new System.Drawing.Point(219, 69);
             this.cbmessage.Name = "cbmessage";
-            this.cbmessage.Size = new System.Drawing.Size(152, 21);
+            this.cbmessage.Size = new System.Drawing.Size(391, 28);
             this.cbmessage.TabIndex = 3;
             // 
             // rbselect
             // 
             this.rbselect.AutoSize = true;
-            this.rbselect.Location = new System.Drawing.Point(256, 56);
+            this.rbselect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbselect.Location = new System.Drawing.Point(219, 39);
             this.rbselect.Name = "rbselect";
-            this.rbselect.Size = new System.Drawing.Size(109, 17);
+            this.rbselect.Size = new System.Drawing.Size(154, 24);
             this.rbselect.TabIndex = 2;
             this.rbselect.TabStop = true;
             this.rbselect.Text = "Select a message";
             this.rbselect.UseVisualStyleBackColor = true;
+            this.rbselect.CheckedChanged += new System.EventHandler(this.rbselect_CheckedChanged_1);
             // 
             // lblto
             // 
             this.lblto.AutoSize = true;
-            this.lblto.Location = new System.Drawing.Point(48, 40);
+            this.lblto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblto.Location = new System.Drawing.Point(6, 16);
             this.lblto.Name = "lblto";
-            this.lblto.Size = new System.Drawing.Size(20, 13);
+            this.lblto.Size = new System.Drawing.Size(27, 20);
             this.lblto.TabIndex = 0;
             this.lblto.Text = "To";
             // 
@@ -247,4 +259,3 @@
 
     }
 }
-
