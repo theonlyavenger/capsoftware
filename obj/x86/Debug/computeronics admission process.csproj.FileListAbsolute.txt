@@ -1,0 +1,9 @@
+C:\Users\Prachi\Documents\Visual Studio 2010\Projects\computeronics admission process\computeronics admission process\bin\Debug\computeronics admission process.exe
+C:\Users\Prachi\Documents\Visual Studio 2010\Projects\computeronics admission process\computeronics admission process\bin\Debug\computeronics admission process.pdb
+C:\Users\Prachi\Documents\Visual Studio 2010\Projects\computeronics admission process\computeronics admission process\obj\x86\Debug\computeronics_admission_process.Properties.Resources.resources
+C:\Users\Prachi\Documents\Visual Studio 2010\Projects\computeronics admission process\computeronics admission process\obj\x86\Debug\computeronics admission process.csproj.GenerateResource.Cache
+C:\Users\Prachi\Documents\Visual Studio 2010\Projects\computeronics admission process\computeronics admission process\obj\x86\Debug\computeronics admission process.exe
+C:\Users\Prachi\Documents\Visual Studio 2010\Projects\computeronics admission process\computeronics admission process\obj\x86\Debug\computeronics admission process.pdb
+C:\Users\Prachi\Documents\Visual Studio 2010\Projects\computeronics admission process\computeronics admission process\obj\x86\Debug\computeronics admission process.csprojResolveAssemblyReference.cache
+C:\Users\Prachi\Documents\Visual Studio 2010\Projects\computeronics admission process\computeronics admission process\bin\Debug\MySql.Data.dll
+C:\Users\Prachi\Documents\Visual Studio 2010\Projects\computeronics admission process\computeronics admission process\obj\x86\Debug\computeronics_admission_process.admissionForm.resources
