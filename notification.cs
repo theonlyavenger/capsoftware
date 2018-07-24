@@ -118,6 +118,7 @@ namespace notification
                 con.Open();
                 for (int i = 0; i < listBoxdisplay.Items.Count; i++)
                 {
+                    //inserting values into notification table
                     string query = "insert into notification (notification_date,notification_source,notification_destination,notification_message)values('" + date + "','" + source + "','"+listBoxdisplay.Items[i].ToString()+"','" + msg + "')";
                     MySqlCommand cmd = new MySqlCommand(query, con);
                     cmd.ExecuteNonQuery();
@@ -229,6 +230,11 @@ namespace notification
         {
             cbmessage.Enabled = false;
             tbmessage.Enabled = true;
+        }
+
+        private void viewHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

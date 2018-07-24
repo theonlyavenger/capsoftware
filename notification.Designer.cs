@@ -42,9 +42,13 @@
             this.cbmessage = new System.Windows.Forms.ComboBox();
             this.rbselect = new System.Windows.Forms.RadioButton();
             this.lblto = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelnotification.SuspendLayout();
             this.panel1.SuspendLayout();
             this.grpboxmessage.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelnotification
@@ -72,6 +76,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.grpboxmessage);
+            this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 58);
             this.panel1.Name = "panel1";
@@ -92,9 +97,9 @@
             this.grpboxmessage.Controls.Add(this.cbmessage);
             this.grpboxmessage.Controls.Add(this.rbselect);
             this.grpboxmessage.Controls.Add(this.lblto);
-            this.grpboxmessage.Location = new System.Drawing.Point(12, 9);
+            this.grpboxmessage.Location = new System.Drawing.Point(8, 24);
             this.grpboxmessage.Name = "grpboxmessage";
-            this.grpboxmessage.Size = new System.Drawing.Size(870, 576);
+            this.grpboxmessage.Size = new System.Drawing.Size(874, 592);
             this.grpboxmessage.TabIndex = 1;
             this.grpboxmessage.TabStop = false;
             // 
@@ -134,7 +139,7 @@
             this.clbstudlist.MaximumSize = new System.Drawing.Size(500, 500);
             this.clbstudlist.Name = "clbstudlist";
             this.clbstudlist.ScrollAlwaysVisible = true;
-            this.clbstudlist.Size = new System.Drawing.Size(236, 499);
+            this.clbstudlist.Size = new System.Drawing.Size(236, 487);
             this.clbstudlist.TabIndex = 2;
             // 
             // tbmessage
@@ -219,6 +224,31 @@
             this.lblto.TabIndex = 0;
             this.lblto.Text = "To";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(894, 24);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewHistoryToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // viewHistoryToolStripMenuItem
+            // 
+            this.viewHistoryToolStripMenuItem.Name = "viewHistoryToolStripMenuItem";
+            this.viewHistoryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.viewHistoryToolStripMenuItem.Text = "View History";
+            this.viewHistoryToolStripMenuItem.Click += new System.EventHandler(this.viewHistoryToolStripMenuItem_Click);
+            // 
             // notification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,6 +256,7 @@
             this.ClientSize = new System.Drawing.Size(894, 651);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelnotification);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "notification";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "notification";
@@ -236,6 +267,8 @@
             this.panel1.PerformLayout();
             this.grpboxmessage.ResumeLayout(false);
             this.grpboxmessage.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -256,6 +289,9 @@
         private System.Windows.Forms.ComboBox cbmessage;
         private System.Windows.Forms.RadioButton rbselect;
         private System.Windows.Forms.Label lblto;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewHistoryToolStripMenuItem;
 
     }
 }
