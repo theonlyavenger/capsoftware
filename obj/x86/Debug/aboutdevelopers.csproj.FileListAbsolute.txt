@@ -1,0 +1,7 @@
+C:\Users\manoj\Computronics\aboutdevelopers\aboutdevelopers\bin\Debug\Computronics Form Template.exe
+C:\Users\manoj\Computronics\aboutdevelopers\aboutdevelopers\bin\Debug\Computronics Form Template.pdb
+C:\Users\manoj\Computronics\aboutdevelopers\aboutdevelopers\obj\x86\Debug\aboutdevelopers.Form1.resources
+C:\Users\manoj\Computronics\aboutdevelopers\aboutdevelopers\obj\x86\Debug\aboutdevelopers.Properties.Resources.resources
+C:\Users\manoj\Computronics\aboutdevelopers\aboutdevelopers\obj\x86\Debug\aboutdevelopers.csproj.GenerateResource.Cache
+C:\Users\manoj\Computronics\aboutdevelopers\aboutdevelopers\obj\x86\Debug\Computronics Form Template.exe
+C:\Users\manoj\Computronics\aboutdevelopers\aboutdevelopers\obj\x86\Debug\Computronics Form Template.pdb
