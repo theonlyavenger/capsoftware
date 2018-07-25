@@ -1,0 +1,11 @@
+C:\Users\manoj\Computronics\exportExcel\exportExcel\bin\Debug\Computronics Form Template.exe
+C:\Users\manoj\Computronics\exportExcel\exportExcel\bin\Debug\Computronics Form Template.pdb
+C:\Users\manoj\Computronics\exportExcel\exportExcel\bin\Debug\MySql.Data.dll
+C:\Users\manoj\Computronics\exportExcel\exportExcel\obj\x86\Debug\exportExcel.csprojResolveAssemblyReference.cache
+C:\Users\manoj\Computronics\exportExcel\exportExcel\obj\x86\Debug\exportExcel.exportExcel.resources
+C:\Users\manoj\Computronics\exportExcel\exportExcel\obj\x86\Debug\exportExcel.Properties.Resources.resources
+C:\Users\manoj\Computronics\exportExcel\exportExcel\obj\x86\Debug\exportExcel.csproj.GenerateResource.Cache
+C:\Users\manoj\Computronics\exportExcel\exportExcel\obj\x86\Debug\Computronics Form Template.exe
+C:\Users\manoj\Computronics\exportExcel\exportExcel\obj\x86\Debug\Computronics Form Template.pdb
+C:\Users\manoj\Computronics\exportExcel\exportExcel\obj\x86\Debug\Interop.DXTRANSLib.dll
+C:\Users\manoj\Computronics\exportExcel\exportExcel\obj\x86\Debug\exportExcel.csproj.ResolveComReference.cache
