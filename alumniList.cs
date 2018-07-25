@@ -10,7 +10,7 @@ using MySql.Data.MySqlClient;
 
 namespace Dashboard
 {
-    public partial class studentlist : Form
+    public partial class alumnilist : Form
     {
         private MySqlConnection con;
         string server;
@@ -18,7 +18,7 @@ namespace Dashboard
         string uid;
         string pwd;
         DataTable dt;
-        public studentlist()
+        public alumnilist()
         {
             InitializeComponent();
 
@@ -48,31 +48,24 @@ namespace Dashboard
         public void DisplayData()
         {
             // Adding column with their properties
-            dataTable.ColumnCount = 5;
+            dataTable.ColumnCount = 4;
             
             dataTable.Columns[0].HeaderText = "ID";
             dataTable.Columns[0].Name = "id";
+            dataTable.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             dataTable.Columns[1].HeaderText = "NAME";
             dataTable.Columns[1].Name = "name";
             dataTable.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             
-            dataTable.Columns[2].HeaderText = "PHONE (R)";
+            dataTable.Columns[2].HeaderText = "PHONE (M)";
             dataTable.Columns[2].Name = "phone";
             dataTable.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             
-            dataTable.Columns[3].HeaderText = "COURSE REGISTERED";
+            dataTable.Columns[3].HeaderText = "COMPANY";
             dataTable.Columns[3].Name = "course";
             dataTable.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             
-            dataTable.Columns[4].HeaderText = "DATE OF JOINING";
-            dataTable.Columns[4].Name = "doj";
-            dataTable.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-           /* dataTable.Columns[5].HeaderText = "PAYMENT STATUS";
-            dataTable.Columns[5].Name = "payment";
-            dataTable.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; */
-
             DataGridViewImageColumn img = new DataGridViewImageColumn();
             img.HeaderText = "PHOTO";
             img.Name = "photo";
@@ -80,7 +73,7 @@ namespace Dashboard
             img.ImageLayout = DataGridViewImageCellLayout.Stretch; 
             dataTable.Columns.Add(img);
 
-            string query = "SELECT stud_id,stud_name,stud_cell,stud_courseSelected,stud_doj,stud_alumni from student";
+            string query = "SELECT stud_id,stud_name,stud_cell,stud_alumni,alumni_comapnyname from student";
             con.Open();
             try
             {
@@ -90,15 +83,14 @@ namespace Dashboard
 
                 while (reader.Read())
                 {
-                    if (reader["stud_alumni"].ToString() != "YES")
+                    if (reader["stud_alumni"].ToString() == "YES")
                     {
                         string id = reader["stud_id"].ToString();
                         string name = reader["stud_name"].ToString();
                         string cell = reader["stud_cell"].ToString();
-                        string course = reader["stud_courseSelected"].ToString();
-                        string doj = reader["stud_doj"].ToString();
-                        Image image = Image.FromFile(@"C:\Users\manoj\Downloads\manoj.jpg");
-                        dataTable.Rows.Add(id, name, cell, course, doj, image);
+                        string company = reader["alumni_comapnyname"].ToString();
+                        Image image = Image.FromFile(@"C:\Users\manoj\Downloads\prachi.png");
+                        dataTable.Rows.Add(id, name, cell, company, image);
                     }
                 }
             }
@@ -118,7 +110,7 @@ namespace Dashboard
             try
             {
                 int id = Convert.ToInt32(dataTable.SelectedRows[0].Cells["id"].Value.ToString());
-                string type = "regular";
+                string type = "alumni";
                 Studentinfo info = new Studentinfo(id, type);
                 info.Show();
             }

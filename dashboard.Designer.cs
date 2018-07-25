@@ -43,8 +43,9 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.aboutdevelopers = new System.Windows.Forms.Button();
             this.btnlogout = new System.Windows.Forms.Button();
+            this.enquiry = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.centerpanel = new System.Windows.Forms.Panel();
             this.btnEnquiry = new System.Windows.Forms.Button();
             this.btnAdmission = new System.Windows.Forms.Button();
@@ -54,11 +55,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.btnStudentInfo = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnalumni = new System.Windows.Forms.Button();
             this.bottompanel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.about = new System.Windows.Forms.Label();
-            this.enquiry = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.headerpannel.SuspendLayout();
             this.leftpanel.SuspendLayout();
             this.centerpanel.SuspendLayout();
@@ -101,7 +101,7 @@
             this.leftpanel.Controls.Add(this.button8);
             this.leftpanel.Controls.Add(this.button12);
             this.leftpanel.Controls.Add(this.button9);
-            this.leftpanel.Controls.Add(this.button2);
+            this.leftpanel.Controls.Add(this.aboutdevelopers);
             this.leftpanel.Controls.Add(this.btnlogout);
             this.leftpanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftpanel.Location = new System.Drawing.Point(0, 58);
@@ -239,20 +239,21 @@
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // aboutdevelopers
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::Dashboard.Properties.Resources.icons8_high_importance_64;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(13, 245);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(64, 39);
-            this.button2.TabIndex = 0;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
+            this.aboutdevelopers.BackColor = System.Drawing.Color.Transparent;
+            this.aboutdevelopers.BackgroundImage = global::Dashboard.Properties.Resources.icons8_high_importance_64;
+            this.aboutdevelopers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.aboutdevelopers.FlatAppearance.BorderSize = 0;
+            this.aboutdevelopers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.aboutdevelopers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aboutdevelopers.Location = new System.Drawing.Point(13, 245);
+            this.aboutdevelopers.Name = "aboutdevelopers";
+            this.aboutdevelopers.Size = new System.Drawing.Size(64, 39);
+            this.aboutdevelopers.TabIndex = 0;
+            this.aboutdevelopers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.aboutdevelopers.UseVisualStyleBackColor = false;
+            this.aboutdevelopers.Click += new System.EventHandler(this.aboutdevelopers_Click);
             // 
             // btnlogout
             // 
@@ -270,8 +271,14 @@
             this.btnlogout.UseVisualStyleBackColor = false;
             this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
+            // enquiry
+            // 
+            this.enquiry.Name = "enquiry";
+            this.enquiry.Size = new System.Drawing.Size(61, 4);
+            // 
             // centerpanel
             // 
+            this.centerpanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.centerpanel.Controls.Add(this.btnEnquiry);
             this.centerpanel.Controls.Add(this.btnAdmission);
             this.centerpanel.Controls.Add(this.button6);
@@ -280,7 +287,7 @@
             this.centerpanel.Controls.Add(this.button3);
             this.centerpanel.Controls.Add(this.btnStudentInfo);
             this.centerpanel.Controls.Add(this.button1);
-            this.centerpanel.Controls.Add(this.button7);
+            this.centerpanel.Controls.Add(this.btnalumni);
             this.centerpanel.Controls.Add(this.bottompanel);
             this.centerpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.centerpanel.Location = new System.Drawing.Point(90, 58);
@@ -295,7 +302,7 @@
             this.btnEnquiry.FlatAppearance.BorderSize = 0;
             this.btnEnquiry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnquiry.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnquiry.Location = new System.Drawing.Point(70, 44);
+            this.btnEnquiry.Location = new System.Drawing.Point(65, 44);
             this.btnEnquiry.Name = "btnEnquiry";
             this.btnEnquiry.Size = new System.Drawing.Size(216, 144);
             this.btnEnquiry.TabIndex = 23;
@@ -310,7 +317,7 @@
             this.btnAdmission.FlatAppearance.BorderSize = 0;
             this.btnAdmission.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmission.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmission.Location = new System.Drawing.Point(302, 44);
+            this.btnAdmission.Location = new System.Drawing.Point(297, 44);
             this.btnAdmission.Name = "btnAdmission";
             this.btnAdmission.Size = new System.Drawing.Size(216, 144);
             this.btnAdmission.TabIndex = 24;
@@ -325,7 +332,7 @@
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(534, 44);
+            this.button6.Location = new System.Drawing.Point(529, 44);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(216, 144);
             this.button6.TabIndex = 25;
@@ -339,7 +346,7 @@
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(70, 204);
+            this.button5.Location = new System.Drawing.Point(65, 204);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(216, 144);
             this.button5.TabIndex = 26;
@@ -353,7 +360,7 @@
             this.notify.FlatAppearance.BorderSize = 0;
             this.notify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.notify.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.notify.Location = new System.Drawing.Point(302, 204);
+            this.notify.Location = new System.Drawing.Point(297, 204);
             this.notify.Name = "notify";
             this.notify.Size = new System.Drawing.Size(216, 144);
             this.notify.TabIndex = 27;
@@ -368,7 +375,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(534, 204);
+            this.button3.Location = new System.Drawing.Point(529, 204);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(216, 144);
             this.button3.TabIndex = 28;
@@ -382,7 +389,7 @@
             this.btnStudentInfo.FlatAppearance.BorderSize = 0;
             this.btnStudentInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStudentInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStudentInfo.Location = new System.Drawing.Point(70, 364);
+            this.btnStudentInfo.Location = new System.Drawing.Point(65, 364);
             this.btnStudentInfo.Name = "btnStudentInfo";
             this.btnStudentInfo.Size = new System.Drawing.Size(216, 144);
             this.btnStudentInfo.TabIndex = 29;
@@ -397,29 +404,31 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(302, 364);
+            this.button1.Location = new System.Drawing.Point(297, 364);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(216, 144);
             this.button1.TabIndex = 30;
             this.button1.Text = "COURSES";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // btnalumni
             // 
-            this.button7.AutoSize = true;
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(534, 364);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(216, 144);
-            this.button7.TabIndex = 31;
-            this.button7.Text = "ALUMNI";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnalumni.AutoSize = true;
+            this.btnalumni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnalumni.FlatAppearance.BorderSize = 0;
+            this.btnalumni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnalumni.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnalumni.Location = new System.Drawing.Point(529, 364);
+            this.btnalumni.Name = "btnalumni";
+            this.btnalumni.Size = new System.Drawing.Size(216, 144);
+            this.btnalumni.TabIndex = 31;
+            this.btnalumni.Text = "ALUMNI";
+            this.btnalumni.UseVisualStyleBackColor = false;
+            this.btnalumni.Click += new System.EventHandler(this.btnalumni_Click);
             // 
             // bottompanel
             // 
+            this.bottompanel.BackColor = System.Drawing.Color.Gainsboro;
             this.bottompanel.Controls.Add(this.label3);
             this.bottompanel.Controls.Add(this.about);
             this.bottompanel.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -442,16 +451,11 @@
             // 
             this.about.AutoSize = true;
             this.about.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.about.Location = new System.Drawing.Point(16, 16);
+            this.about.Location = new System.Drawing.Point(11, 16);
             this.about.Name = "about";
             this.about.Size = new System.Drawing.Size(136, 20);
             this.about.TabIndex = 0;
             this.about.Text = "CAP SOFTWARE";
-            // 
-            // enquiry
-            // 
-            this.enquiry.Name = "enquiry";
-            this.enquiry.Size = new System.Drawing.Size(153, 26);
             // 
             // dashboard
             // 
@@ -498,8 +502,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnStudentInfo;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnalumni;
+        private System.Windows.Forms.Button aboutdevelopers;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label5;

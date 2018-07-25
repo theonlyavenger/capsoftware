@@ -63,9 +63,39 @@ namespace Dashboard.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1600x900_white_texture_1454516 {
+            get {
+                object obj = ResourceManager.GetObject("1600x900_white_texture-1454516", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20180430_150313 {
+            get {
+                object obj = ResourceManager.GetObject("20180430_150313", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close {
             get {
                 object obj = ResourceManager.GetObject("close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap downloaded {
+            get {
+                object obj = ResourceManager.GetObject("downloaded", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +196,46 @@ namespace Dashboard.Properties {
         internal static System.Drawing.Bitmap icons8_shutdown_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-shutdown-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IMG_20160525_WA0039 {
+            get {
+                object obj = ResourceManager.GetObject("IMG-20160525-WA0039", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IMG_20160525_WA00391 {
+            get {
+                object obj = ResourceManager.GetObject("IMG-20160525-WA00391", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IMG_20180318_150943_122 {
+            get {
+                object obj = ResourceManager.GetObject("IMG_20180318_150943_122", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IMG_20180724_132522 {
+            get {
+                object obj = ResourceManager.GetObject("IMG_20180724_132522", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

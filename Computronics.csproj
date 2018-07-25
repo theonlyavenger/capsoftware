@@ -62,6 +62,24 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="aboutdevelopers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aboutdevelopers.designer.cs">
+      <DependentUpon>aboutdevelopers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="alumniCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alumniCompany.Designer.cs">
+      <DependentUpon>alumniCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="alumniList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alumniList.designer.cs">
+      <DependentUpon>alumniList.cs</DependentUpon>
+    </Compile>
     <Compile Include="dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +97,12 @@
     </Compile>
     <Compile Include="enquiryform.designer.cs">
       <DependentUpon>enquiryform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="enquirylist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="enquirylist.designer.cs">
+      <DependentUpon>enquirylist.cs</DependentUpon>
     </Compile>
     <Compile Include="notification.cs">
       <SubType>Form</SubType>
@@ -106,6 +130,15 @@
     <Compile Include="studentlist.designer.cs">
       <DependentUpon>studentlist.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="aboutdevelopers.resx">
+      <DependentUpon>aboutdevelopers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alumniCompany.resx">
+      <DependentUpon>alumniCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alumniList.resx">
+      <DependentUpon>alumniList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="enquiryform.resx">
       <DependentUpon>enquiryform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="enquirylist.resx">
+      <DependentUpon>enquirylist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="notification.resx">
       <DependentUpon>notification.cs</DependentUpon>
@@ -185,6 +221,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-increase-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20180430_150313.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20180724_132522.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG-20160525-WA0039.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG-20160525-WA00391.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20180318_150943_122.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1600x900_white_texture-1454516.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downloaded.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -28,17 +28,19 @@ namespace Dashboard
 
         private void notification_Load(object sender, EventArgs e)
         {
+            btnremove.Enabled = false;
 
             listBoxdisplay.HorizontalScrollbar = true;
             cbmessage.SelectedIndex = 0;
             this.MaximizeBox = false;
             rbselect.Checked = true;
+            
 
             InitializeDb();
 
 
             displayData();
-            resize();
+            
 
 
         }
@@ -60,14 +62,16 @@ namespace Dashboard
             try
             {
                 con.Open();
-                string query = "SELECT stud_id,stud_name FROM student ";
+                string query = "SELECT stud_id,stud_name,stud_alumni FROM student ";
                 MySqlCommand cmd = new MySqlCommand(query, con);
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
-
-                    clbstudlist.Items.Add(reader["stud_id"].ToString() + "   " + reader["stud_name"].ToString());//fetching & adding id & name to checkedlistbox
+                    if (reader["stud_alumni"].ToString() != "YES")
+                    {
+                        clbstudlist.Items.Add(reader["stud_id"].ToString() + "   " + reader["stud_name"].ToString());//fetching & adding id & name to checkedlistbox
+                    }
                 }
             }
             catch (Exception ex)
@@ -80,49 +84,53 @@ namespace Dashboard
             }
 
         }
-        private void resize()
+        
+        private void addHistory(string source,string msg)
         {
-            int x, y, a, b;
-            y = panel1.Size.Height;
-            x = panel1.Size.Width;
-
-            a = grpboxmessage.Size.Height;
-            b = grpboxmessage.Size.Width;
-
-
-            int halfx, halfy;
-
-            halfx = (x / 2) - (b / 2);
-            halfy = (y / 2) - (a / 2);
-
-
-            grpboxmessage.Left = halfx;
-            grpboxmessage.Top = halfy;
-        }
-
-        private void btnselect_Click_1(object sender, EventArgs e)
-        {
-
-            foreach (string item in clbstudlist.CheckedItems)//for each checked item in the listbox
+            string date = DateTime.Now.ToString();
+           
+            try
             {
-               listBoxdisplay.Items.Add(item);//adding only the checked items from checkedlistbox to the listbox
+                con.Open();
+                for (int i = 0; i < listBoxdisplay.Items.Count; i++)
+                {
+                    //inserting values into notification table
+                    string query = "insert into notification (notification_date,notification_source,notification_destination,notification_message)values('" + date + "','" + source + "','"+listBoxdisplay.Items[i].ToString()+"','" + msg + "')";
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+
         }
+
+
 
         private void btnsend_Click_1(object sender, EventArgs e)
         {
             if (rbtype.Checked == true)
             {
-                
                 rbselect.Checked = false;
                 string message = tbmessage.Text.ToString();
                 sendMail(message);              //selecting text from typed message and then sendmail
+                addHistory("mail", message);
+
             }
             else if (rbselect.Checked == true)
             {
                 
                 string message = cbmessage.SelectedItem.ToString();
                 sendMail(message);              //selecting text from template and then sendmail
+                addHistory("mail", message);
+
             }
 
 
@@ -188,13 +196,63 @@ namespace Dashboard
 
         }
 
-        private void rbselect_CheckedChanged_1(object sender, EventArgs e)
+      
+   
+
+        private void viewHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnselect_Click(object sender, EventArgs e)
+        {
+            btnremove.Enabled = true;
+            foreach (string item in clbstudlist.CheckedItems)//for each checked item in the listbox
+            {
+                listBoxdisplay.Items.Add(item);//adding only the checked items from checkedlistbox to the listbox
+                listBoxdisplay.SelectedIndex = 0;
+            }
+        }
+
+        private void btnremove_Click(object sender, EventArgs e)
+        {
+
+            for (int v = 0; v < listBoxdisplay.SelectedItems.Count; v++)
+            {
+               
+                listBoxdisplay.Items.Remove(listBoxdisplay.SelectedItems[v]);
+               
+            }
+             
+        }
+
+        private void listBoxdisplay_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                listBoxdisplay.SelectedIndex = 0;
+            }
+            catch (Exception)
+            {
+
+                btnremove.Enabled = false;
+            }
+            
+        }
+
+        private void rbselect_CheckedChanged(object sender, EventArgs e)
         {
             cbmessage.Enabled = true;
             tbmessage.Enabled = false;
+          
         }
 
-        private void rbtype_CheckedChanged_1(object sender, EventArgs e)
+        private void tbmessage_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbtype_CheckedChanged(object sender, EventArgs e)
         {
             cbmessage.Enabled = false;
             tbmessage.Enabled = true;

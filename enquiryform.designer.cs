@@ -76,7 +76,7 @@ namespace Dashboard
             this.computronics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(0)))));
             this.computronics.Location = new System.Drawing.Point(0, 0);
             this.computronics.Name = "computronics";
-            this.computronics.Size = new System.Drawing.Size(900, 58);
+            this.computronics.Size = new System.Drawing.Size(910, 58);
             this.computronics.TabIndex = 18;
             // 
             // lblenquiry
@@ -114,7 +114,7 @@ namespace Dashboard
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 58);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(900, 603);
+            this.panel1.Size = new System.Drawing.Size(910, 613);
             this.panel1.TabIndex = 19;
             // 
             // textboxbranch
@@ -155,9 +155,9 @@ namespace Dashboard
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(3, 118);
+            this.panel2.Location = new System.Drawing.Point(0, 118);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(894, 35);
+            this.panel2.Size = new System.Drawing.Size(910, 35);
             this.panel2.TabIndex = 121;
             // 
             // label1
@@ -175,9 +175,9 @@ namespace Dashboard
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.panel4.Controls.Add(this.label23);
-            this.panel4.Location = new System.Drawing.Point(4, 293);
+            this.panel4.Location = new System.Drawing.Point(0, 293);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(893, 35);
+            this.panel4.Size = new System.Drawing.Size(910, 35);
             this.panel4.TabIndex = 122;
             // 
             // label23
@@ -314,10 +314,11 @@ namespace Dashboard
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(900, 661);
+            this.ClientSize = new System.Drawing.Size(910, 671);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.computronics);
             this.Controls.Add(this.NAME);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "enquiryform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);

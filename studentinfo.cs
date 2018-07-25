@@ -17,12 +17,13 @@ namespace Dashboard
         string database;
         string uid;
         string pwd;
-
         int ID;
-        public Studentinfo(int id)
+        string TYPE;
+        public Studentinfo(int id, string type)
         {
             InitializeComponent();
             ID = id;
+            TYPE = type;
         }
 
         private void InitilizeDb()
@@ -41,19 +42,30 @@ namespace Dashboard
             this.MaximizeBox = false;
             InitilizeDb();
             FetchDetails(ID);
+            if (TYPE == "regular")
+            {
+                btnAlumni.Visible = true;
+            }
+            else if (TYPE == "alumni")
+            {
+                btnAlumni.Visible = false;
+            }
         }
         private void FetchDetails(int Key)
         {
             string query = "SELECT * from student WHERE stud_id = " + Key + " ";
-            con.Open();
+            
             try
             {
+                con.Open();
+
                 MySqlCommand cmd = new MySqlCommand(query, con);
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.Read())
                 {
+
                     lblId.Text = reader["stud_id"].ToString();
                     lblName.Text = reader["stud_name"].ToString();
                     lblPhone.Text = reader["stud_pno"].ToString();
@@ -85,6 +97,14 @@ namespace Dashboard
             }
 
         }
+
+        private void btnAlumni_Click(object sender, EventArgs e)
+        {
+            alumniCompany alumni = new alumniCompany(ID);
+            alumni.Show();
+            this.Close();
+        }
+
       
     }
 }

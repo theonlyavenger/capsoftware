@@ -32,7 +32,7 @@
             this.headerpannel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnIdProof = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAlumni = new System.Windows.Forms.Button();
             this.lblId = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
@@ -76,8 +76,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pbPhoto = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.headerpannel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -110,7 +110,7 @@
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btnIdProof);
-            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnAlumni);
             this.panel1.Controls.Add(this.lblId);
             this.panel1.Controls.Add(this.lblName);
             this.panel1.Controls.Add(this.lblPhone);
@@ -170,19 +170,20 @@
             this.btnIdProof.Text = "View";
             this.btnIdProof.UseVisualStyleBackColor = true;
             // 
-            // btnDelete
+            // btnAlumni
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Tomato;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(1238, 12);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 30;
-            this.btnDelete.Text = "DELETE";
-            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnAlumni.BackColor = System.Drawing.Color.Tomato;
+            this.btnAlumni.FlatAppearance.BorderSize = 0;
+            this.btnAlumni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlumni.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlumni.ForeColor = System.Drawing.Color.White;
+            this.btnAlumni.Location = new System.Drawing.Point(1189, 12);
+            this.btnAlumni.Name = "btnAlumni";
+            this.btnAlumni.Size = new System.Drawing.Size(124, 23);
+            this.btnAlumni.TabIndex = 30;
+            this.btnAlumni.Text = "MARK AS ALUMNI";
+            this.btnAlumni.UseVisualStyleBackColor = false;
+            this.btnAlumni.Click += new System.EventHandler(this.btnAlumni_Click);
             // 
             // lblId
             // 
@@ -614,14 +615,6 @@
             this.label17.TabIndex = 16;
             this.label17.Text = "PERSONAL DETAILS";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.panel2.Location = new System.Drawing.Point(2, 237);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1323, 36);
-            this.panel2.TabIndex = 26;
-            // 
             // pbPhoto
             // 
             this.pbPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -632,6 +625,14 @@
             this.pbPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbPhoto.TabIndex = 4;
             this.pbPhoto.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel2.Location = new System.Drawing.Point(2, 237);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1323, 36);
+            this.panel2.TabIndex = 26;
             // 
             // Studentinfo
             // 
@@ -704,7 +705,7 @@
         private System.Windows.Forms.Label lblSign;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAlumni;
         private System.Windows.Forms.Button btnIdProof;
     }
 }

@@ -22,7 +22,7 @@ namespace Dashboard
         public dashboard()
         {
             InitializeComponent();
-            InitilizeDb();
+            InitializeDb();
         }
         Thread th;
         private void btnlogout_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace Dashboard
                     
         }
 
-        private void InitilizeDb()
+        private void InitializeDb()
         {
             server = "localhost";
             database = "computronics_admission_process";
@@ -74,7 +74,7 @@ namespace Dashboard
 
         private void btnEnquiry_Click(object sender, EventArgs e)
         {
-            enquiryform enquiry = new enquiryform();
+            enquirylist enquiry = new enquirylist();
             enquiry.Show();
         }
 
@@ -94,6 +94,19 @@ namespace Dashboard
             notification notify = new notification();
             notify.Show();
         }
+
+        private void aboutdevelopers_Click(object sender, EventArgs e)
+        {
+            aboutdevelopers about = new aboutdevelopers();
+            about.Show();
+        }
+
+        private void btnalumni_Click(object sender, EventArgs e)
+        {
+            alumnilist alumni = new alumnilist();
+            alumni.Show();
+        }
+
 
        
        

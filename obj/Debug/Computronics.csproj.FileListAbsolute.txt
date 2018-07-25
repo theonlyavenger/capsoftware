@@ -14,3 +14,7 @@ C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Softwar
 C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Computronics.csprojResolveAssemblyReference.cache
 C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.studentlist.resources
 C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.notification.resources
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.enquirylist.resources
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.aboutdevelopers.resources
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.alumniCompany.resources
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.alumnilist.resources

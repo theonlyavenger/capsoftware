@@ -1,6 +1,6 @@
 ﻿namespace Dashboard
 {
-    partial class studentlist
+    partial class alumnilist
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.headerpannel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,9 +47,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(8, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(357, 24);
+            this.label1.Size = new System.Drawing.Size(324, 24);
             this.label1.TabIndex = 4;
-            this.label1.Text = "COMPUTRONICS - STUDENTS INFO";
+            this.label1.Text = "COMPUTRONICS - ALUMNI INFO";
             // 
             // headerpannel
             // 
@@ -84,24 +86,40 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataTable.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataTable.Location = new System.Drawing.Point(0, 0);
             this.dataTable.MultiSelect = false;
             this.dataTable.Name = "dataTable";
             this.dataTable.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataTable.RowTemplate.Height = 128;
             this.dataTable.Size = new System.Drawing.Size(910, 613);
             this.dataTable.TabIndex = 0;
             this.dataTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTable_CellClick);
             // 
-            // studentlist
+            // alumnilist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 671);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.headerpannel);
-            this.Name = "studentlist";
+            this.Name = "alumnilist";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.studentlist_Load);
             this.headerpannel.ResumeLayout(false);
