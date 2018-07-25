@@ -1,0 +1,9 @@
+C:\Users\Prachi\Documents\Visual Studio 2010\Projects\Payments\Payments\bin\Debug\Computronics Form Template.exe
+C:\Users\Prachi\Documents\Visual Studio 2010\Projects\Payments\Payments\bin\Debug\Computronics Form Template.pdb
+C:\Users\Prachi\Documents\Visual Studio 2010\Projects\Payments\Payments\obj\x86\Debug\Payments.Properties.Resources.resources
+C:\Users\Prachi\Documents\Visual Studio 2010\Projects\Payments\Payments\obj\x86\Debug\Payments.csproj.GenerateResource.Cache
+C:\Users\Prachi\Documents\Visual Studio 2010\Projects\Payments\Payments\obj\x86\Debug\Computronics Form Template.exe
+C:\Users\Prachi\Documents\Visual Studio 2010\Projects\Payments\Payments\obj\x86\Debug\Computronics Form Template.pdb
+C:\Users\Prachi\Documents\Visual Studio 2010\Projects\Payments\Payments\bin\Debug\MySql.Data.dll
+C:\Users\Prachi\Documents\Visual Studio 2010\Projects\Payments\Payments\obj\x86\Debug\Payments.csprojResolveAssemblyReference.cache
+C:\Users\Prachi\Documents\Visual Studio 2010\Projects\Payments\Payments\obj\x86\Debug\Payments.lblCourseSelected.resources
