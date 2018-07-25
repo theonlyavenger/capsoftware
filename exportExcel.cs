@@ -17,6 +17,8 @@ namespace exportExcel
         string database;
         string uid;
         string pwd;
+        string formname;
+        string date;
         public exportExcel()
         {
             InitializeComponent();
@@ -24,6 +26,7 @@ namespace exportExcel
 
         private void btnExport_Click(object sender, EventArgs e)
         {
+            date = DateTime.Now.ToString("dd-MM-yyyy");
             Excel.Application xlApp;
             Excel.Workbook xlWorkBook;
             Excel.Worksheet xlWorkSheet;
@@ -44,7 +47,7 @@ namespace exportExcel
                 }
             }
 
-            xlWorkBook.SaveAs("csharp.net-informations.xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+            xlWorkBook.SaveAs(""+formname+"- "+date, Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
             xlWorkBook.Close(true, misValue, misValue);
             xlApp.Quit();
 
@@ -52,10 +55,12 @@ namespace exportExcel
             releaseObject(xlWorkBook);
             releaseObject(xlApp);
 
-            MessageBox.Show("Excel file created , you can find the file c:\\csharp.net-informations.xls");
+            MessageBox.Show("Excel file created in Documents");
         }
         private void admissionTableToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            formname = "Admission";
+            btnExport.Visible = true;
             dataTable.Rows.Clear();
             dataTable.Refresh();
             // Adding column with their properties
@@ -127,6 +132,8 @@ namespace exportExcel
 
         private void enquiryTableToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            formname = "Enquiry";
+            btnExport.Visible = true;
             dataTable.ColumnCount = 0;
             dataTable.Rows.Clear();
             dataTable.Refresh();
@@ -206,11 +213,13 @@ namespace exportExcel
 
         private void paymentsTableToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            formname = "Payments";
         }
 
         private void alumniTableToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            formname = "Alumni";
+            btnExport.Visible = true;
             dataTable.Rows.Clear();
             dataTable.Refresh();
             // Adding column with their properties
@@ -299,7 +308,8 @@ namespace exportExcel
 
         private void exportExcel_Load(object sender, EventArgs e)
         {
-            InitializeDb(); 
+            InitializeDb();
+            btnExport.Visible = false;
         }
 
         private void InitializeDb()
