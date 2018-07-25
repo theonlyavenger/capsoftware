@@ -1,0 +1,7 @@
+C:\Users\manoj\Computronics\analytics\analytics\bin\Debug\Computronics Form Template.exe
+C:\Users\manoj\Computronics\analytics\analytics\bin\Debug\Computronics Form Template.pdb
+C:\Users\manoj\Computronics\analytics\analytics\obj\x86\Debug\analytics.analytics.resources
+C:\Users\manoj\Computronics\analytics\analytics\obj\x86\Debug\analytics.Properties.Resources.resources
+C:\Users\manoj\Computronics\analytics\analytics\obj\x86\Debug\analytics.csproj.GenerateResource.Cache
+C:\Users\manoj\Computronics\analytics\analytics\obj\x86\Debug\Computronics Form Template.exe
+C:\Users\manoj\Computronics\analytics\analytics\obj\x86\Debug\Computronics Form Template.pdb
