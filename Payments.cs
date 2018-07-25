@@ -54,7 +54,7 @@ namespace Payments
         private void InitializeDb()
         {
             server = "localhost";
-            database = "c#project";
+            database = "computronics_admission_process";
             uid = "root";
             pwd = "";
 
@@ -77,7 +77,7 @@ namespace Payments
                 con.Open();
                 query = "select stud_id, stud_name, stud_pno, stud_courseSelected, stud_courseFee from student where stud_id = (select max(stud_id) from student)";
                 cmd = new MySqlCommand(query, con);
-                 
+
                 reader = cmd.ExecuteReader();
 
                 if (reader.Read())
@@ -88,21 +88,21 @@ namespace Payments
                     lblStudCourseSelected.Text = reader["stud_courseSelected"].ToString();
                     lblCoursefee.Text = reader["stud_courseFee"].ToString();
                 }
-                else
-                {
-                    con.Close();
-                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("This is the exception which has occured" + ex);
+                MessageBox.Show("This is the exception which has occured" + ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
 
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            tbAmountPaid.Enabled = false;
+            //tbAmountPaid.Enabled = false;
             var courseFee = 0;
             var amountPaid = 0;
             var remainingAmount = 0;
@@ -111,18 +111,24 @@ namespace Payments
 
             remainingAmount = courseFee - amountPaid;
 
-            lblRemainingAmount.Text = remainingAmount.ToString();
+            
 
-            if (remainingAmount != 0)
+            if (courseFee < amountPaid)
             {
+                MessageBox.Show("amount paid must be less or equal to than course fee");
+                tbAmountPaid.Focus();
+            }
+            else if(remainingAmount != 0)
+            {                
                 lblPaymentStatus.Text = "Pending";
                 btnSubmit.Enabled = false;
-                
+                lblRemainingAmount.Text = remainingAmount.ToString();
             }
             else
             {
                 lblPaymentStatus.Text = "Paid";
                 btnSubmit.Enabled = false;
+                lblRemainingAmount.Text = remainingAmount.ToString();
             }
         }
     }
