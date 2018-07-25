@@ -41,7 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.aboutdevelopers = new System.Windows.Forms.Button();
             this.btnlogout = new System.Windows.Forms.Button();
@@ -49,7 +49,7 @@
             this.centerpanel = new System.Windows.Forms.Panel();
             this.btnEnquiry = new System.Windows.Forms.Button();
             this.btnAdmission = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnPayments = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.notify = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -99,7 +99,7 @@
             this.leftpanel.Controls.Add(this.label2);
             this.leftpanel.Controls.Add(this.button13);
             this.leftpanel.Controls.Add(this.button8);
-            this.leftpanel.Controls.Add(this.button12);
+            this.leftpanel.Controls.Add(this.btnExport);
             this.leftpanel.Controls.Add(this.button9);
             this.leftpanel.Controls.Add(this.aboutdevelopers);
             this.leftpanel.Controls.Add(this.btnlogout);
@@ -209,20 +209,21 @@
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = false;
             // 
-            // button12
+            // btnExport
             // 
-            this.button12.BackColor = System.Drawing.Color.Transparent;
-            this.button12.BackgroundImage = global::Dashboard.Properties.Resources.icons8_microsoft_excel_64;
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(13, 129);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(64, 39);
-            this.button12.TabIndex = 0;
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.UseVisualStyleBackColor = false;
+            this.btnExport.BackColor = System.Drawing.Color.Transparent;
+            this.btnExport.BackgroundImage = global::Dashboard.Properties.Resources.icons8_microsoft_excel_64;
+            this.btnExport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExport.FlatAppearance.BorderSize = 0;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.Location = new System.Drawing.Point(13, 129);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(64, 39);
+            this.btnExport.TabIndex = 0;
+            this.btnExport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // button9
             // 
@@ -281,7 +282,7 @@
             this.centerpanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.centerpanel.Controls.Add(this.btnEnquiry);
             this.centerpanel.Controls.Add(this.btnAdmission);
-            this.centerpanel.Controls.Add(this.button6);
+            this.centerpanel.Controls.Add(this.btnPayments);
             this.centerpanel.Controls.Add(this.button5);
             this.centerpanel.Controls.Add(this.notify);
             this.centerpanel.Controls.Add(this.button3);
@@ -325,19 +326,20 @@
             this.btnAdmission.UseVisualStyleBackColor = false;
             this.btnAdmission.Click += new System.EventHandler(this.btnAdmission_Click);
             // 
-            // button6
+            // btnPayments
             // 
-            this.button6.AutoSize = true;
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(529, 44);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(216, 144);
-            this.button6.TabIndex = 25;
-            this.button6.Text = "PAYMENTS";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnPayments.AutoSize = true;
+            this.btnPayments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnPayments.FlatAppearance.BorderSize = 0;
+            this.btnPayments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayments.Location = new System.Drawing.Point(529, 44);
+            this.btnPayments.Name = "btnPayments";
+            this.btnPayments.Size = new System.Drawing.Size(216, 144);
+            this.btnPayments.TabIndex = 25;
+            this.btnPayments.Text = "PAYMENTS";
+            this.btnPayments.UseVisualStyleBackColor = false;
+            this.btnPayments.Click += new System.EventHandler(this.btnPayments_Click);
             // 
             // button5
             // 
@@ -488,7 +490,7 @@
         private System.Windows.Forms.Panel leftpanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.Button btnlogout;
         private System.Windows.Forms.Panel centerpanel;
         private System.Windows.Forms.Panel bottompanel;
@@ -496,7 +498,7 @@
         private System.Windows.Forms.Label about;
         private System.Windows.Forms.Button btnEnquiry;
         private System.Windows.Forms.Button btnAdmission;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnPayments;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button notify;
         private System.Windows.Forms.Button button3;

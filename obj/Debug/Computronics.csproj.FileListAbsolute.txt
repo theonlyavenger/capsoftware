@@ -18,3 +18,5 @@ C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Softwar
 C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.aboutdevelopers.resources
 C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.alumniCompany.resources
 C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.alumnilist.resources
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.Payments.resources
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.exportExcel.resources

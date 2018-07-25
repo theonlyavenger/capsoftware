@@ -107,8 +107,17 @@ namespace Dashboard
             alumni.Show();
         }
 
+        private void btnPayments_Click(object sender, EventArgs e)
+        {
+            Payments payments = new Payments();
+            payments.Show();
+        }
 
-       
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            exportExcel excel = new exportExcel();
+            excel.Show();
+        }   
        
 
         /*private void resize()

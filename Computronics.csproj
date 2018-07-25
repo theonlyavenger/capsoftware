@@ -37,6 +37,9 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\MySql.Data.dll</HintPath>
@@ -104,11 +107,23 @@
     <Compile Include="enquirylist.designer.cs">
       <DependentUpon>enquirylist.cs</DependentUpon>
     </Compile>
+    <Compile Include="exportExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="exportExcel.designer.cs">
+      <DependentUpon>exportExcel.cs</DependentUpon>
+    </Compile>
     <Compile Include="notification.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="notification.designer.cs">
       <DependentUpon>notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments.designer.cs">
+      <DependentUpon>Payments.cs</DependentUpon>
     </Compile>
     <Compile Include="studentinfo.cs">
       <SubType>Form</SubType>
@@ -151,8 +166,14 @@
     <EmbeddedResource Include="enquirylist.resx">
       <DependentUpon>enquirylist.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="exportExcel.resx">
+      <DependentUpon>exportExcel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="notification.resx">
       <DependentUpon>notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments.resx">
+      <DependentUpon>Payments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="studentinfo.resx">
       <DependentUpon>studentinfo.cs</DependentUpon>
