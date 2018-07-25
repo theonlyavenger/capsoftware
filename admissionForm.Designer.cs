@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbImage = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblLocIdProof = new System.Windows.Forms.Label();
             this.lblLocPhoto = new System.Windows.Forms.Label();
@@ -86,7 +86,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.headerPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -123,14 +123,14 @@
             this.label2.TabIndex = 59;
             this.label2.Text = "Form No.";
             // 
-            // pictureBox1
+            // pbImage
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1064, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(102, 106);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 60;
-            this.pictureBox1.TabStop = false;
+            this.pbImage.Location = new System.Drawing.Point(1064, 6);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.Size = new System.Drawing.Size(102, 106);
+            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImage.TabIndex = 60;
+            this.pbImage.TabStop = false;
             // 
             // panel2
             // 
@@ -185,7 +185,7 @@
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.pbImage);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 58);
@@ -425,7 +425,7 @@
             // 
             this.rbFriends.AutoSize = true;
             this.rbFriends.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFriends.Location = new System.Drawing.Point(466, 570);
+            this.rbFriends.Location = new System.Drawing.Point(464, 568);
             this.rbFriends.Name = "rbFriends";
             this.rbFriends.Size = new System.Drawing.Size(80, 24);
             this.rbFriends.TabIndex = 91;
@@ -513,15 +513,12 @@
             this.cbCourseSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCourseSelected.FormattingEnabled = true;
             this.cbCourseSelected.Items.AddRange(new object[] {
-            "c",
-            "c++",
-            "java",
-            "python",
-            "c#"});
+            "SELECT"});
             this.cbCourseSelected.Location = new System.Drawing.Point(260, 517);
             this.cbCourseSelected.Name = "cbCourseSelected";
             this.cbCourseSelected.Size = new System.Drawing.Size(201, 28);
             this.cbCourseSelected.TabIndex = 83;
+            this.cbCourseSelected.SelectedIndexChanged += new System.EventHandler(this.cbCourseSelected_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -599,6 +596,7 @@
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(205, 26);
             this.dtpDOB.TabIndex = 75;
+            this.dtpDOB.ValueChanged += new System.EventHandler(this.dtpDOB_ValueChanged_1);
             // 
             // label9
             // 
@@ -746,7 +744,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -762,7 +760,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbImage;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblFormNo;
         private System.Windows.Forms.Button btnSubmitform;

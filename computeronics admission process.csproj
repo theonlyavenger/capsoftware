@@ -49,16 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdmissionForm.cs">
+    <Compile Include="admissionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>AdmissionForm.cs</DependentUpon>
+    <Compile Include="admissionForm.Designer.cs">
+      <DependentUpon>admissionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdmissionForm.resx">
-      <DependentUpon>AdmissionForm.cs</DependentUpon>
+    <EmbeddedResource Include="admissionForm.resx">
+      <DependentUpon>admissionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

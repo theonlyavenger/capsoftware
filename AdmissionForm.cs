@@ -35,14 +35,13 @@ namespace computeronics_admission_process
         public admissionForm()
         {
             InitializeComponent();
-
         }
 
         //function to initialize database
         private void InitializeDb()
         {
             server = "localhost";
-            database = "c#project";
+            database = "computronics_admission_process";
             uid = "root";
             pwd = "";
 
@@ -88,7 +87,7 @@ namespace computeronics_admission_process
             }
             catch (Exception ex)
             {
-                MessageBox.Show("" + ex);
+                MessageBox.Show("" + ex.Message);
             }
             finally
             {
@@ -96,19 +95,71 @@ namespace computeronics_admission_process
             }
         }
 
-        
+        //function to store data into combo box
+        private void comboBoxData()
+        {
+            try
+            {
+                string Sql = "select course_name from course group by course_name";
+                con.Open();
+                cmd = new MySqlCommand(Sql, con);
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    cbCourseSelected.Items.Add(reader[0]);
+
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(" " +ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        //function to store data in course_fees
+        private void cbCourseSelected_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string course = cbCourseSelected.Text;
+                string Sql = "select course_fees from course where course_name = '"+course+"'";
+                con.Open();
+                cmd = new MySqlCommand(Sql, con);
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    tbCoursefee.Text = reader["course_fees"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(" " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            tbAge.ReadOnly = true;
+            tbAge.Enabled = false;
             resize();
             MaximizeBox = false;
 
             InitializeDb();
             formNumber();
-
-            cbCourseSelected.SelectedIndex = 0;
-         
+            comboBoxData();
+            //cbCourseSelected.SelectedIndex = 0;        
         }
 
 
@@ -176,7 +227,7 @@ namespace computeronics_admission_process
             }
             catch (Exception ex)
             {
-                MessageBox.Show("" + ex);
+                MessageBox.Show("" + ex.Message);
             }
             finally
             {
@@ -194,7 +245,7 @@ namespace computeronics_admission_process
             {
                 string picLoc1 = dlg.FileName.ToString();
                 lblLocPhoto.Text = picLoc1;
-                pictureBox1.ImageLocation = picLoc1;
+                pbImage.ImageLocation = picLoc1;
                 insertImage();
             }
         }
@@ -298,7 +349,7 @@ namespace computeronics_admission_process
             }
             catch (Exception ex)
             {
-                MessageBox.Show("" + ex);
+                MessageBox.Show("" + ex.Message);
             }
         }
 
@@ -322,7 +373,7 @@ namespace computeronics_admission_process
             }
             catch (Exception ex)
             {
-                MessageBox.Show("" + ex);
+                MessageBox.Show("" + ex.Message);
             }
         }
 
@@ -403,20 +454,22 @@ namespace computeronics_admission_process
             return bStatus;
         }
 
-        private void dtpDOB_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void tbPhone_TextChanged(object sender, EventArgs e)
         {
+            if (tbPhone.Text.Length == 10)
+            {
+                tbCell.Focus();
+            }
 
         }
 
-        
+        private void dtpDOB_ValueChanged_1(object sender, EventArgs e)
+        {
+            int Age = DateTime.Today.Year - dtpDOB.Value.Year; // CurrentYear - BirthDate
 
-        
-        
+            tbAge.Text = Age.ToString();
+
+        }    
         
     }
 }
