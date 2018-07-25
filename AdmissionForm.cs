@@ -100,11 +100,15 @@ namespace computeronics_admission_process
         private void Form1_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+            tbFname.Focus();
+            tbAge.ReadOnly = true;
             resize();
             MaximizeBox = false;
 
             InitializeDb();
             formNumber();
+
+            cbCourseSelected.SelectedIndex = 0;
          
         }
 
@@ -161,7 +165,7 @@ namespace computeronics_admission_process
         private void btnSubmitform_Click(object sender, EventArgs e)
         {
 
-            name = tbFname.Text + " " + tbLname.Text;
+            name = tbLname.Text + " " + tbFname.Text;
             try
             {
                 query = "insert into student(stud_photo,stud_name,stud_address,stud_pno,stud_cell,stud_email,stud_gender,stud_dob,stud_age,stud_educationpersuing,stud_branch,stud_college,stud_courseSelected,stud_courseFee,stud_details_of_work,stud_reference,stud_doj,stud_place,stud_idproof) values(@IMG,'" + name + "','" + tbAddress.Text + "','" + tbPhone.Text + "','" + tbCell.Text + "','" + tbEmail.Text + "','" + radioGender + "','" + dtpDOB.Text + "','" + tbAge.Text + "','" + tbEducationpersuing.Text + "','" + tbBranch.Text + "','" + tbCollege.Text + "','" + cbCourseSelected.Text + "','" + tbCoursefee.Text + "','" + tbDetailsOfWork.Text + "','" + radioReferences + "','" + dtpDoj.Text + "','" + tbPlace.Text + "',@IMG2)";
@@ -218,13 +222,14 @@ namespace computeronics_admission_process
         private bool ValidateFName()
         {
             bool bStatus = true;
-            if (tbFname.Text == "")
+            if (tbLname.Text == "")
             {
-                ep.SetError(tbFname, "Please enter your Name");
+                ep.SetError(tbLname, "Please enter your Name");
+                tbLname.Focus();
                 bStatus = false;
             }
             else
-                ep.SetError(tbFname, "");
+                ep.Clear();
             return bStatus;
         }
 
@@ -237,13 +242,14 @@ namespace computeronics_admission_process
         private bool ValidateLName()
         {
             bool bStatus = true;
-            if (tbLname.Text == "")
+            if (tbFname.Text == "")
             {
-                ep.SetError(tbLname, "Please enter your Name");
+                ep.SetError(tbFname, "Please enter your Name");
+                tbFname.Focus();
                 bStatus = false;
             }
             else
-                ep.SetError(tbLname, "");
+                ep.Clear();
             return bStatus;
         }
 
@@ -259,10 +265,11 @@ namespace computeronics_admission_process
             if (tbAddress.Text == "")
             {
                 ep.SetError(tbAddress, "Please enter your Name");
+                tbAddress.Focus();
                 bStatus = false;
             }
             else
-                ep.SetError(tbAddress, "");
+                ep.Clear();
             return bStatus;
         }
 
@@ -271,7 +278,7 @@ namespace computeronics_admission_process
         {
             try
             {
-               string pattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z]*@[0-9a-zA-Z]*[-\\w]\\.)+[a-zA-Z]{2-9}$)";
+               string pattern = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
                 if (Regex.IsMatch(tbEmail.Text, pattern))
                 {
                     ep.Clear();
@@ -279,8 +286,10 @@ namespace computeronics_admission_process
                 else
                 {
                     ep.SetError(this.tbEmail, "Please provide valid email address");
+                    tbEmail.Focus();
                     return;
-}
+                }
+
             }
             catch (Exception ex)
             {
@@ -293,14 +302,16 @@ namespace computeronics_admission_process
         {
             try
             {
-                string pattern = "^([0-9]{9})$";
+                string pattern = @"(?<!\d)\d{10}(?!\d)";             
                 if (Regex.IsMatch(tbPhone.Text, pattern))
                 {
                     ep.Clear();
+                    
                 }
                 else
                 {
                     ep.SetError(this.tbPhone, "Phone Number must of be 10 digits");
+                    tbPhone.Focus();
                     return;
                 }
             }
@@ -321,10 +332,11 @@ namespace computeronics_admission_process
             if (tbEducationpersuing.Text == "")
             {
                 ep.SetError(tbEducationpersuing, "Please enter Education Persuing");
+                tbEducationpersuing.Focus();
                 bStatus = false;
             }
             else
-                ep.SetError(tbEducationpersuing, "");
+                ep.Clear();
             return bStatus;
         }
       
@@ -340,10 +352,11 @@ namespace computeronics_admission_process
             if (tbBranch.Text == "")
             {
                 ep.SetError(tbBranch, "Please enter branch");
+                tbBranch.Focus();
                 bStatus = false;
             }
             else
-                ep.SetError(tbBranch, "");
+                ep.Clear();
             return bStatus;
         }
 
@@ -358,10 +371,11 @@ namespace computeronics_admission_process
             if (tbCollege.Text == "")
             {
                 ep.SetError(tbCollege, "Please enter your college");
+                tbCollege.Focus();
                 bStatus = false;
             }
             else
-                ep.SetError(tbCollege, "");
+                ep.Clear();
             return bStatus;
         }
 
@@ -376,11 +390,29 @@ namespace computeronics_admission_process
             if (tbPlace.Text == "")
             {
                 ep.SetError(tbPlace, "Please enter your place");
+                tbPlace.Focus();
                 bStatus = false;
             }
             else
-                ep.SetError(tbPlace, "");
+                ep.Clear();
             return bStatus;
+        }
+
+        private void dtpDOB_ValueChanged(object sender, EventArgs e)
+        {
+            int Age = DateTime.Today.Year - dtpDOB.Value.Year; // CurrentYear - BirthDate
+
+            tbAge.Text = Age.ToString();
+        }
+
+        private void tbPhone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         
