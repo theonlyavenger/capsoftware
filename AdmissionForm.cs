@@ -100,7 +100,6 @@ namespace computeronics_admission_process
         private void Form1_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            tbFname.Focus();
             tbAge.ReadOnly = true;
             resize();
             MaximizeBox = false;
@@ -165,7 +164,7 @@ namespace computeronics_admission_process
         private void btnSubmitform_Click(object sender, EventArgs e)
         {
 
-            name = tbLname.Text + " " + tbFname.Text;
+            name = tbFname.Text + " " + tbLname.Text;
             try
             {
                 query = "insert into student(stud_photo,stud_name,stud_address,stud_pno,stud_cell,stud_email,stud_gender,stud_dob,stud_age,stud_educationpersuing,stud_branch,stud_college,stud_courseSelected,stud_courseFee,stud_details_of_work,stud_reference,stud_doj,stud_place,stud_idproof) values(@IMG,'" + name + "','" + tbAddress.Text + "','" + tbPhone.Text + "','" + tbCell.Text + "','" + tbEmail.Text + "','" + radioGender + "','" + dtpDOB.Text + "','" + tbAge.Text + "','" + tbEducationpersuing.Text + "','" + tbBranch.Text + "','" + tbCollege.Text + "','" + cbCourseSelected.Text + "','" + tbCoursefee.Text + "','" + tbDetailsOfWork.Text + "','" + radioReferences + "','" + dtpDoj.Text + "','" + tbPlace.Text + "',@IMG2)";
@@ -222,14 +221,17 @@ namespace computeronics_admission_process
         private bool ValidateFName()
         {
             bool bStatus = true;
-            if (tbLname.Text == "")
+            if (tbFname.Text == "")
             {
-                ep.SetError(tbLname, "Please enter your Name");
-                tbLname.Focus();
+                ep.SetError(tbFname, "Please enter your Name");
+                tbFname.Focus();
                 bStatus = false;
             }
             else
+            {
                 ep.Clear();
+                tbLname.Focus();
+            }
             return bStatus;
         }
 
@@ -242,14 +244,17 @@ namespace computeronics_admission_process
         private bool ValidateLName()
         {
             bool bStatus = true;
-            if (tbFname.Text == "")
+            if (tbLname.Text == "")
             {
-                ep.SetError(tbFname, "Please enter your Name");
-                tbFname.Focus();
+                ep.SetError(tbLname, "Please enter your Name");
+                tbLname.Focus();
                 bStatus = false;
             }
             else
+            {
                 ep.Clear();
+                tbAddress.Focus();
+            }
             return bStatus;
         }
 
@@ -400,17 +405,10 @@ namespace computeronics_admission_process
 
         private void dtpDOB_ValueChanged(object sender, EventArgs e)
         {
-            int Age = DateTime.Today.Year - dtpDOB.Value.Year; // CurrentYear - BirthDate
 
-            tbAge.Text = Age.ToString();
         }
 
         private void tbPhone_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

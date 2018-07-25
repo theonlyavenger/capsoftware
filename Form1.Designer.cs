@@ -45,7 +45,7 @@
             this.tbOthers = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
-            this.tbFname = new System.Windows.Forms.TextBox();
+            this.tbLname = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblFormNo = new System.Windows.Forms.Label();
@@ -80,7 +80,7 @@
             this.tbCell = new System.Windows.Forms.TextBox();
             this.tbPhone = new System.Windows.Forms.TextBox();
             this.tbAddress = new System.Windows.Forms.TextBox();
-            this.tbLname = new System.Windows.Forms.TextBox();
+            this.tbFname = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -136,8 +136,6 @@
             // 
             this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.lblLocIdProof);
-            this.panel2.Controls.Add(this.tbFname);
-            this.panel2.Controls.Add(this.tbLname);
             this.panel2.Controls.Add(this.lblLocPhoto);
             this.panel2.Controls.Add(this.tbAge);
             this.panel2.Controls.Add(this.label24);
@@ -147,6 +145,7 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.tbOthers);
             this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.tbLname);
             this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.lblFormNo);
@@ -181,6 +180,7 @@
             this.panel2.Controls.Add(this.tbCell);
             this.panel2.Controls.Add(this.tbPhone);
             this.panel2.Controls.Add(this.tbAddress);
+            this.panel2.Controls.Add(this.tbFname);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label6);
@@ -192,7 +192,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1380, 701);
             this.panel2.TabIndex = 58;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // lblLocIdProof
             // 
@@ -316,14 +315,14 @@
             this.label22.TabIndex = 79;
             this.label22.Text = "EDUCATIONAL DETAILS:";
             // 
-            // tbFname
+            // tbLname
             // 
-            this.tbFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFname.Location = new System.Drawing.Point(260, 208);
-            this.tbFname.Name = "tbFname";
-            this.tbFname.Size = new System.Drawing.Size(368, 26);
-            this.tbFname.TabIndex = 101;
-            this.tbFname.Validating += new System.ComponentModel.CancelEventHandler(this.tbLname_Validating);
+            this.tbLname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbLname.Location = new System.Drawing.Point(776, 207);
+            this.tbLname.Name = "tbLname";
+            this.tbLname.Size = new System.Drawing.Size(431, 26);
+            this.tbLname.TabIndex = 101;
+            this.tbLname.Validating += new System.ComponentModel.CancelEventHandler(this.tbLname_Validating);
             // 
             // label21
             // 
@@ -600,7 +599,6 @@
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(205, 26);
             this.dtpDOB.TabIndex = 75;
-            this.dtpDOB.ValueChanged += new System.EventHandler(this.dtpDOB_ValueChanged);
             // 
             // label9
             // 
@@ -684,14 +682,14 @@
             this.tbAddress.TabIndex = 67;
             this.tbAddress.Validating += new System.ComponentModel.CancelEventHandler(this.tbAddress_Validating);
             // 
-            // tbLname
+            // tbFname
             // 
-            this.tbLname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLname.Location = new System.Drawing.Point(768, 208);
-            this.tbLname.Name = "tbLname";
-            this.tbLname.Size = new System.Drawing.Size(440, 26);
-            this.tbLname.TabIndex = 66;
-            this.tbLname.Validating += new System.ComponentModel.CancelEventHandler(this.tbFname_Validating);
+            this.tbFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFname.Location = new System.Drawing.Point(260, 207);
+            this.tbFname.Name = "tbFname";
+            this.tbFname.Size = new System.Drawing.Size(363, 26);
+            this.tbFname.TabIndex = 66;
+            this.tbFname.Validating += new System.ComponentModel.CancelEventHandler(this.tbFname_Validating);
             // 
             // label5
             // 
@@ -798,7 +796,7 @@
         private System.Windows.Forms.TextBox tbCell;
         private System.Windows.Forms.TextBox tbPhone;
         private System.Windows.Forms.TextBox tbAddress;
-        private System.Windows.Forms.TextBox tbLname;
+        private System.Windows.Forms.TextBox tbFname;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
@@ -810,7 +808,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.RadioButton rbNewspaper;
-        private System.Windows.Forms.TextBox tbFname;
+        private System.Windows.Forms.TextBox tbLname;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button btnIdProof;
         private System.Windows.Forms.Label label20;
