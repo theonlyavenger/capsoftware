@@ -50,7 +50,7 @@
             this.btnEnquiry = new System.Windows.Forms.Button();
             this.btnAdmission = new System.Windows.Forms.Button();
             this.btnPayments = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnbatches = new System.Windows.Forms.Button();
             this.notify = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnStudentInfo = new System.Windows.Forms.Button();
@@ -283,7 +283,7 @@
             this.centerpanel.Controls.Add(this.btnEnquiry);
             this.centerpanel.Controls.Add(this.btnAdmission);
             this.centerpanel.Controls.Add(this.btnPayments);
-            this.centerpanel.Controls.Add(this.button5);
+            this.centerpanel.Controls.Add(this.btnbatches);
             this.centerpanel.Controls.Add(this.notify);
             this.centerpanel.Controls.Add(this.button3);
             this.centerpanel.Controls.Add(this.btnStudentInfo);
@@ -341,19 +341,20 @@
             this.btnPayments.UseVisualStyleBackColor = false;
             this.btnPayments.Click += new System.EventHandler(this.btnPayments_Click);
             // 
-            // button5
+            // btnbatches
             // 
-            this.button5.AutoSize = true;
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(65, 204);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(216, 144);
-            this.button5.TabIndex = 26;
-            this.button5.Text = "BATCHES";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnbatches.AutoSize = true;
+            this.btnbatches.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnbatches.FlatAppearance.BorderSize = 0;
+            this.btnbatches.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnbatches.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbatches.Location = new System.Drawing.Point(65, 204);
+            this.btnbatches.Name = "btnbatches";
+            this.btnbatches.Size = new System.Drawing.Size(216, 144);
+            this.btnbatches.TabIndex = 26;
+            this.btnbatches.Text = "BATCHES";
+            this.btnbatches.UseVisualStyleBackColor = false;
+            this.btnbatches.Click += new System.EventHandler(this.btnbatches_Click);
             // 
             // notify
             // 
@@ -499,7 +500,7 @@
         private System.Windows.Forms.Button btnEnquiry;
         private System.Windows.Forms.Button btnAdmission;
         private System.Windows.Forms.Button btnPayments;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnbatches;
         private System.Windows.Forms.Button notify;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnStudentInfo;

@@ -83,6 +83,18 @@
     <Compile Include="alumniList.designer.cs">
       <DependentUpon>alumniList.cs</DependentUpon>
     </Compile>
+    <Compile Include="batch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="batch.designer.cs">
+      <DependentUpon>batch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="batchlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="batchlist.designer.cs">
+      <DependentUpon>batchlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,7 +110,7 @@
     <Compile Include="enquiryform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="enquiryform.designer.cs">
+    <Compile Include="enquiryform.Designer.cs">
       <DependentUpon>enquiryform.cs</DependentUpon>
     </Compile>
     <Compile Include="enquirylist.cs">
@@ -153,6 +165,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="alumniList.resx">
       <DependentUpon>alumniList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="batch.resx">
+      <DependentUpon>batch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="batchlist.resx">
+      <DependentUpon>batchlist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
@@ -263,6 +281,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\downloaded.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chevron-right-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-forward-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-file-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

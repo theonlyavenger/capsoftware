@@ -103,6 +103,26 @@ namespace Dashboard.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cancel_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cancel-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_chevron_right_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-chevron-right-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_data_backup_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-data-backup-64", resourceCulture);
@@ -116,6 +136,26 @@ namespace Dashboard.Properties {
         internal static System.Drawing.Bitmap icons8_delete_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-delete-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_delete_file_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-delete-file-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_forward_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-forward-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

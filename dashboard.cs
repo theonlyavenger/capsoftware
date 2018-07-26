@@ -117,6 +117,12 @@ namespace Dashboard
         {
             exportExcel excel = new exportExcel();
             excel.Show();
+        }
+
+        private void btnbatches_Click(object sender, EventArgs e)
+        {
+            batch batch = new batch();
+            batch.Show();
         }   
        
 
