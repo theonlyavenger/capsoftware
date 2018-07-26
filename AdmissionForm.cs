@@ -25,7 +25,6 @@ namespace computeronics_admission_process
         string pwd;
         string radioGender;
         string query;
-        string radioReferences;
         string name;
         MySqlCommand cmd;
         byte[] imagebt;
@@ -152,13 +151,19 @@ namespace computeronics_admission_process
         private void Form1_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+            tbOthers.Enabled = false;
             tbAge.Enabled = false;
+            tbCoursefee.Enabled = false;
             resize();
             MaximizeBox = false;
+
+            dtpDOB.MaxDate = DateTime.Now;
+            dtpDoj.MaxDate = DateTime.Now;
 
             InitializeDb();
             formNumber();
             comboBoxData();
+
             //cbCourseSelected.SelectedIndex = 0;        
         }
 
@@ -171,26 +176,6 @@ namespace computeronics_admission_process
         private void rbFemale_CheckedChanged(object sender, EventArgs e)
         {
             radioGender = rbFemale.Text;
-        }
-
-        private void rbAdvertisement_CheckedChanged(object sender, EventArgs e)
-        {
-            radioReferences = rbAdvertisement.Text;
-        }
-
-        private void rbFriends_CheckedChanged(object sender, EventArgs e)
-        {
-            radioReferences = rbFriends.Text;
-        }
-
-        private void rbNewspaper_CheckedChanged(object sender, EventArgs e)
-        {
-            radioReferences = rbNewspaper.Text;
-        }
-
-        private void rbOthers_CheckedChanged(object sender, EventArgs e)
-        {
-            radioReferences = tbOthers.Text;
         }
 
         //function to insert image in database
@@ -209,32 +194,143 @@ namespace computeronics_admission_process
             FileStream fstream2 = new FileStream(this.lblLocIdProof.Text, FileMode.Open, FileAccess.Read);
             BinaryReader br2 = new BinaryReader(fstream2);
             idproofbt = br2.ReadBytes((int)fstream2.Length);
+
+           /* Bitmap bitmp = new Bitmap(btnIdProof.PostedFile.InputStream);  
+                            if (bitmp.Width > 100 | bitmp.Height > 1000)
+                            {  
+                                    MessageBox.Show("Image is not in proper dimension");  
+                                    //Label1.ForeColor = System.Drawing.Color.Red;                                   
+                            }     */                       
         }
+
+        private bool validation()
+        {
+            if (tbFname.Text == "")
+            {
+                MessageBox.Show("Please enter first name");
+                tbFname.Focus();
+                return false;
+            }
+            else if (tbLname.Text == "")
+            {
+                MessageBox.Show( "please enter last name");
+                tbLname.Focus();
+                return false;
+            }
+            else if (tbAddress.Text == "")
+            {
+                MessageBox.Show("please enter address");
+                tbAddress.Focus();
+                return false;
+            }
+            else if (tbPhone.Text == "")
+            {
+                MessageBox.Show("please enter phone number");
+                tbPhone.Focus();
+                return false;
+            }
+            else if (tbCell.Text == "")
+            {
+                MessageBox.Show("please enter cell number");
+                tbCell.Focus();
+                return false;
+            }
+            else if (tbEmail.Text == "")
+            {
+                MessageBox.Show("please enter email");
+                tbEmail.Focus();
+                return false;
+            }
+            else if (dtpDOB.Text == "")
+            {
+                MessageBox.Show("please enter date of birth");
+                dtpDOB.Focus();
+                return false;
+            }
+            else if (tbEducationpersuing.Text == "")
+            {
+                MessageBox.Show("please enter education persuing");
+                tbEducationpersuing.Focus();
+                return false;
+
+            }
+            else if (tbBranch.Text == "")
+            {
+                MessageBox.Show("please enter branch");
+                tbBranch.Focus();
+                return false;
+            }
+            else if (tbCollege.Text == "")
+            {
+                MessageBox.Show("please enter college");
+                tbCollege.Focus();
+                return false;
+            }
+            else if (cbCourseSelected.Text == "")
+            {
+                MessageBox.Show("please select a course");
+                cbCourseSelected.Focus();
+                return false;
+            }
+            else if (cbReferences.Text == "")
+            {
+                MessageBox.Show("please select references");
+                cbReferences.Focus();
+                return false;
+            }
+            else if (tbPlace.Text == "")
+            {
+                MessageBox.Show("please enter place");
+                tbPlace.Focus();
+                return false;
+            }
+            else if(!(rbMale.Checked || rbFemale.Checked))
+            {
+                MessageBox.Show("Select an option for gender");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+
 
         //function called when submit button is clicked
         private void btnSubmitform_Click(object sender, EventArgs e)
         {
-
+            bool result;
             name = tbFname.Text + " " + tbLname.Text;
-            try
+            result = validation();
+            if (result == true)
             {
-                query = "insert into student(stud_photo,stud_name,stud_address,stud_pno,stud_cell,stud_email,stud_gender,stud_dob,stud_age,stud_educationpersuing,stud_branch,stud_college,stud_courseSelected,stud_courseFee,stud_details_of_work,stud_reference,stud_doj,stud_place,stud_idproof) values(@IMG,'" + name + "','" + tbAddress.Text + "','" + tbPhone.Text + "','" + tbCell.Text + "','" + tbEmail.Text + "','" + radioGender + "','" + dtpDOB.Text + "','" + tbAge.Text + "','" + tbEducationpersuing.Text + "','" + tbBranch.Text + "','" + tbCollege.Text + "','" + cbCourseSelected.Text + "','" + tbCoursefee.Text + "','" + tbDetailsOfWork.Text + "','" + radioReferences + "','" + dtpDoj.Text + "','" + tbPlace.Text + "',@IMG2)";
-                con.Open();
-                cmd = new MySqlCommand(query, con);
-                cmd.Parameters.Add(new MySqlParameter("@IMG2", idproofbt));
-                cmd.Parameters.Add(new MySqlParameter("@IMG", imagebt));
-                cmd.ExecuteNonQuery();                
+                try
+                {
+                    if (cbReferences.Text == "Others")
+                    {
+                        query = "insert into student(stud_photo,stud_name,stud_address,stud_pno,stud_cell,stud_email,stud_gender,stud_dob,stud_age,stud_educationpersuing,stud_branch,stud_college,stud_courseSelected,stud_courseFee,stud_details_of_work,stud_reference,stud_doj,stud_place,stud_idproof) values(@IMG,'" + name + "','" + tbAddress.Text + "','" + tbPhone.Text + "','" + tbCell.Text + "','" + tbEmail.Text + "','" + radioGender + "','" + dtpDOB.Text + "','" + tbAge.Text + "','" + tbEducationpersuing.Text + "','" + tbBranch.Text + "','" + tbCollege.Text + "','" + cbCourseSelected.Text + "','" + tbCoursefee.Text + "','" + tbDetailsOfWork.Text + "','" + tbOthers.Text + "','" + dtpDoj.Text + "','" + tbPlace.Text + "',@IMG2)";
+                    }
+                    else
+                    {
+                        query = "insert into student(stud_photo,stud_name,stud_address,stud_pno,stud_cell,stud_email,stud_gender,stud_dob,stud_age,stud_educationpersuing,stud_branch,stud_college,stud_courseSelected,stud_courseFee,stud_details_of_work,stud_reference,stud_doj,stud_place,stud_idproof) values(@IMG,'" + name + "','" + tbAddress.Text + "','" + tbPhone.Text + "','" + tbCell.Text + "','" + tbEmail.Text + "','" + radioGender + "','" + dtpDOB.Text + "','" + tbAge.Text + "','" + tbEducationpersuing.Text + "','" + tbBranch.Text + "','" + tbCollege.Text + "','" + cbCourseSelected.Text + "','" + tbCoursefee.Text + "','" + tbDetailsOfWork.Text + "','" + cbReferences.Text + "','" + dtpDoj.Text + "','" + tbPlace.Text + "',@IMG2)";
+                    }
+                    con.Open();
+                    cmd = new MySqlCommand(query, con);
+                    cmd.Parameters.Add(new MySqlParameter("@IMG2", idproofbt));
+                    cmd.Parameters.Add(new MySqlParameter("@IMG", imagebt));
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("" + ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("" + ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
-            
-        }
+         }
     
         //upload button click function
         private void btnUploadPhoto_Click(object sender, EventArgs e)
@@ -264,69 +360,46 @@ namespace computeronics_admission_process
         }
 
 
-        //validating name
-        private void tbFname_Validating(object sender, CancelEventArgs e)
+       
+        private void dtpDOB_ValueChanged_1(object sender, EventArgs e)
         {
-            ValidateFName();
-        }
-        private bool ValidateFName()
-        {
-            bool bStatus = true;
-            if (tbFname.Text == "")
+            int ageYears = (DateTime.Today.Year - dtpDOB.Value.Year);// CurrentYear - BirthDate
+            int ageMonths = DateTime.Today.Month - dtpDOB.Value.Month;
+            int ageDays = DateTime.Today.Day - dtpDOB.Value.Day;
+            int age = 0;
+            if (ageMonths < 0)
             {
-                ep.SetError(tbFname, "Please enter your Name");
-                tbFname.Focus();
-                bStatus = false;
+                age = ageYears - 1;
+                tbAge.Text = age.ToString();
+            }
+            else if (ageMonths == 0)
+            {
+                if (ageDays < 0)
+                {
+                    age = ageYears - 1;
+                    tbAge.Text = age.ToString();
+                }
             }
             else
             {
-                ep.Clear();
-                tbLname.Focus();
-            }
-            return bStatus;
+                age = ageYears;
+                tbAge.Text = age.ToString();
+            }      
+           
         }
 
-        //validate last name
-        private void tbLname_Validating(object sender, CancelEventArgs e)
-        {
-            ValidateLName();
-        }
 
-        private bool ValidateLName()
+
+       
+
+        private void tbAge_TextChanged(object sender, EventArgs e)
         {
-            bool bStatus = true;
-            if (tbLname.Text == "")
+            int validAge = Convert.ToInt32(tbAge.Text);
+            if (validAge < 6)
             {
-                ep.SetError(tbLname, "Please enter your Name");
-                tbLname.Focus();
-                bStatus = false;
+                MessageBox.Show("Invalid age");
+                dtpDOB.Focus();
             }
-            else
-            {
-                ep.Clear();
-                tbAddress.Focus();
-            }
-            return bStatus;
-        }
-
-        //validating address
-        private void tbAddress_Validating(object sender, CancelEventArgs e)
-        {
-            ValidateAddress();
-        }
-
-        private bool ValidateAddress()
-        {
-            bool bStatus = true;
-            if (tbAddress.Text == "")
-            {
-                ep.SetError(tbAddress, "Please enter your Name");
-                tbAddress.Focus();
-                bStatus = false;
-            }
-            else
-                ep.Clear();
-            return bStatus;
         }
 
         //validating email
@@ -334,7 +407,7 @@ namespace computeronics_admission_process
         {
             try
             {
-               string pattern = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
+                string pattern = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
                 if (Regex.IsMatch(tbEmail.Text, pattern))
                 {
                     ep.Clear();
@@ -351,18 +424,21 @@ namespace computeronics_admission_process
             {
                 MessageBox.Show("" + ex.Message);
             }
+
+
+            //validate phone
+
         }
 
-        //validate phone
         private void tbPhone_Leave(object sender, EventArgs e)
         {
             try
             {
-                string pattern = @"(?<!\d)\d{10}(?!\d)";             
+                string pattern = @"(?<!\d)\d{10}(?!\d)";
                 if (Regex.IsMatch(tbPhone.Text, pattern))
                 {
                     ep.Clear();
-                    
+
                 }
                 else
                 {
@@ -377,99 +453,17 @@ namespace computeronics_admission_process
             }
         }
 
-        //validate education persuing
-        private void tbEducationpersuing_Validating(object sender, CancelEventArgs e)
+        private void cbReferences_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ValidateEducationPersuing();
-        }
-        private bool ValidateEducationPersuing()
-        {
-            bool bStatus = true;
-            if (tbEducationpersuing.Text == "")
+            string reference = cbReferences.Text;
+            if (reference == "Others")
             {
-                ep.SetError(tbEducationpersuing, "Please enter Education Persuing");
-                tbEducationpersuing.Focus();
-                bStatus = false;
+                tbOthers.Enabled = true;
             }
             else
-                ep.Clear();
-            return bStatus;
-        }
-      
-
-        //validate branch
-        private void tbBranch_Validating(object sender, CancelEventArgs e)
-        {
-            ValidateBranch();
-        }
-        private bool ValidateBranch()
-        {
-            bool bStatus = true;
-            if (tbBranch.Text == "")
             {
-                ep.SetError(tbBranch, "Please enter branch");
-                tbBranch.Focus();
-                bStatus = false;
+                tbOthers.Enabled = false;
             }
-            else
-                ep.Clear();
-            return bStatus;
         }
-
-        //validate college
-        private void tbCollege_Validating(object sender, CancelEventArgs e)
-        {
-            ValidateCollege();
-        }
-        private bool ValidateCollege()
-        {
-            bool bStatus = true;
-            if (tbCollege.Text == "")
-            {
-                ep.SetError(tbCollege, "Please enter your college");
-                tbCollege.Focus();
-                bStatus = false;
-            }
-            else
-                ep.Clear();
-            return bStatus;
-        }
-
-        //validate place
-        private void tbPlace_Validating(object sender, CancelEventArgs e)
-        {
-            ValidatePlace();
-        }
-        private bool ValidatePlace()
-        {
-            bool bStatus = true;
-            if (tbPlace.Text == "")
-            {
-                ep.SetError(tbPlace, "Please enter your place");
-                tbPlace.Focus();
-                bStatus = false;
-            }
-            else
-                ep.Clear();
-            return bStatus;
-        }
-
-        private void tbPhone_TextChanged(object sender, EventArgs e)
-        {
-            if (tbPhone.Text.Length == 10)
-            {
-                tbCell.Focus();
-            }
-
-        }
-
-        private void dtpDOB_ValueChanged_1(object sender, EventArgs e)
-        {
-            int Age = DateTime.Today.Year - dtpDOB.Value.Year; // CurrentYear - BirthDate
-
-            tbAge.Text = Age.ToString();
-
-        }    
-        
     }
 }

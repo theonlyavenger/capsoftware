@@ -33,13 +33,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pbImage = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cbReferences = new System.Windows.Forms.ComboBox();
             this.lblLocIdProof = new System.Windows.Forms.Label();
             this.lblLocPhoto = new System.Windows.Forms.Label();
             this.tbAge = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.btnIdProof = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
-            this.rbNewspaper = new System.Windows.Forms.RadioButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.tbOthers = new System.Windows.Forms.TextBox();
@@ -54,9 +54,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.dtpDoj = new System.Windows.Forms.DateTimePicker();
             this.label18 = new System.Windows.Forms.Label();
-            this.rbOthers = new System.Windows.Forms.RadioButton();
-            this.rbFriends = new System.Windows.Forms.RadioButton();
-            this.rbAdvertisement = new System.Windows.Forms.RadioButton();
             this.label17 = new System.Windows.Forms.Label();
             this.tbDetailsOfWork = new System.Windows.Forms.TextBox();
             this.btnUploadPhoto = new System.Windows.Forms.Button();
@@ -135,13 +132,13 @@
             // panel2
             // 
             this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.cbReferences);
             this.panel2.Controls.Add(this.lblLocIdProof);
             this.panel2.Controls.Add(this.lblLocPhoto);
             this.panel2.Controls.Add(this.tbAge);
             this.panel2.Controls.Add(this.label24);
             this.panel2.Controls.Add(this.btnIdProof);
             this.panel2.Controls.Add(this.label20);
-            this.panel2.Controls.Add(this.rbNewspaper);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.tbOthers);
             this.panel2.Controls.Add(this.panel3);
@@ -154,9 +151,6 @@
             this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.dtpDoj);
             this.panel2.Controls.Add(this.label18);
-            this.panel2.Controls.Add(this.rbOthers);
-            this.panel2.Controls.Add(this.rbFriends);
-            this.panel2.Controls.Add(this.rbAdvertisement);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Controls.Add(this.tbDetailsOfWork);
             this.panel2.Controls.Add(this.btnUploadPhoto);
@@ -193,6 +187,22 @@
             this.panel2.Size = new System.Drawing.Size(1380, 701);
             this.panel2.TabIndex = 58;
             // 
+            // cbReferences
+            // 
+            this.cbReferences.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbReferences.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbReferences.FormattingEnabled = true;
+            this.cbReferences.Items.AddRange(new object[] {
+            "Advertisement",
+            "Friends",
+            "Newspaper",
+            "Others"});
+            this.cbReferences.Location = new System.Drawing.Point(260, 568);
+            this.cbReferences.Name = "cbReferences";
+            this.cbReferences.Size = new System.Drawing.Size(200, 28);
+            this.cbReferences.TabIndex = 111;
+            this.cbReferences.SelectedIndexChanged += new System.EventHandler(this.cbReferences_SelectedIndexChanged);
+            // 
             // lblLocIdProof
             // 
             this.lblLocIdProof.AutoSize = true;
@@ -221,6 +231,7 @@
             this.tbAge.Name = "tbAge";
             this.tbAge.Size = new System.Drawing.Size(281, 26);
             this.tbAge.TabIndex = 108;
+            this.tbAge.TextChanged += new System.EventHandler(this.tbAge_TextChanged);
             // 
             // label24
             // 
@@ -256,19 +267,6 @@
             this.label20.TabIndex = 105;
             this.label20.Text = "Adhaar No.";
             // 
-            // rbNewspaper
-            // 
-            this.rbNewspaper.AutoSize = true;
-            this.rbNewspaper.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbNewspaper.Location = new System.Drawing.Point(620, 570);
-            this.rbNewspaper.Name = "rbNewspaper";
-            this.rbNewspaper.Size = new System.Drawing.Size(107, 24);
-            this.rbNewspaper.TabIndex = 104;
-            this.rbNewspaper.TabStop = true;
-            this.rbNewspaper.Text = "Newspaper";
-            this.rbNewspaper.UseVisualStyleBackColor = true;
-            this.rbNewspaper.CheckedChanged += new System.EventHandler(this.rbNewspaper_CheckedChanged);
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -291,7 +289,7 @@
             // tbOthers
             // 
             this.tbOthers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbOthers.Location = new System.Drawing.Point(926, 564);
+            this.tbOthers.Location = new System.Drawing.Point(568, 568);
             this.tbOthers.Name = "tbOthers";
             this.tbOthers.Size = new System.Drawing.Size(281, 26);
             this.tbOthers.TabIndex = 103;
@@ -322,7 +320,6 @@
             this.tbLname.Name = "tbLname";
             this.tbLname.Size = new System.Drawing.Size(431, 26);
             this.tbLname.TabIndex = 101;
-            this.tbLname.Validating += new System.ComponentModel.CancelEventHandler(this.tbLname_Validating);
             // 
             // label21
             // 
@@ -375,7 +372,6 @@
             this.tbPlace.Name = "tbPlace";
             this.tbPlace.Size = new System.Drawing.Size(281, 26);
             this.tbPlace.TabIndex = 96;
-            this.tbPlace.Validating += new System.ComponentModel.CancelEventHandler(this.tbPlace_Validating);
             // 
             // label19
             // 
@@ -396,7 +392,7 @@
             this.dtpDoj.Name = "dtpDoj";
             this.dtpDoj.Size = new System.Drawing.Size(201, 26);
             this.dtpDoj.TabIndex = 94;
-            this.dtpDoj.Value = new System.DateTime(2018, 7, 12, 0, 0, 0, 0);
+            this.dtpDoj.Value = new System.DateTime(2018, 7, 26, 0, 0, 0, 0);
             // 
             // label18
             // 
@@ -407,45 +403,6 @@
             this.label18.Size = new System.Drawing.Size(62, 40);
             this.label18.TabIndex = 93;
             this.label18.Text = "Date of\r\njoining";
-            // 
-            // rbOthers
-            // 
-            this.rbOthers.AutoSize = true;
-            this.rbOthers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbOthers.Location = new System.Drawing.Point(795, 570);
-            this.rbOthers.Name = "rbOthers";
-            this.rbOthers.Size = new System.Drawing.Size(75, 24);
-            this.rbOthers.TabIndex = 92;
-            this.rbOthers.TabStop = true;
-            this.rbOthers.Text = "Others";
-            this.rbOthers.UseVisualStyleBackColor = true;
-            this.rbOthers.CheckedChanged += new System.EventHandler(this.rbOthers_CheckedChanged);
-            // 
-            // rbFriends
-            // 
-            this.rbFriends.AutoSize = true;
-            this.rbFriends.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFriends.Location = new System.Drawing.Point(464, 568);
-            this.rbFriends.Name = "rbFriends";
-            this.rbFriends.Size = new System.Drawing.Size(80, 24);
-            this.rbFriends.TabIndex = 91;
-            this.rbFriends.TabStop = true;
-            this.rbFriends.Text = "Friends";
-            this.rbFriends.UseVisualStyleBackColor = true;
-            this.rbFriends.CheckedChanged += new System.EventHandler(this.rbFriends_CheckedChanged);
-            // 
-            // rbAdvertisement
-            // 
-            this.rbAdvertisement.AutoSize = true;
-            this.rbAdvertisement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbAdvertisement.Location = new System.Drawing.Point(260, 570);
-            this.rbAdvertisement.Name = "rbAdvertisement";
-            this.rbAdvertisement.Size = new System.Drawing.Size(129, 24);
-            this.rbAdvertisement.TabIndex = 90;
-            this.rbAdvertisement.TabStop = true;
-            this.rbAdvertisement.Text = "Advertisement";
-            this.rbAdvertisement.UseVisualStyleBackColor = true;
-            this.rbAdvertisement.CheckedChanged += new System.EventHandler(this.rbAdvertisement_CheckedChanged);
             // 
             // label17
             // 
@@ -537,7 +494,6 @@
             this.tbCollege.Name = "tbCollege";
             this.tbCollege.Size = new System.Drawing.Size(281, 26);
             this.tbCollege.TabIndex = 81;
-            this.tbCollege.Validating += new System.ComponentModel.CancelEventHandler(this.tbCollege_Validating);
             // 
             // label13
             // 
@@ -556,7 +512,6 @@
             this.tbBranch.Name = "tbBranch";
             this.tbBranch.Size = new System.Drawing.Size(213, 26);
             this.tbBranch.TabIndex = 79;
-            this.tbBranch.Validating += new System.ComponentModel.CancelEventHandler(this.tbBranch_Validating);
             // 
             // label12
             // 
@@ -575,7 +530,6 @@
             this.tbEducationpersuing.Name = "tbEducationpersuing";
             this.tbEducationpersuing.Size = new System.Drawing.Size(201, 26);
             this.tbEducationpersuing.TabIndex = 77;
-            this.tbEducationpersuing.Validating += new System.ComponentModel.CancelEventHandler(this.tbEducationpersuing_Validating);
             // 
             // label11
             // 
@@ -678,7 +632,6 @@
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.Size = new System.Drawing.Size(947, 55);
             this.tbAddress.TabIndex = 67;
-            this.tbAddress.Validating += new System.ComponentModel.CancelEventHandler(this.tbAddress_Validating);
             // 
             // tbFname
             // 
@@ -687,7 +640,6 @@
             this.tbFname.Name = "tbFname";
             this.tbFname.Size = new System.Drawing.Size(363, 26);
             this.tbFname.TabIndex = 66;
-            this.tbFname.Validating += new System.ComponentModel.CancelEventHandler(this.tbFname_Validating);
             // 
             // label5
             // 
@@ -768,9 +720,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.DateTimePicker dtpDoj;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.RadioButton rbOthers;
-        private System.Windows.Forms.RadioButton rbFriends;
-        private System.Windows.Forms.RadioButton rbAdvertisement;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox tbDetailsOfWork;
         private System.Windows.Forms.Button btnUploadPhoto;
@@ -805,7 +754,6 @@
         private System.Windows.Forms.TextBox tbOthers;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.RadioButton rbNewspaper;
         private System.Windows.Forms.TextBox tbLname;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button btnIdProof;
@@ -814,6 +762,7 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label lblLocPhoto;
         private System.Windows.Forms.Label lblLocIdProof;
+        private System.Windows.Forms.ComboBox cbReferences;
 
 
     }
