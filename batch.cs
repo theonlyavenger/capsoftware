@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Collections;
 
+
 namespace batches
 {
     public partial class batch : Form
@@ -18,6 +19,7 @@ namespace batches
         string database;
         string uid;
         string pwd;
+      
         public batch()
         {
             InitializeComponent();
@@ -59,7 +61,7 @@ namespace batches
                 while (reader.Read())
                 {
 
-                    clbdisplaylist.Items.Add(reader["stud_id"].ToString() + "   " + reader["stud_name"].ToString());//fetching & adding id & name to checkedlistbox
+                    clbdisplaylist.Items.Add( reader["stud_id"].ToString()+" "+reader["stud_name"].ToString());//fetching & adding id & name to checkedlistbox
                 }
             }
             catch (Exception ex)
@@ -99,50 +101,36 @@ namespace batches
             }
         }
 
-      /*  private void makeBatch()
+        private void makeBatch()
         {
-            ArrayList batch = new ArrayList();              
-                con.Open();
-                string query = "SELECT distinct course_name FROM course";
-                MySqlCommand cmd = new MySqlCommand(query, con);
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    batch.Add(reader["course_name"].ToString());
-                    //todo cmb box
-                }
-
-           // cmb chageevent 
-
-            foreach(string name in batch)
+           
+            try
             {
-                string q = "SELECT stud_id,stud_name,stud_courseSelected, FROM student where stud_courseSelected='"+name+"' ";
-                MySqlCommand comm = new MySqlCommand(q, con);
-                MySqlDataReader read = cmd.ExecuteReader();
+              con.Open();
+               foreach (string item in clbdisplaylist.CheckedItems)//for each checked item in the listbox
+            {
+                string id = item.Trim(new Char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 
+               'r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V',
+               'W','X','Y','Z',' '});
 
-
-
-                try
-                {
-                   
-                    while (read.Read())
-                    {
-                       // cbbatchlist.items.Add(read["course_name"].ToString());
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Message not emailed: " + ex.Message.ToString());
-                }
-                finally
-                {
-                    con.Close();
-                    read.Close();
+                string name = item.Trim(new Char[] {'0','1','2','3','4','5','6','7','8','9','0'});
+                    //inserting values into batch table
+                string query = "insert into batch (batch_no,stud_id,stud_name,stud_course,batch_timing)values('" + b1ToolStripMenuItem.Text + "'," + id + ",'" +name+ "','" + cbbatchlist.Text + "','" + tbbatchtiming + "')";
+                   MySqlCommand cmd = new MySqlCommand(query, con);
+                   cmd.ExecuteNonQuery();
+                   MessageBox.Show("ADDED!");
                 }
             }
-        }*/
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex.Message);
+            }
+            finally
+            {
+               
+               con.Close();
+            }
+        }
     
 
         private void btnshow_Click(object sender, EventArgs e)
@@ -157,6 +145,12 @@ namespace batches
             displayData();
           
         }
+
+        private void b1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            makeBatch();
+        }
+
        
     }
 }

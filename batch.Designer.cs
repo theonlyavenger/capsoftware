@@ -31,22 +31,26 @@
             this.headerpannel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.clbdisplaylist = new System.Windows.Forms.CheckedListBox();
+            this.cbbatchlist = new System.Windows.Forms.ComboBox();
+            this.btnshow = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnshow = new System.Windows.Forms.Button();
-            this.cbbatchlist = new System.Windows.Forms.ComboBox();
-            this.clbdisplaylist = new System.Windows.Forms.CheckedListBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.makeBatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.b1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.b2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.b3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.b4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.b5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblcourse = new System.Windows.Forms.Label();
+            this.lblbatchtiming = new System.Windows.Forms.Label();
+            this.tbbatchtiming = new System.Windows.Forms.TextBox();
             this.headerpannel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // headerpannel
@@ -74,103 +78,46 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.tbbatchtiming);
+            this.panel1.Controls.Add(this.lblbatchtiming);
+            this.panel1.Controls.Add(this.lblcourse);
             this.panel1.Controls.Add(this.clbdisplaylist);
             this.panel1.Controls.Add(this.cbbatchlist);
             this.panel1.Controls.Add(this.btnshow);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 58);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(910, 613);
             this.panel1.TabIndex = 3;
             // 
-            // label10
+            // clbdisplaylist
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(81, 116);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 20);
-            this.label10.TabIndex = 124;
-            this.label10.Text = "Value";
+            this.clbdisplaylist.FormattingEnabled = true;
+            this.clbdisplaylist.Location = new System.Drawing.Point(66, 291);
+            this.clbdisplaylist.Name = "clbdisplaylist";
+            this.clbdisplaylist.Size = new System.Drawing.Size(299, 364);
+            this.clbdisplaylist.TabIndex = 128;
             // 
-            // label9
+            // cbbatchlist
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(81, 83);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 20);
-            this.label9.TabIndex = 124;
-            this.label9.Text = "Value";
+            this.cbbatchlist.FormattingEnabled = true;
+            this.cbbatchlist.Location = new System.Drawing.Point(526, 285);
+            this.cbbatchlist.Name = "cbbatchlist";
+            this.cbbatchlist.Size = new System.Drawing.Size(151, 21);
+            this.cbbatchlist.TabIndex = 127;
+            this.cbbatchlist.SelectedIndexChanged += new System.EventHandler(this.cbbatchlist_SelectedIndexChanged);
             // 
-            // label8
+            // btnshow
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(81, 51);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 20);
-            this.label8.TabIndex = 124;
-            this.label8.Text = "Value";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(81, 18);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 20);
-            this.label7.TabIndex = 124;
-            this.label7.Text = "Value";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 116);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 20);
-            this.label6.TabIndex = 123;
-            this.label6.Text = "Label :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 83);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 20);
-            this.label5.TabIndex = 123;
-            this.label5.Text = "Label :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 51);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 20);
-            this.label4.TabIndex = 123;
-            this.label4.Text = "Label :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 20);
-            this.label3.TabIndex = 123;
-            this.label3.Text = "Label :";
+            this.btnshow.Location = new System.Drawing.Point(495, 556);
+            this.btnshow.Name = "btnshow";
+            this.btnshow.Size = new System.Drawing.Size(75, 23);
+            this.btnshow.TabIndex = 126;
+            this.btnshow.Text = "Show";
+            this.btnshow.UseVisualStyleBackColor = true;
+            this.btnshow.Click += new System.EventHandler(this.btnshow_Click);
             // 
             // panel2
             // 
@@ -192,32 +139,91 @@
             this.label2.TabIndex = 100;
             this.label2.Text = "HEADER IF REQUIRED";
             // 
-            // btnshow
+            // menuStrip1
             // 
-            this.btnshow.Location = new System.Drawing.Point(646, 460);
-            this.btnshow.Name = "btnshow";
-            this.btnshow.Size = new System.Drawing.Size(75, 23);
-            this.btnshow.TabIndex = 126;
-            this.btnshow.Text = "Show";
-            this.btnshow.UseVisualStyleBackColor = true;
-            this.btnshow.Click += new System.EventHandler(this.btnshow_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(910, 24);
+            this.menuStrip1.TabIndex = 129;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // cbbatchlist
+            // fileToolStripMenuItem
             // 
-            this.cbbatchlist.FormattingEnabled = true;
-            this.cbbatchlist.Location = new System.Drawing.Point(630, 285);
-            this.cbbatchlist.Name = "cbbatchlist";
-            this.cbbatchlist.Size = new System.Drawing.Size(151, 21);
-            this.cbbatchlist.TabIndex = 127;
-            this.cbbatchlist.SelectedIndexChanged += new System.EventHandler(this.cbbatchlist_SelectedIndexChanged);
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.makeBatchToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
             // 
-            // clbdisplaylist
+            // makeBatchToolStripMenuItem
             // 
-            this.clbdisplaylist.FormattingEnabled = true;
-            this.clbdisplaylist.Location = new System.Drawing.Point(66, 291);
-            this.clbdisplaylist.Name = "clbdisplaylist";
-            this.clbdisplaylist.Size = new System.Drawing.Size(299, 364);
-            this.clbdisplaylist.TabIndex = 128;
+            this.makeBatchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.b1ToolStripMenuItem,
+            this.b2ToolStripMenuItem,
+            this.b3ToolStripMenuItem,
+            this.b4ToolStripMenuItem,
+            this.b5ToolStripMenuItem});
+            this.makeBatchToolStripMenuItem.Name = "makeBatchToolStripMenuItem";
+            this.makeBatchToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.makeBatchToolStripMenuItem.Text = "Make Batch";
+            // 
+            // b1ToolStripMenuItem
+            // 
+            this.b1ToolStripMenuItem.Name = "b1ToolStripMenuItem";
+            this.b1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.b1ToolStripMenuItem.Text = "B1";
+            this.b1ToolStripMenuItem.Click += new System.EventHandler(this.b1ToolStripMenuItem_Click);
+            // 
+            // b2ToolStripMenuItem
+            // 
+            this.b2ToolStripMenuItem.Name = "b2ToolStripMenuItem";
+            this.b2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.b2ToolStripMenuItem.Text = "B2";
+            // 
+            // b3ToolStripMenuItem
+            // 
+            this.b3ToolStripMenuItem.Name = "b3ToolStripMenuItem";
+            this.b3ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.b3ToolStripMenuItem.Text = "B3";
+            // 
+            // b4ToolStripMenuItem
+            // 
+            this.b4ToolStripMenuItem.Name = "b4ToolStripMenuItem";
+            this.b4ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.b4ToolStripMenuItem.Text = "B4";
+            // 
+            // b5ToolStripMenuItem
+            // 
+            this.b5ToolStripMenuItem.Name = "b5ToolStripMenuItem";
+            this.b5ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.b5ToolStripMenuItem.Text = "B5";
+            // 
+            // lblcourse
+            // 
+            this.lblcourse.AutoSize = true;
+            this.lblcourse.Location = new System.Drawing.Point(414, 293);
+            this.lblcourse.Name = "lblcourse";
+            this.lblcourse.Size = new System.Drawing.Size(73, 13);
+            this.lblcourse.TabIndex = 130;
+            this.lblcourse.Text = "Select Course";
+            // 
+            // lblbatchtiming
+            // 
+            this.lblbatchtiming.AutoSize = true;
+            this.lblbatchtiming.Location = new System.Drawing.Point(418, 387);
+            this.lblbatchtiming.Name = "lblbatchtiming";
+            this.lblbatchtiming.Size = new System.Drawing.Size(69, 13);
+            this.lblbatchtiming.TabIndex = 131;
+            this.lblbatchtiming.Text = "Batch Timing";
+            // 
+            // tbbatchtiming
+            // 
+            this.tbbatchtiming.Location = new System.Drawing.Point(526, 380);
+            this.tbbatchtiming.Name = "tbbatchtiming";
+            this.tbbatchtiming.Size = new System.Drawing.Size(151, 20);
+            this.tbbatchtiming.TabIndex = 132;
             // 
             // batch
             // 
@@ -227,6 +233,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.headerpannel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "batch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.batch_Load);
@@ -236,6 +243,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -245,19 +254,22 @@
         private System.Windows.Forms.Panel headerpannel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnshow;
         private System.Windows.Forms.ComboBox cbbatchlist;
         private System.Windows.Forms.CheckedListBox clbdisplaylist;
+        private System.Windows.Forms.Label lblcourse;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem makeBatchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem b1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem b2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem b3ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem b4ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem b5ToolStripMenuItem;
+        private System.Windows.Forms.TextBox tbbatchtiming;
+        private System.Windows.Forms.Label lblbatchtiming;
     }
 }
 
