@@ -1,0 +1,9 @@
+E:\c#\batch 2\batch 2\batch 2\bin\Debug\Computronics Form Template.exe
+E:\c#\batch 2\batch 2\batch 2\bin\Debug\Computronics Form Template.pdb
+E:\c#\batch 2\batch 2\batch 2\bin\Debug\MySql.Data.DLL
+E:\c#\batch 2\batch 2\batch 2\obj\x86\Debug\batch 2.csprojResolveAssemblyReference.cache
+E:\c#\batch 2\batch 2\batch 2\obj\x86\Debug\batch_2.Properties.Resources.resources
+E:\c#\batch 2\batch 2\batch 2\obj\x86\Debug\batch 2.csproj.GenerateResource.Cache
+E:\c#\batch 2\batch 2\batch 2\obj\x86\Debug\Computronics Form Template.exe
+E:\c#\batch 2\batch 2\batch 2\obj\x86\Debug\Computronics Form Template.pdb
+E:\c#\batch 2\batch 2\batch 2\obj\x86\Debug\batch_2.batch.resources
