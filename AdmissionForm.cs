@@ -27,6 +27,8 @@ namespace computeronics_admission_process
         string query;
         string name;
         MySqlCommand cmd;
+        long lengthImage;
+        long lengthIdProof;
         byte[] imagebt;
         byte[] idproofbt;
 
@@ -195,6 +197,8 @@ namespace computeronics_admission_process
             BinaryReader br2 = new BinaryReader(fstream2);
             idproofbt = br2.ReadBytes((int)fstream2.Length);
 
+
+
            /* Bitmap bitmp = new Bitmap(btnIdProof.PostedFile.InputStream);  
                             if (bitmp.Width > 100 | bitmp.Height > 1000)
                             {  
@@ -288,6 +292,16 @@ namespace computeronics_admission_process
             {
                 MessageBox.Show("Select an option for gender");
                 return false;
+            }  
+            else if (lengthImage > 90000)
+            {
+                MessageBox.Show("The Id proof size must be less than 90kb");
+                return false;
+            }  
+            else if(lengthIdProof > 90000)
+            {
+                MessageBox.Show("The Id proof size must be less than 90kb");
+                return false;
             }
             else
             {
@@ -343,6 +357,15 @@ namespace computeronics_admission_process
                 lblLocPhoto.Text = picLoc1;
                 pbImage.ImageLocation = picLoc1;
                 insertImage();
+
+                lengthImage = new System.IO.FileInfo(picLoc1).Length;
+
+                if(lengthImage > 90000  )
+                {
+                    MessageBox.Show("The image size must be less than 90kb");
+                    btnUploadPhoto.Focus();
+                }
+                
             }
         }
 
@@ -356,6 +379,14 @@ namespace computeronics_admission_process
                 string picLoc2 = dlg.FileName.ToString();
                 lblLocIdProof.Text = picLoc2;
                 insertIdProof();
+
+                 lengthIdProof = new System.IO.FileInfo(picLoc2).Length;
+
+                 if (lengthIdProof > 90000)
+                 {
+                     MessageBox.Show("The image size must be less than 90kb");
+                     btnIdProof.Focus();
+                 }
             }
         }
 
@@ -465,5 +496,10 @@ namespace computeronics_admission_process
                 tbOthers.Enabled = false;
             }
         }
+
+       /* private void admissionForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyCode == 
+        }*/
     }
 }
