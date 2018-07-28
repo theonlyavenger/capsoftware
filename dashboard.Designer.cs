@@ -39,12 +39,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.aboutdevelopers = new System.Windows.Forms.Button();
-            this.btnlogout = new System.Windows.Forms.Button();
             this.enquiry = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.centerpanel = new System.Windows.Forms.Panel();
             this.btnEnquiry = new System.Windows.Forms.Button();
@@ -59,6 +53,12 @@
             this.bottompanel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.about = new System.Windows.Forms.Label();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.btnAnalytics = new System.Windows.Forms.Button();
+            this.aboutdevelopers = new System.Windows.Forms.Button();
+            this.btnlogout = new System.Windows.Forms.Button();
             this.headerpannel.SuspendLayout();
             this.leftpanel.SuspendLayout();
             this.centerpanel.SuspendLayout();
@@ -100,7 +100,7 @@
             this.leftpanel.Controls.Add(this.button13);
             this.leftpanel.Controls.Add(this.button8);
             this.leftpanel.Controls.Add(this.btnExport);
-            this.leftpanel.Controls.Add(this.button9);
+            this.leftpanel.Controls.Add(this.btnAnalytics);
             this.leftpanel.Controls.Add(this.aboutdevelopers);
             this.leftpanel.Controls.Add(this.btnlogout);
             this.leftpanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -178,99 +178,6 @@
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "HOME";
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.Transparent;
-            this.button13.BackgroundImage = global::Dashboard.Properties.Resources.icons8_home_64;
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(13, 0);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(64, 39);
-            this.button13.TabIndex = 0;
-            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.BackgroundImage = global::Dashboard.Properties.Resources.icons8_data_backup_64;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(13, 58);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(64, 39);
-            this.button8.TabIndex = 0;
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // btnExport
-            // 
-            this.btnExport.BackColor = System.Drawing.Color.Transparent;
-            this.btnExport.BackgroundImage = global::Dashboard.Properties.Resources.icons8_microsoft_excel_64;
-            this.btnExport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnExport.FlatAppearance.BorderSize = 0;
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.Location = new System.Drawing.Point(13, 129);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(64, 39);
-            this.btnExport.TabIndex = 0;
-            this.btnExport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExport.UseVisualStyleBackColor = false;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.BackgroundImage = global::Dashboard.Properties.Resources.icons8_increase_641;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(13, 187);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(64, 39);
-            this.button9.TabIndex = 0;
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // aboutdevelopers
-            // 
-            this.aboutdevelopers.BackColor = System.Drawing.Color.Transparent;
-            this.aboutdevelopers.BackgroundImage = global::Dashboard.Properties.Resources.icons8_high_importance_64;
-            this.aboutdevelopers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.aboutdevelopers.FlatAppearance.BorderSize = 0;
-            this.aboutdevelopers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aboutdevelopers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aboutdevelopers.Location = new System.Drawing.Point(13, 245);
-            this.aboutdevelopers.Name = "aboutdevelopers";
-            this.aboutdevelopers.Size = new System.Drawing.Size(64, 39);
-            this.aboutdevelopers.TabIndex = 0;
-            this.aboutdevelopers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.aboutdevelopers.UseVisualStyleBackColor = false;
-            this.aboutdevelopers.Click += new System.EventHandler(this.aboutdevelopers_Click);
-            // 
-            // btnlogout
-            // 
-            this.btnlogout.BackColor = System.Drawing.Color.Transparent;
-            this.btnlogout.BackgroundImage = global::Dashboard.Properties.Resources.icons8_shutdown_64;
-            this.btnlogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnlogout.FlatAppearance.BorderSize = 0;
-            this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnlogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogout.Location = new System.Drawing.Point(13, 309);
-            this.btnlogout.Name = "btnlogout";
-            this.btnlogout.Size = new System.Drawing.Size(64, 39);
-            this.btnlogout.TabIndex = 0;
-            this.btnlogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnlogout.UseVisualStyleBackColor = false;
-            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
             // enquiry
             // 
@@ -460,6 +367,100 @@
             this.about.TabIndex = 0;
             this.about.Text = "CAP SOFTWARE";
             // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.Transparent;
+            this.button13.BackgroundImage = global::Dashboard.Properties.Resources.icons8_home_64;
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Location = new System.Drawing.Point(13, 0);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(64, 39);
+            this.button13.TabIndex = 0;
+            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button13.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.BackgroundImage = global::Dashboard.Properties.Resources.icons8_data_backup_64;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(13, 58);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(64, 39);
+            this.button8.TabIndex = 0;
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.Color.Transparent;
+            this.btnExport.BackgroundImage = global::Dashboard.Properties.Resources.icons8_microsoft_excel_64;
+            this.btnExport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExport.FlatAppearance.BorderSize = 0;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.Location = new System.Drawing.Point(13, 129);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(64, 39);
+            this.btnExport.TabIndex = 0;
+            this.btnExport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // btnAnalytics
+            // 
+            this.btnAnalytics.BackColor = System.Drawing.Color.Transparent;
+            this.btnAnalytics.BackgroundImage = global::Dashboard.Properties.Resources.icons8_increase_641;
+            this.btnAnalytics.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAnalytics.FlatAppearance.BorderSize = 0;
+            this.btnAnalytics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnalytics.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnalytics.Location = new System.Drawing.Point(13, 187);
+            this.btnAnalytics.Name = "btnAnalytics";
+            this.btnAnalytics.Size = new System.Drawing.Size(64, 39);
+            this.btnAnalytics.TabIndex = 0;
+            this.btnAnalytics.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAnalytics.UseVisualStyleBackColor = false;
+            this.btnAnalytics.Click += new System.EventHandler(this.btnAnalytics_Click);
+            // 
+            // aboutdevelopers
+            // 
+            this.aboutdevelopers.BackColor = System.Drawing.Color.Transparent;
+            this.aboutdevelopers.BackgroundImage = global::Dashboard.Properties.Resources.icons8_high_importance_64;
+            this.aboutdevelopers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.aboutdevelopers.FlatAppearance.BorderSize = 0;
+            this.aboutdevelopers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.aboutdevelopers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aboutdevelopers.Location = new System.Drawing.Point(13, 245);
+            this.aboutdevelopers.Name = "aboutdevelopers";
+            this.aboutdevelopers.Size = new System.Drawing.Size(64, 39);
+            this.aboutdevelopers.TabIndex = 0;
+            this.aboutdevelopers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.aboutdevelopers.UseVisualStyleBackColor = false;
+            this.aboutdevelopers.Click += new System.EventHandler(this.aboutdevelopers_Click);
+            // 
+            // btnlogout
+            // 
+            this.btnlogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnlogout.BackgroundImage = global::Dashboard.Properties.Resources.icons8_shutdown_64;
+            this.btnlogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnlogout.FlatAppearance.BorderSize = 0;
+            this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogout.Location = new System.Drawing.Point(13, 309);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Size = new System.Drawing.Size(64, 39);
+            this.btnlogout.TabIndex = 0;
+            this.btnlogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnlogout.UseVisualStyleBackColor = false;
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
+            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -508,7 +509,7 @@
         private System.Windows.Forms.Button btnalumni;
         private System.Windows.Forms.Button aboutdevelopers;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnAnalytics;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;

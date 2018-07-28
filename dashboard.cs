@@ -123,6 +123,12 @@ namespace Dashboard
         {
             batch batch = new batch();
             batch.Show();
+        }
+
+        private void btnAnalytics_Click(object sender, EventArgs e)
+        {
+            analytics analytics = new analytics();
+            analytics.Show();
         }   
        
 
