@@ -51,6 +51,7 @@ namespace batch_2
             con = new MySqlConnection(constr);
 
         }
+        //displaying name and id from student table to searchlistbox
         private void displayData()
         {
             try
@@ -78,6 +79,7 @@ namespace batch_2
             }
         }
 
+        //displaying course_name from course table to combobox
         private void displayCourse()
         {
             try
@@ -103,6 +105,7 @@ namespace batch_2
             }
         }
 
+        //making of batch by storing the batches into batch table
         private void makeBatch(string batchname)
         {
             Boolean flag = false;
@@ -139,6 +142,7 @@ namespace batch_2
                con.Close();
             }
         }
+        //validation for display listbox and batchtiming textbox
 
         private void validateBeforeBatchMaking(string batchname)
         {
@@ -160,7 +164,7 @@ namespace batch_2
             
 
         }
-
+        //refreshing the form once batch is alloted
         private void resetForm()
         {
             tbbatchtiming.Clear();
@@ -208,7 +212,7 @@ namespace batch_2
         {
             int count=0;
             Boolean searchnotfound = false;
-            if (String.IsNullOrEmpty(tbSearch.Text) ||
+            if (String.IsNullOrEmpty(tbSearch.Text) ||          //checking for empty field for the search textbox
         tbSearch.Text.Any(c => Char.IsNumber(c)))
             {
                 MessageBox.Show("Please enter the name to search");
@@ -219,7 +223,7 @@ namespace batch_2
                 searchlistbox.SelectedItems.Clear();
                 for (int i = searchlistbox.Items.Count - 1; i >= 0; i--)
                 {
-                    if (searchlistbox.Items[i].ToString().ToLower().Contains(tbSearch.Text))
+                    if (searchlistbox.Items[i].ToString().ToLower().Contains(tbSearch.Text))        //checking for the duplicates in the two listboxes
                     {
                         searchlistbox.SetSelected(i, true);
                         count++;
@@ -249,7 +253,7 @@ namespace batch_2
 
         private void addone_Click(object sender, EventArgs e)
         {
-            if (lbdisplay.Items.Contains(searchlistbox.Text))
+            if (lbdisplay.Items.Contains(searchlistbox.Text))       //checking  whether the searchbox text is present in the listbox or not
             {
                 MessageBox.Show("This name already exists!");
             }
@@ -259,7 +263,7 @@ namespace batch_2
                 foreach (string obj in searchlistbox.SelectedItems)
 
                     lbdisplay.Items.Add(obj);
-                for (int i = searchlistbox.Items.Count - 1; i >= 0; i--)
+                for (int i = searchlistbox.Items.Count - 1; i >= 0; i--)        //shows that text is present in the listbox
                 {
                     searchlistbox.SetSelected(i, false);
                 }
@@ -268,6 +272,7 @@ namespace batch_2
            
         }
 
+        //adding all items to listbox
         private void addall_Click(object sender, EventArgs e)
         {
             if (lbdisplay.Text == "")
@@ -290,6 +295,8 @@ namespace batch_2
             
         }
 
+        //deleting the selected item
+
         private void clearselected_Click(object sender, EventArgs e)
         {
             try
@@ -305,11 +312,13 @@ namespace batch_2
             }  
         }
 
+        //deleting all the items
         private void clearall_Click(object sender, EventArgs e)
         {
             lbdisplay.Items.Clear();
 
         }
+
 
         private void tbbatchtiming_Validating(object sender, CancelEventArgs e)
         {
@@ -330,7 +339,7 @@ namespace batch_2
             return bStatus;
         }
 
-        private void tbSearch_TextChanged(object sender, EventArgs e)
+        private void tbSearch_TextChanged(object sender, EventArgs e) 
         {
             searchlistbox.SelectedIndex = -1;
         }
