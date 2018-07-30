@@ -1,0 +1,9 @@
+C:\Users\Megha S\Desktop\C#\progressform2\progressform2\obj\x86\Debug\progressform2.Properties.Resources.resources
+C:\Users\Megha S\Desktop\C#\progressform2\progressform2\obj\x86\Debug\progressform2.csproj.GenerateResource.Cache
+C:\Users\Megha S\Desktop\C#\progressform2\progressform2\bin\Debug\Computronics Form Template.exe
+C:\Users\Megha S\Desktop\C#\progressform2\progressform2\bin\Debug\Computronics Form Template.pdb
+C:\Users\Megha S\Desktop\C#\progressform2\progressform2\obj\x86\Debug\Computronics Form Template.exe
+C:\Users\Megha S\Desktop\C#\progressform2\progressform2\obj\x86\Debug\Computronics Form Template.pdb
+C:\Users\Megha S\Desktop\C#\progressform2\progressform2\bin\Debug\MySql.Data.dll
+C:\Users\Megha S\Desktop\C#\progressform2\progressform2\obj\x86\Debug\progressform2.csprojResolveAssemblyReference.cache
+C:\Users\Megha S\Desktop\C#\progressform2\progressform2\obj\x86\Debug\progressform2.progressform.resources
