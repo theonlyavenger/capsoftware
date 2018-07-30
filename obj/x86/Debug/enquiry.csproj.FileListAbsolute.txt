@@ -31,3 +31,11 @@ C:\Users\Megha S\Desktop\Computronics Admission Process\enquiry form\enquiry\obj
 C:\Users\Megha S\Desktop\Computronics Admission Process\enquiry form\enquiry\bin\Debug\enquiry.exe
 C:\Users\Megha S\Desktop\Computronics Admission Process\enquiry form\enquiry\bin\Debug\enquiry.pdb
 C:\Users\Megha S\Desktop\Computronics Admission Process\enquiry form\enquiry\bin\Debug\MySql.Data.dll
+C:\Users\Megha S\Desktop\C#\enquiry2\capsoftware\obj\x86\Debug\enquiry.exe
+C:\Users\Megha S\Desktop\C#\enquiry2\capsoftware\obj\x86\Debug\enquiry.pdb
+C:\Users\Megha S\Desktop\C#\enquiry2\capsoftware\bin\Debug\enquiry.exe
+C:\Users\Megha S\Desktop\C#\enquiry2\capsoftware\bin\Debug\enquiry.pdb
+C:\Users\Megha S\Desktop\C#\enquiry2\capsoftware\obj\x86\Debug\enquiry.csprojResolveAssemblyReference.cache
+C:\Users\Megha S\Desktop\C#\enquiry2\capsoftware\obj\x86\Debug\enquiry.enquiryform.resources
+C:\Users\Megha S\Desktop\C#\enquiry2\capsoftware\obj\x86\Debug\enquiry.Properties.Resources.resources
+C:\Users\Megha S\Desktop\C#\enquiry2\capsoftware\obj\x86\Debug\enquiry.csproj.GenerateResource.Cache
