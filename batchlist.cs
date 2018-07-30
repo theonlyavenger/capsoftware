@@ -106,45 +106,107 @@ namespace Dashboard
         {
             dataTable.Rows.Clear();
             dataTable.Refresh();
-            // Adding column with their properties
-            dataTable.ColumnCount = 2;
-            dataTable.RowTemplate.Height = 20;
 
-            dataTable.Columns[0].HeaderText = "ID";
-            dataTable.Columns[0].Name = "sno";
-
-            dataTable.Columns[1].HeaderText = "STUDENT NAME";
-            dataTable.Columns[1].Name = "sname";
-            dataTable.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-            string query = "SELECT * from batch where stud_course = '"+ course +"' and batch_no = '"+batch+"'";
-
-            try
+            if (course == "ALL")
             {
-                con.Open();
+                // Adding column with their properties
+                dataTable.ColumnCount = 5;
+                dataTable.RowTemplate.Height = 20;
 
-                MySqlCommand cmd = new MySqlCommand(query, con);
+                dataTable.Columns[0].HeaderText = "ID";
+                dataTable.Columns[0].Name = "sno";
 
-                MySqlDataReader reader = cmd.ExecuteReader();
+                dataTable.Columns[1].HeaderText = "BATCH";
+                dataTable.Columns[1].Name = "batch";
+                dataTable.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-                while (reader.Read())
+                dataTable.Columns[2].HeaderText = "STUDENT NAME";
+                dataTable.Columns[2].Name = "sname";
+                dataTable.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                dataTable.Columns[3].HeaderText = "COURSE";
+                dataTable.Columns[3].Name = "course";
+                dataTable.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                dataTable.Columns[4].HeaderText = "BATCH TIMINGS";
+                dataTable.Columns[4].Name = "timing";
+                dataTable.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+
+
+                string query = "SELECT * from batch";
+
+                try
                 {
-                    //string id = reader["batch_id"].ToString();
-                    //string batchno = reader["batch_no"].ToString();
-                    string studentid = reader["stud_id"].ToString();
-                    string studentname = reader["stud_name"].ToString();
-                    //string studentcourse = reader["stud_course"].ToString();
-                    //string batchtiming = reader["batch_timing"].ToString();
-                    dataTable.Rows.Add(studentid, studentname);
+                    con.Open();
+
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        //string id = reader["batch_id"].ToString();
+                        string batchno = reader["batch_no"].ToString();
+                        string studentid = reader["stud_id"].ToString();
+                        string studentname = reader["stud_name"].ToString();
+                        string studentcourse = reader["stud_course"].ToString();
+                        string batchtiming = reader["batch_timing"].ToString();
+                        dataTable.Rows.Add(studentid, batchno, studentname, studentcourse, batchtiming);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                con.Close();
+                // Adding column with their properties
+                dataTable.ColumnCount = 2;
+                dataTable.RowTemplate.Height = 20;
+
+                dataTable.Columns[0].HeaderText = "ID";
+                dataTable.Columns[0].Name = "sno";
+
+                dataTable.Columns[1].HeaderText = "STUDENT NAME";
+                dataTable.Columns[1].Name = "sname";
+                dataTable.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                string query = "SELECT * from batch where stud_course = '" + course + "' and batch_no = '" + batch + "'";
+
+                try
+                {
+                    con.Open();
+
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        //string id = reader["batch_id"].ToString();
+                        string batchno = reader["batch_no"].ToString();
+                        string studentid = reader["stud_id"].ToString();
+                        string studentname = reader["stud_name"].ToString();
+                        string studentcourse = reader["stud_course"].ToString();
+                        string batchtiming = reader["batch_timing"].ToString();
+                        dataTable.Rows.Add(studentid, studentname);
+                        lblbatchdetails.Text = ""+studentcourse+" - "+"Batch : "+batchno+", Timing: "+batchtiming;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
             }
         }
 
@@ -155,12 +217,20 @@ namespace Dashboard
             fillCombobox2();
             cmbCourse.SelectedIndex = 0;
             cmbBatch.Enabled = false;
-            btnSearch.Enabled = false;
         }
 
         private void cmbCourse_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmbBatch.Enabled = true;
+            if (cmbCourse.Text == "ALL")
+            {
+                cmbBatch.Text = "NULL";
+            }
+            else
+            {
+                cmbBatch.Enabled = true;
+                
+            }
+            
         }
 
         private void cmbBatch_SelectedIndexChanged(object sender, EventArgs e)

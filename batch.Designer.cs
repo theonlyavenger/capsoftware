@@ -429,7 +429,6 @@
             // 
             // addalldisabletimer
             // 
-            this.addalldisabletimer.Tick += new System.EventHandler(this.addalldisabletimer_Tick);
             // 
             // batch
             // 

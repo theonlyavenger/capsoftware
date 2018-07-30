@@ -147,6 +147,8 @@
             this.cmbCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmbCourse.FormattingEnabled = true;
+            this.cmbCourse.Items.AddRange(new object[] {
+            "ALL"});
             this.cmbCourse.Location = new System.Drawing.Point(220, 16);
             this.cmbCourse.Name = "cmbCourse";
             this.cmbCourse.Size = new System.Drawing.Size(192, 28);

@@ -39,9 +39,6 @@ namespace Dashboard
             }
             labelresult.Visible = false;
             lblresultfound.Visible = false;
-            addalldisabletimer.Enabled = true;
-            addalldisabletimer.Interval = 1;
-            addalldisabletimer.Start();
         }
         private void InitializeDb()
         {
@@ -210,7 +207,7 @@ namespace Dashboard
 
         private void validateBeforeBatchMaking(string batchname)
         {
-            if (String.IsNullOrEmpty(lbdisplay.Text))
+            if (lbdisplay.Items.Count != 0) 
             {
                 if (ValidateBatchTiming())
                 {
@@ -339,7 +336,7 @@ namespace Dashboard
         {
             try
             {
-                if (lbdisplay.Items.Contains(searchlistbox.Text))
+                if (lbdisplay.Items.Contains(searchlistbox.SelectedItem.ToString()))
                 {
                     MessageBox.Show("This name already exists!");
                 }
@@ -347,7 +344,7 @@ namespace Dashboard
                 {
                     lbdisplay.Items.AddRange(searchlistbox.Items);
                 }
-                lbdisplay.SelectedIndex = 0;
+                // lbdisplay.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
@@ -406,17 +403,5 @@ namespace Dashboard
             batchlist batch = new batchlist();
             batch.Show();
         }
-
-        private void addalldisabletimer_Tick(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(lbdisplay.Text))
-            {
-                addall.Visible = true;
-            }
-            else
-            {
-                addall.Visible = false;
-            }
         }
     }
-}
