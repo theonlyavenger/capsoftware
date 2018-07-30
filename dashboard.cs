@@ -115,7 +115,7 @@ namespace Dashboard
         private void btnPayments_Click(object sender, EventArgs e)
         {
             // this.WindowState = FormWindowState.Minimized;
-            Payments payment = new Payments(18);
+            paymentlist payment = new paymentlist();
             payment.Show();
         }
 

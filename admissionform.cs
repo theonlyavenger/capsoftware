@@ -153,12 +153,10 @@ namespace Dashboard
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            this.MaximizeBox = false;
             tbOthers.Enabled = false;
             tbAge.Enabled = false;
             tbCoursefee.Enabled = false;
-            resize();
-            MaximizeBox = false;
 
             dtpDOB.MaxDate = DateTime.Now;
             dtpDoj.MaxDate = DateTime.Now;

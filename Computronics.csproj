@@ -144,6 +144,12 @@
     <Compile Include="notification.designer.cs">
       <DependentUpon>notification.cs</DependentUpon>
     </Compile>
+    <Compile Include="paymentlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="paymentlist.Designer.cs">
+      <DependentUpon>paymentlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="Payments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="notification.resx">
       <DependentUpon>notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="paymentlist.resx">
+      <DependentUpon>paymentlist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Payments.resx">
       <DependentUpon>Payments.cs</DependentUpon>

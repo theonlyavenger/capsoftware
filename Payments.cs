@@ -83,7 +83,7 @@ namespace Dashboard
             try
             {
                 con.Open();
-                query = "select stud_id, stud_photo, stud_name, stud_pno, stud_courseSelected, stud_courseFee from student where stud_id = (select max(stud_id) from student)";
+                query = "select stud_id, stud_photo, stud_name, stud_cell, stud_courseSelected, stud_courseFee from student where stud_id = (select max(stud_id) from student)";
                 cmd = new MySqlCommand(query, con);
 
                 reader = cmd.ExecuteReader();
@@ -102,7 +102,7 @@ namespace Dashboard
                         pbPhoto.Image = Image.FromStream(ms);
                     }
                     lblStudName.Text = reader["stud_name"].ToString();
-                    lblStudPh.Text = reader["stud_pno"].ToString();
+                    lblStudPh.Text = reader["stud_cell"].ToString();
                     lblStudCourseSelected.Text = reader["stud_courseSelected"].ToString();
                     lblCoursefee.Text = reader["stud_courseFee"].ToString();
                 }
@@ -122,7 +122,7 @@ namespace Dashboard
             try
             {
                 con.Open();
-                query = "insert into payment(payment_mode, stud_id, payment_amount, payment_status, payment_remaining_amount) values ('"+radioPaymentMode +"','"+ lblStudId.Text +"','"+tbAmountPaid.Text+"','"+lblPaymentStatus.Text+"','"+lblRemainingAmount.Text+"')";
+                query = "insert into payment(payment_mode, stud_id, stud_name, payment_amount, payment_status, payment_remaining_amount) values ('"+radioPaymentMode +"','"+ lblStudId.Text +"','"+lblStudName.Text+"','"+tbAmountPaid.Text+"','"+lblPaymentStatus.Text+"','"+lblRemainingAmount.Text+"')";
                 cmd = new MySqlCommand(query, con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Student Added!");

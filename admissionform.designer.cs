@@ -82,6 +82,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.panel2.SuspendLayout();
@@ -134,6 +135,7 @@
             this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.dtpDoj);
             this.panel2.Controls.Add(this.cbReferences);
+            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.lblLocIdProof);
             this.panel2.Controls.Add(this.lblLocPhoto);
             this.panel2.Controls.Add(this.tbAge);
@@ -283,7 +285,7 @@
             this.panel4.Controls.Add(this.label23);
             this.panel4.Location = new System.Drawing.Point(0, 165);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1360, 35);
+            this.panel4.Size = new System.Drawing.Size(1343, 35);
             this.panel4.TabIndex = 102;
             // 
             // label23
@@ -310,7 +312,7 @@
             this.panel3.Controls.Add(this.label22);
             this.panel3.Location = new System.Drawing.Point(0, 400);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1360, 35);
+            this.panel3.Size = new System.Drawing.Size(1343, 35);
             this.panel3.TabIndex = 102;
             // 
             // label22
@@ -367,11 +369,11 @@
             this.btnSubmitform.FlatAppearance.BorderSize = 0;
             this.btnSubmitform.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmitform.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmitform.Location = new System.Drawing.Point(620, 668);
+            this.btnSubmitform.Location = new System.Drawing.Point(1036, 669);
             this.btnSubmitform.Name = "btnSubmitform";
-            this.btnSubmitform.Size = new System.Drawing.Size(93, 28);
+            this.btnSubmitform.Size = new System.Drawing.Size(171, 28);
             this.btnSubmitform.TabIndex = 87;
-            this.btnSubmitform.Text = "Submit";
+            this.btnSubmitform.Text = "Proceed To Payment";
             this.btnSubmitform.UseVisualStyleBackColor = false;
             this.btnSubmitform.Click += new System.EventHandler(this.btnSubmitform_Click);
             // 
@@ -680,6 +682,17 @@
             this.label4.TabIndex = 62;
             this.label4.Text = "Address";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label10.Location = new System.Drawing.Point(795, 705);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(75, 25);
+            this.label10.TabIndex = 110;
+            this.label10.Text = "label25";
+            this.label10.Visible = false;
+            // 
             // admissionform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -692,6 +705,7 @@
             this.Name = "admissionform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admission Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
@@ -762,6 +776,7 @@
         private System.Windows.Forms.Label lblLocIdProof;
         private System.Windows.Forms.ComboBox cbReferences;
         private System.Windows.Forms.DateTimePicker dtpDoj;
+        private System.Windows.Forms.Label label10;
 
 
     }
