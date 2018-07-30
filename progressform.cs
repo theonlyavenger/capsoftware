@@ -51,7 +51,7 @@ namespace progressform2
         public void DisplayData()
         {
             // Adding column with their properties
-            dataTable.ColumnCount = 2;
+         /*  dataTable.ColumnCount = 2;
 
             dataTable.Columns[0].HeaderText = "BATCH";
             dataTable.Columns[0].Name = "batch";
@@ -71,9 +71,11 @@ namespace progressform2
             chkcertificate.HeaderText = "CERTIFICATE";
             chkcertificate.Name = "chkcertificate";
             chkcertificate.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            
 
 
-           /* dataTable.Columns[4].HeaderText = "DATE OF JOINING";
+
+           dataTable.Columns[4].HeaderText = "DATE OF JOINING";
             dataTable.Columns[4].Name = "doj";
             dataTable.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
@@ -84,15 +86,16 @@ namespace progressform2
           
           
 
-            string query = "SELECT batch_no,stud_name  from batch";
+            string query = "SELECT batch_no as BATCH,stud_name as NAME  from batch";
             con.Open();
             try
             {
                 MySqlCommand cmd = new MySqlCommand(query, con);
 
-                MySqlDataReader reader = cmd.ExecuteReader();
+                //MySqlDataReader reader = cmd.ExecuteReader();
+                MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
 
-                while (reader.Read())
+               /* while (reader.Read())
                 {
                   
                   
@@ -101,7 +104,15 @@ namespace progressform2
 
                         dataTable.Rows.Add(batch, name);
                     
-                }
+                }*/
+                sda.Fill(dt);
+                dataTable.DataSource = dt;
+                DataGridViewCheckBoxColumn chkcertificate = new DataGridViewCheckBoxColumn();
+                dataTable.Columns.Add(chkcertificate);
+                chkcertificate.HeaderText = "CERTIFICATE";
+                chkcertificate.Name = "chkcertificate";
+                dataTable.AutoGenerateColumns = false;
+
             }
             catch (Exception ex)
             {
@@ -111,6 +122,8 @@ namespace progressform2
             {
                 con.Close();
             }
+
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
