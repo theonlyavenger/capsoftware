@@ -33,6 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pbImage = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dtpDoj = new System.Windows.Forms.DateTimePicker();
             this.cbReferences = new System.Windows.Forms.ComboBox();
             this.lblLocIdProof = new System.Windows.Forms.Label();
             this.lblLocPhoto = new System.Windows.Forms.Label();
@@ -81,7 +82,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dtpDoj = new System.Windows.Forms.DateTimePicker();
             this.headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.panel2.SuspendLayout();
@@ -186,6 +186,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1380, 701);
             this.panel2.TabIndex = 58;
+            // 
+            // dtpDoj
+            // 
+            this.dtpDoj.CustomFormat = "dd/MM/yyyy";
+            this.dtpDoj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dtpDoj.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDoj.Location = new System.Drawing.Point(260, 621);
+            this.dtpDoj.Name = "dtpDoj";
+            this.dtpDoj.Size = new System.Drawing.Size(200, 26);
+            this.dtpDoj.TabIndex = 84;
             // 
             // cbReferences
             // 
@@ -656,9 +666,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(145, 326);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 20);
+            this.label6.Size = new System.Drawing.Size(105, 20);
             this.label6.TabIndex = 63;
-            this.label6.Text = "Phone No.";
+            this.label6.Text = "Phone No (R)";
             // 
             // label4
             // 
@@ -669,13 +679,6 @@
             this.label4.Size = new System.Drawing.Size(68, 20);
             this.label4.TabIndex = 62;
             this.label4.Text = "Address";
-            // 
-            // dtpDoj
-            // 
-            this.dtpDoj.Location = new System.Drawing.Point(260, 621);
-            this.dtpDoj.Name = "dtpDoj";
-            this.dtpDoj.Size = new System.Drawing.Size(200, 20);
-            this.dtpDoj.TabIndex = 84;
             // 
             // admissionform
             // 

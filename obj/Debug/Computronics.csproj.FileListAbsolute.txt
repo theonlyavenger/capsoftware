@@ -23,3 +23,4 @@ C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Softwar
 C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.batch.resources
 C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.batchlist.resources
 C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.analytics.resources
+C:\Users\manoj\Computronics\Computronics Software\capsoftware-master\CAP Software\obj\Debug\Dashboard.course.resources

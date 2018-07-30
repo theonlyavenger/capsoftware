@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace Dashboard
 {
@@ -73,7 +74,7 @@ namespace Dashboard
             img.ImageLayout = DataGridViewImageCellLayout.Stretch; 
             dataTable.Columns.Add(img);
 
-            string query = "SELECT stud_id,stud_name,stud_cell,stud_alumni,alumni_comapnyname from student";
+            string query = "SELECT stud_photo,stud_id,stud_name,stud_cell,stud_alumni,alumni_comapnyname from student";
             con.Open();
             try
             {
@@ -89,8 +90,18 @@ namespace Dashboard
                         string name = reader["stud_name"].ToString();
                         string cell = reader["stud_cell"].ToString();
                         string company = reader["alumni_comapnyname"].ToString();
-                        Image image = Image.FromFile(@"C:\Users\manoj\Downloads\prachi.png");
-                        dataTable.Rows.Add(id, name, cell, company, image);
+                        byte[] imagedb = (byte[])(reader["stud_photo"]);
+                        if (imagedb == null)
+                        {
+                            img.Image = null;
+                        }
+                        else
+                        {
+                            MemoryStream ms = new MemoryStream(imagedb);
+                            img.Image = Image.FromStream(ms);
+                        }
+                        
+                        dataTable.Rows.Add(id, name, cell, company, img.Image);
                     }
                 }
             }

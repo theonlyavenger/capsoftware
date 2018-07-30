@@ -68,18 +68,21 @@ namespace Dashboard
 
         private void btnAdmission_Click(object sender, EventArgs e)
         {
+            // this.WindowState = FormWindowState.Minimized;
             admissionform admission = new admissionform();
             admission.Show();
         }
 
         private void btnEnquiry_Click(object sender, EventArgs e)
         {
+            // this.WindowState = FormWindowState.Minimized;
             enquirylist enquiry = new enquirylist();
             enquiry.Show();
         }
 
         private void btnStudentInfo_Click(object sender, EventArgs e)
         {
+            // this.WindowState = FormWindowState.Minimized;
             studentlist studentlist = new studentlist();
             studentlist.Show();
         }
@@ -91,6 +94,7 @@ namespace Dashboard
 
         private void notify_Click(object sender, EventArgs e)
         {
+            // this.WindowState = FormWindowState.Minimized;
             notification notify = new notification();
             notify.Show();
         }
@@ -103,14 +107,16 @@ namespace Dashboard
 
         private void btnalumni_Click(object sender, EventArgs e)
         {
+            // this.WindowState = FormWindowState.Minimized;
             alumnilist alumni = new alumnilist();
             alumni.Show();
         }
 
         private void btnPayments_Click(object sender, EventArgs e)
         {
-            Payments payments = new Payments();
-            payments.Show();
+            // this.WindowState = FormWindowState.Minimized;
+            Payments payment = new Payments(18);
+            payment.Show();
         }
 
         private void btnExport_Click(object sender, EventArgs e)
@@ -121,6 +127,7 @@ namespace Dashboard
 
         private void btnbatches_Click(object sender, EventArgs e)
         {
+            // this.WindowState = FormWindowState.Minimized;
             batch batch = new batch();
             batch.Show();
         }
@@ -129,6 +136,13 @@ namespace Dashboard
         {
             analytics analytics = new analytics();
             analytics.Show();
+        }
+
+        private void btnCourses_Click(object sender, EventArgs e)
+        {
+            // this.WindowState = FormWindowState.Minimized;
+            course course = new course();
+            course.Show();
         }   
        
 

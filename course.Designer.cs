@@ -1,6 +1,6 @@
-﻿namespace coursefi
+﻿namespace Dashboard
 {
-    partial class course1
+    partial class course
     {
         /// <summary>
         /// Required designer variable.
@@ -176,7 +176,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "course1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "course1";
             this.Load += new System.EventHandler(this.course1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

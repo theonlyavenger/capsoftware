@@ -622,7 +622,7 @@
             this.pbPhoto.Location = new System.Drawing.Point(15, 15);
             this.pbPhoto.Name = "pbPhoto";
             this.pbPhoto.Size = new System.Drawing.Size(128, 128);
-            this.pbPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPhoto.TabIndex = 4;
             this.pbPhoto.TabStop = false;
             // 

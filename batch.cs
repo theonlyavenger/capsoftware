@@ -326,7 +326,7 @@ namespace Dashboard
                     lbdisplay.SelectedIndex = 0;
                 }
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 MessageBox.Show("Please select an item to add");
             }

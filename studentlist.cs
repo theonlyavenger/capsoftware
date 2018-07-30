@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO; 
 
 namespace Dashboard
 {
@@ -75,12 +76,12 @@ namespace Dashboard
 
             DataGridViewImageColumn img = new DataGridViewImageColumn();
             img.HeaderText = "PHOTO";
-            img.Name = "photo";
+            img.Name = "pbPhoto";
             img.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             img.ImageLayout = DataGridViewImageCellLayout.Stretch; 
             dataTable.Columns.Add(img);
 
-            string query = "SELECT stud_id,stud_name,stud_cell,stud_courseSelected,stud_doj,stud_alumni from student";
+            string query = "SELECT stud_photo,stud_id,stud_name,stud_cell,stud_courseSelected,stud_doj,stud_alumni from student";
             con.Open();
             try
             {
@@ -97,8 +98,17 @@ namespace Dashboard
                         string cell = reader["stud_cell"].ToString();
                         string course = reader["stud_courseSelected"].ToString();
                         string doj = reader["stud_doj"].ToString();
-                        Image image = Image.FromFile(@"C:\Users\manoj\Downloads\manoj.jpg");
-                        dataTable.Rows.Add(id, name, cell, course, doj, image);
+                        byte[] imagedb = (byte[])(reader["stud_photo"]);
+                        if (imagedb == null)
+                        {
+                            img.Image = null;
+                        }
+                        else
+                        {
+                            MemoryStream ms = new MemoryStream(imagedb);
+                            img.Image = Image.FromStream(ms);
+                        }
+                        dataTable.Rows.Add(id, name, cell, course, doj, img.Image);
                     }
                 }
             }

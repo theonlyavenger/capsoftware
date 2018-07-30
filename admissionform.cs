@@ -26,6 +26,7 @@ namespace Dashboard
         string radioGender;
         string query;
         string name;
+        int index;
         MySqlCommand cmd;
         long lengthImage;
         long lengthIdProof;
@@ -334,6 +335,9 @@ namespace Dashboard
                     cmd.Parameters.Add(new MySqlParameter("@IMG2", idproofbt));
                     cmd.Parameters.Add(new MySqlParameter("@IMG", imagebt));
                     cmd.ExecuteNonQuery();
+
+                    Payments payments = new Payments(index);
+                    payments.Show();
                 }
                 catch (Exception ex)
                 {
@@ -360,9 +364,9 @@ namespace Dashboard
 
                 lengthImage = new System.IO.FileInfo(picLoc1).Length;
 
-                if(lengthImage > 90000  )
+                if (lengthImage > 10000000)
                 {
-                    MessageBox.Show("The image size must be less than 90kb");
+                    MessageBox.Show("The image size must be less than 10MB");
                     btnUploadPhoto.Focus();
                 }
                 
@@ -382,9 +386,9 @@ namespace Dashboard
 
                  lengthIdProof = new System.IO.FileInfo(picLoc2).Length;
 
-                 if (lengthIdProof > 90000)
+                 if (lengthIdProof > 10000000)
                  {
-                     MessageBox.Show("The image size must be less than 90kb");
+                     MessageBox.Show("The image size must be less than 10MB");
                      btnIdProof.Focus();
                  }
             }

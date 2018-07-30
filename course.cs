@@ -8,9 +8,9 @@ using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace coursefi
+namespace Dashboard
 {
-    public partial class course1 : Form
+    public partial class course : Form
     {
         private MySqlConnection con;
         string server;
@@ -18,7 +18,8 @@ namespace coursefi
         string uid;
         string password;
         DataTable dt;
-        public course1()
+       
+        public course()
         {
             InitializeComponent();
         }

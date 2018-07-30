@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-
+using System.IO;
 namespace Dashboard
 {
     public partial class Studentinfo : Form
@@ -85,6 +85,16 @@ namespace Dashboard
                     lblReference.Text = reader["stud_reference"].ToString();
                     lblPlace.Text = reader["stud_place"].ToString();
                     lblSign.Text = reader["stud_name"].ToString();
+                    byte[] imagedb = (byte[])(reader["stud_photo"]);
+                    if (imagedb == null)
+                    {
+                        pbPhoto.Image = null;
+                    }
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(imagedb);
+                        pbPhoto.Image = Image.FromStream(ms);
+                    }
                 }
             }
             catch (Exception ex)

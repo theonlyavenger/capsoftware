@@ -36,7 +36,7 @@ namespace Dashboard
             this.label8 = new System.Windows.Forms.Label();
             this.tbAmountPaid = new System.Windows.Forms.TextBox();
             this.lblRemainingAmount = new System.Windows.Forms.Label();
-            this.abCheque = new System.Windows.Forms.RadioButton();
+            this.rbCheque = new System.Windows.Forms.RadioButton();
             this.rbCash = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@ namespace Dashboard
             this.lblStudId = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbPhoto = new System.Windows.Forms.PictureBox();
             this.lbl = new System.Windows.Forms.Label();
             this.lblCoursefee = new System.Windows.Forms.Label();
             this.lblStudCourseSelected = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@ namespace Dashboard
             this.label2 = new System.Windows.Forms.Label();
             this.headerpannel.SuspendLayout();
             this.formPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPhoto)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,7 +92,7 @@ namespace Dashboard
             this.formPanel.Controls.Add(this.label8);
             this.formPanel.Controls.Add(this.tbAmountPaid);
             this.formPanel.Controls.Add(this.lblRemainingAmount);
-            this.formPanel.Controls.Add(this.abCheque);
+            this.formPanel.Controls.Add(this.rbCheque);
             this.formPanel.Controls.Add(this.rbCash);
             this.formPanel.Controls.Add(this.label12);
             this.formPanel.Controls.Add(this.label11);
@@ -101,7 +101,7 @@ namespace Dashboard
             this.formPanel.Controls.Add(this.lblStudId);
             this.formPanel.Controls.Add(this.label13);
             this.formPanel.Controls.Add(this.label14);
-            this.formPanel.Controls.Add(this.pictureBox1);
+            this.formPanel.Controls.Add(this.pbPhoto);
             this.formPanel.Controls.Add(this.lbl);
             this.formPanel.Controls.Add(this.lblCoursefee);
             this.formPanel.Controls.Add(this.lblStudCourseSelected);
@@ -157,6 +157,7 @@ namespace Dashboard
             this.tbAmountPaid.Name = "tbAmountPaid";
             this.tbAmountPaid.Size = new System.Drawing.Size(112, 26);
             this.tbAmountPaid.TabIndex = 147;
+            this.tbAmountPaid.TextChanged += new System.EventHandler(this.tbAmountPaid_TextChanged);
             // 
             // lblRemainingAmount
             // 
@@ -168,18 +169,18 @@ namespace Dashboard
             this.lblRemainingAmount.TabIndex = 146;
             this.lblRemainingAmount.Text = "Value";
             // 
-            // abCheque
+            // rbCheque
             // 
-            this.abCheque.AutoSize = true;
-            this.abCheque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abCheque.Location = new System.Drawing.Point(336, 265);
-            this.abCheque.Name = "abCheque";
-            this.abCheque.Size = new System.Drawing.Size(83, 24);
-            this.abCheque.TabIndex = 144;
-            this.abCheque.TabStop = true;
-            this.abCheque.Text = "Cheque";
-            this.abCheque.UseVisualStyleBackColor = true;
-            this.abCheque.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.rbCheque.AutoSize = true;
+            this.rbCheque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbCheque.Location = new System.Drawing.Point(336, 265);
+            this.rbCheque.Name = "rbCheque";
+            this.rbCheque.Size = new System.Drawing.Size(83, 24);
+            this.rbCheque.TabIndex = 144;
+            this.rbCheque.TabStop = true;
+            this.rbCheque.Text = "Cheque";
+            this.rbCheque.UseVisualStyleBackColor = true;
+            this.rbCheque.CheckedChanged += new System.EventHandler(this.rbCheque_CheckedChanged);
             // 
             // rbCash
             // 
@@ -192,6 +193,7 @@ namespace Dashboard
             this.rbCash.TabStop = true;
             this.rbCash.Text = "Cash";
             this.rbCash.UseVisualStyleBackColor = true;
+            this.rbCash.CheckedChanged += new System.EventHandler(this.rbCash_CheckedChanged);
             // 
             // label12
             // 
@@ -263,13 +265,14 @@ namespace Dashboard
             this.label14.TabIndex = 136;
             this.label14.Text = "Student Name:";
             // 
-            // pictureBox1
+            // pbPhoto
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(48, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 120);
-            this.pictureBox1.TabIndex = 135;
-            this.pictureBox1.TabStop = false;
+            this.pbPhoto.Location = new System.Drawing.Point(48, 32);
+            this.pbPhoto.Name = "pbPhoto";
+            this.pbPhoto.Size = new System.Drawing.Size(116, 120);
+            this.pbPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPhoto.TabIndex = 135;
+            this.pbPhoto.TabStop = false;
             // 
             // lbl
             // 
@@ -371,7 +374,7 @@ namespace Dashboard
             this.label2.TabIndex = 100;
             this.label2.Text = "HEADER IF REQUIRED";
             // 
-            // lblCourseSelected
+            // Payments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -379,15 +382,14 @@ namespace Dashboard
             this.Controls.Add(this.formPanel);
             this.Controls.Add(this.headerpannel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "lblCourseSelected";
+            this.Name = "Payments";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Payments";
             this.Load += new System.EventHandler(this.paymentsForm_Load);
             this.headerpannel.ResumeLayout(false);
             this.headerpannel.PerformLayout();
             this.formPanel.ResumeLayout(false);
             this.formPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPhoto)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -408,7 +410,7 @@ namespace Dashboard
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton abCheque;
+        private System.Windows.Forms.RadioButton rbCheque;
         private System.Windows.Forms.RadioButton rbCash;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -417,7 +419,7 @@ namespace Dashboard
         private System.Windows.Forms.Label lblStudId;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbPhoto;
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.TextBox tbAmountPaid;
         private System.Windows.Forms.Label lblRemainingAmount;
