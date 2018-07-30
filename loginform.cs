@@ -72,12 +72,12 @@ namespace Dashboard
         private void CheckSession()
         {
             string sessionCheck = "SELECT login_session from login";
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand(sessionCheck, con);
-
-            MySqlDataReader reader = cmd.ExecuteReader();
             try
             {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(sessionCheck, con);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
                     int sessionbit = Convert.ToInt32(reader["login_session"]);
@@ -92,7 +92,7 @@ namespace Dashboard
             }
             catch (Exception ex)
             {
-                MessageBox.Show(""+ex);
+                MessageBox.Show(""+ex.Message);
             }
             finally
             {

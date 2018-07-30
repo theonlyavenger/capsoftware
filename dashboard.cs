@@ -29,9 +29,9 @@ namespace Dashboard
         {
             int session = 0;
             string sessionQuery = "UPDATE login set login_session=" + session + "";
-            con.Open();
             try
             {
+                con.Open();
                 MySqlCommand cmd2 = new MySqlCommand(sessionQuery, con);
                 cmd2.ExecuteNonQuery();
                 this.Close();

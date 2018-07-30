@@ -116,25 +116,7 @@ namespace Dashboard
 
         private void btnsend_Click_1(object sender, EventArgs e)
         {
-            if (rbtype.Checked == true)
-            {
-                rbselect.Checked = false;
-                string message = tbmessage.Text.ToString();
-                sendMail(message);              //selecting text from typed message and then sendmail
-                addHistory("mail", message);
-
-            }
-            else if (rbselect.Checked == true)
-            {
-                
-                string message = cbmessage.SelectedItem.ToString();
-                sendMail(message);              //selecting text from template and then sendmail
-                addHistory("mail", message);
-
-            }
-
-
-            tbmessage.Clear();
+           
         }
 
         private void sendMail(string message)
@@ -256,6 +238,27 @@ namespace Dashboard
         {
             cbmessage.Enabled = false;
             tbmessage.Enabled = true;
+        }
+
+        private void btnsend_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            if (rbtype.Checked == true)
+            {
+                rbselect.Checked = false;
+                string message = tbmessage.Text.ToString();
+                sendMail(message);              //selecting text from typed message and then sendmail
+                addHistory("mail", message);
+            }
+            else if (rbselect.Checked == true)
+            {
+
+                string message = cbmessage.SelectedItem.ToString();
+                sendMail(message);              //selecting text from template and then sendmail
+                addHistory("mail", message);
+            }
+            tbmessage.Clear();
+            this.Cursor = Cursors.Default;
         }
     }
 }

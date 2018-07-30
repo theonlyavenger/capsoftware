@@ -189,6 +189,7 @@ namespace Dashboard
             this.btnsend.TabIndex = 16;
             this.btnsend.Text = "Send Email";
             this.btnsend.UseVisualStyleBackColor = false;
+            this.btnsend.Click += new System.EventHandler(this.btnsend_Click);
             // 
             // rbtype
             // 
