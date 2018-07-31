@@ -46,9 +46,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(8, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(359, 24);
+            this.label1.Size = new System.Drawing.Size(383, 24);
             this.label1.TabIndex = 4;
-            this.label1.Text = "COMPUTRONICS-PROGRESS FORM";
+            this.label1.Text = "COMPUTRONICS-PROGRESS DETAILS";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // headerpannel
@@ -84,6 +84,8 @@
             // 
             // dataTable
             // 
+            this.dataTable.AllowUserToAddRows = false;
+            this.dataTable.AllowUserToDeleteRows = false;
             this.dataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataTable.Location = new System.Drawing.Point(0, 0);

@@ -107,6 +107,11 @@ namespace progressform2
                 }*/
                 sda.Fill(dt);
                 dataTable.DataSource = dt;
+                DataGridViewCheckBoxColumn chkexam = new DataGridViewCheckBoxColumn();
+                dataTable.Columns.Add(chkexam);
+                chkexam.HeaderText = "EXAM";
+                chkexam.Name = "chkexam";
+              
                 DataGridViewCheckBoxColumn chkcertificate = new DataGridViewCheckBoxColumn();
                 dataTable.Columns.Add(chkcertificate);
                 chkcertificate.HeaderText = "CERTIFICATE";
