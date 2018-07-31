@@ -39,9 +39,9 @@ namespace Dashboard
             int i = 0;
             int j = 0;
 
-            for (i = 0; i <= dataTable.RowCount - 1; i++)
+            for (j = 0; j <= dataTable.ColumnCount - 1; j++)
             {
-                for (j = 0; j <= dataTable.ColumnCount - 1; j++)
+                for (i = 0; i <= dataTable.RowCount - 1; i++)
                 {
                     DataGridViewCell cell = dataTable[j, i];
                     xlWorkSheet.Cells[i + 1, j + 1] = cell.Value;
@@ -65,40 +65,10 @@ namespace Dashboard
             dataTable.Rows.Clear();
             dataTable.Refresh();
             // Adding column with their properties
-            dataTable.ColumnCount = 5;
-            dataTable.RowTemplate.Height = 120;
+            dataTable.ColumnCount = 17;
+            dataTable.RowTemplate.Height = 20;
 
-            dataTable.Columns[0].HeaderText = "ID";
-            dataTable.Columns[0].Name = "id";
-
-            dataTable.Columns[1].HeaderText = "NAME";
-            dataTable.Columns[1].Name = "name";
-            dataTable.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-            dataTable.Columns[2].HeaderText = "PHONE (R)";
-            dataTable.Columns[2].Name = "phone";
-            dataTable.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-            dataTable.Columns[3].HeaderText = "COURSE REGISTERED";
-            dataTable.Columns[3].Name = "course";
-            dataTable.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-            dataTable.Columns[4].HeaderText = "DATE OF JOINING";
-            dataTable.Columns[4].Name = "doj";
-            dataTable.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-            /* dataTable.Columns[5].HeaderText = "PAYMENT STATUS";
-             dataTable.Columns[5].Name = "payment";
-             dataTable.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; */
-
-            DataGridViewImageColumn img = new DataGridViewImageColumn();
-            img.HeaderText = "PHOTO";
-            img.Name = "photo";
-            img.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            img.ImageLayout = DataGridViewImageCellLayout.Stretch;
-            dataTable.Columns.Add(img);
-
-            string query = "SELECT stud_id,stud_name,stud_cell,stud_courseSelected,stud_doj,stud_alumni from student";
+            string query = "SELECT * from student";
             con.Open();
             try
             {
@@ -110,13 +80,26 @@ namespace Dashboard
                 {
                     if (reader["stud_alumni"].ToString() != "YES")
                     {
-                        string id = reader["stud_id"].ToString();
-                        string name = reader["stud_name"].ToString();
-                        string cell = reader["stud_cell"].ToString();
-                        string course = reader["stud_courseSelected"].ToString();
-                        string doj = reader["stud_doj"].ToString();
-                        Image image = Image.FromFile(@"C:\Users\manoj\Downloads\manoj.jpg");
-                        dataTable.Rows.Add(id, name, cell, course, doj, image);
+                        string lblId = reader["stud_id"].ToString();
+                        string lblName = reader["stud_name"].ToString();
+                        string lblPhone = reader["stud_pno"].ToString();
+                        string lblCell = reader["stud_cell"].ToString();
+                        string lblAddres = reader["stud_address"].ToString();
+                        string lblEmail = reader["stud_email"].ToString();
+                        string lblDoj = reader["stud_doj"].ToString();
+                        string lblCourseRegistered = reader["stud_courseSelected"].ToString();
+                        string lblCourseFees = reader["stud_courseFee"].ToString();
+                        //string lblPaymentStatus.Text = reader["start"].ToString();
+                        string lblEduPersuing = reader["stud_educationpersuing"].ToString();
+                        string lblCollege = reader["stud_college"].ToString();
+                        string lblBranch = reader["stud_branch"].ToString();
+                        string lblWork = reader["stud_details_of_work"].ToString();
+                        string lblAge = reader["stud_age"].ToString();
+                        string lblDob = reader["stud_dob"].ToString();
+                        string lblReference = reader["stud_reference"].ToString();
+                        string lblPlace = reader["stud_place"].ToString();
+                        dataTable.Rows.Add(lblId, lblName, lblPhone, lblCell, lblAddres, lblEmail, lblDoj, lblCourseRegistered, lblCourseFees, lblEduPersuing, lblCollege,
+                           lblBranch, lblWork, lblAge, lblDob, lblReference, lblPlace);
                     }
                 }
             }
@@ -224,43 +207,15 @@ namespace Dashboard
             dataTable.Rows.Clear();
             dataTable.Refresh();
             // Adding column with their properties
-            dataTable.ColumnCount = 5;
-            dataTable.RowTemplate.Height = 120;
+            dataTable.ColumnCount = 18;
+            dataTable.RowTemplate.Height = 20;
 
-            dataTable.Columns[0].HeaderText = "ID";
-            dataTable.Columns[0].Name = "id";
-
-            dataTable.Columns[1].HeaderText = "NAME";
-            dataTable.Columns[1].Name = "name";
-            dataTable.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-            dataTable.Columns[2].HeaderText = "PHONE (R)";
-            dataTable.Columns[2].Name = "phone";
-            dataTable.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-            dataTable.Columns[3].HeaderText = "COURSE REGISTERED";
-            dataTable.Columns[3].Name = "course";
-            dataTable.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-            dataTable.Columns[4].HeaderText = "DATE OF JOINING";
-            dataTable.Columns[4].Name = "doj";
-            dataTable.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-            /* dataTable.Columns[5].HeaderText = "PAYMENT STATUS";
-             dataTable.Columns[5].Name = "payment";
-             dataTable.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; */
-
-            DataGridViewImageColumn img = new DataGridViewImageColumn();
-            img.HeaderText = "PHOTO";
-            img.Name = "photo";
-            img.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            img.ImageLayout = DataGridViewImageCellLayout.Stretch;
-            dataTable.Columns.Add(img);
-
-            string query = "SELECT stud_id,stud_name,stud_cell,stud_courseSelected,stud_doj,stud_alumni from student";
-            con.Open();
+            string query = "SELECT * from student";
+            
             try
             {
+                con.Open();
+
                 MySqlCommand cmd = new MySqlCommand(query, con);
 
                 MySqlDataReader reader = cmd.ExecuteReader();
@@ -269,13 +224,27 @@ namespace Dashboard
                 {
                     if (reader["stud_alumni"].ToString() == "YES")
                     {
-                        string id = reader["stud_id"].ToString();
-                        string name = reader["stud_name"].ToString();
-                        string cell = reader["stud_cell"].ToString();
-                        string course = reader["stud_courseSelected"].ToString();
-                        string doj = reader["stud_doj"].ToString();
-                        Image image = Image.FromFile(@"C:\Users\manoj\Downloads\manoj.jpg");
-                        dataTable.Rows.Add(id, name, cell, course, doj, image);
+                        string lblId = reader["stud_id"].ToString();
+                        string lblName = reader["stud_name"].ToString();
+                        string lblPhone = reader["stud_pno"].ToString();
+                        string lblCell = reader["stud_cell"].ToString();
+                        string lblAddres = reader["stud_address"].ToString();
+                        string lblEmail = reader["stud_email"].ToString();
+                        string lblDoj = reader["stud_doj"].ToString();
+                        string lblCourseRegistered = reader["stud_courseSelected"].ToString();
+                        string lblCourseFees = reader["stud_courseFee"].ToString();
+                        //string lblPaymentStatus.Text = reader["start"].ToString();
+                        string lblEduPersuing = reader["stud_educationpersuing"].ToString();
+                        string lblCollege = reader["stud_college"].ToString();
+                        string lblBranch = reader["stud_branch"].ToString();
+                        string lblWork = reader["stud_details_of_work"].ToString();
+                        string lblAge = reader["stud_age"].ToString();
+                        string lblDob = reader["stud_dob"].ToString();
+                        string lblReference = reader["stud_reference"].ToString();
+                        string lblPlace = reader["stud_place"].ToString();
+                        string lblcompany = reader["alumni_comapnyname"].ToString();
+                        dataTable.Rows.Add(lblId, lblName, lblPhone, lblCell, lblAddres, lblEmail, lblDoj, lblCourseRegistered, lblCourseFees, lblEduPersuing, lblCollege,
+                            lblBranch, lblWork, lblAge, lblDob, lblReference, lblPlace, lblcompany);
                     }
                 }
             }

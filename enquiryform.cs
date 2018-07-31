@@ -25,25 +25,6 @@ namespace Dashboard
             InitializeComponent();
         }
 
-        private void resize()
-        {
-            int x, y, a, b;
-            y = this.Size.Height;
-            x = this.Size.Width;
-
-            a = groupBox1.Size.Height;
-            b = groupBox1.Size.Width;
-
-
-            int halfx, halfy;
-
-            halfx = (x / 2) - (b / 2);
-            halfy = (y / 2) - (a / 2);
-
-
-            groupBox1.Left = halfx;
-            groupBox1.Top = halfy;
-        }
         private void InitializeDb()
         {
             server = "localhost";
@@ -57,26 +38,40 @@ namespace Dashboard
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            resize();
+            // resize();
             this.MaximizeBox = false;
-           
+            //  textboxcourseenquired.SelectedIndex = 0;
             InitializeDb();
-            
+
             addToEnquiryList();
-            textboxcourseenquired.SelectedIndex = 0;
-           
+
         }
 
-        private void lblsubmit_Click(object sender, EventArgs e)
+        /* private void lblsubmit_Click(object sender, EventArgs e)
+         {
+
+           
+
+         }
+         */
+
+
+
+
+
+        private void addToEnquiryList()
         {
-
-            string query = "insert into enquiry(enq_date,enq_name,enq_pno,enq_email,course_enquired,enq_educationpursuing,enq_branch,enq_college)values('" + dtpdate.Text + "','" + textboxname.Text + "'," + textboxphoneno.Text + ",'" + textboxemail.Text + "','" + textboxcourseenquired.Text + "','" + txtboxcollege.Text + "','" + textboxedupur.Text + "','" + textboxbranch.Text + "')";
-
             try
             {
                 con.Open();
+                string query = " SELECT distinct course_name from course";
                 MySqlCommand cmd = new MySqlCommand(query, con);
-                cmd.ExecuteNonQuery();
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    textboxcourseenquired.Items.Add(reader["course_name"].ToString());
+                }
             }
             catch (Exception ex)
             {
@@ -87,36 +82,38 @@ namespace Dashboard
             {
                 con.Close();
             }
-
         }
 
-        
-        //validating name
 
 
-        private void textboxname_Validating(object sender, CancelEventArgs e)
+     // validating phone no
+        private void textboxphoneno_Leave_1(object sender, EventArgs e)
         {
-            ValidateName();
-        }
-        private bool ValidateName()
-        {
-            bool bstatus = true;
-            if (textboxname.Text == "")
+
+
+            try
             {
-                ep.SetError(textboxname, "Please enter your Name");
-                bstatus = false;
+                string pattern = @"(?<!\d)\d{10}(?!\d)";
+                if (Regex.IsMatch(textboxphoneno.Text, pattern))
+                {
+                    ep.Clear();
+                }
+                else
+                {
+                    ep.SetError(this.textboxphoneno, "phone number must be of 10 digits");
+                    //textboxphoneno.Focus();
+                    return;
+                }
             }
-            else
-                ep.SetError(textboxname, "");
-            textboxname.Focus();
-            return bstatus;
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
         }
-
-
         //validating email
-
-        private void textboxemail_Leave(object sender, EventArgs e)
+        private void textboxemail_Leave_1(object sender, EventArgs e)
         {
+
             try
             {
                 string pattern = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
@@ -136,140 +133,119 @@ namespace Dashboard
                 MessageBox.Show("" + ex);
 
             }
-         
-        } 
-           
-        //validate course
-        private void textboxcourseenquired_Validating(object sender, CancelEventArgs e)
-        {
-            Validatecoursereq();
-        }
-        private bool Validatecoursereq()
-        {
-            bool bstatus = true;
-            if (textboxcourseenquired.Text == "")
-            {
-                ep.SetError(textboxcourseenquired, "please enter  the course enquired");
-                bstatus = false;
-            }
-            else
-                ep.SetError(textboxcourseenquired, "");
-            textboxcourseenquired.Focus();
-            return bstatus;
+
         }
 
-        //validating college
-        private void txtboxcollege_Validating(object sender, CancelEventArgs e)
+
+
+        private bool validation()
         {
-        Validatecollege();
+            if (textboxname.Text == "")
+            {
+                MessageBox.Show("Please enter name");
+                textboxname.Focus();
+                return false;
+            }
+            else if (textboxphoneno.Text == "")
+            {
+                MessageBox.Show("Please enter phone number");
+                textboxphoneno.Focus();
+                return false;
+            }
+            else if (textboxemail.Text == "")
+            {
+                MessageBox.Show("Please enter email id");
+                textboxemail.Focus();
+                return false;
+            }
+            else if (textboxcourseenquired.Text == "")
+            {
+                MessageBox.Show("Please enter course");
+                textboxcourseenquired.Focus();
+                return false;
+            }
+            else if (textboxcollege.Text == "")
+            {
+                MessageBox.Show("Please enter college");
+                textboxcollege.Focus();
+                return false;
+            }
+            else if (textboxedupur.Text == "")
+            {
+                MessageBox.Show("Please enter education pursuing");
+                textboxedupur.Focus();
+                return false;
+            }
+            else if (textboxbranch.Text == "")
+            {
+                MessageBox.Show("Please enter branch");
+                textboxbranch.Focus();
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
+
+        private void lblsubmit_Click_1(object sender, EventArgs e)
+        {
+            bool result;
+            result = validation();
+
+            if(result == true)
+            {
+                string query = "insert into enquiry(enq_date,enq_name,enq_pno,enq_email,course_enquired,enq_educationpursuing,enq_branch,enq_college)values('" + dtpdate.Text + "','" + textboxname.Text + "'," + textboxphoneno.Text + ",'" + textboxemail.Text + "','" + textboxcourseenquired.Text + "','" + textboxedupur.Text + "','" + textboxbranch.Text + "','" + txtboxcollege.Text + "')";
+
+                try
+                {   
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("ADDED" );
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("" + ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        private void textboxcourseenquired_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    } 
+}
         
-        private bool Validatecollege()
-        {
-            bool bstatus = true;
-            if (textboxcollege.Text == "")
-            {
-                ep.SetError(textboxcollege, "please enter  the college");
-                bstatus = false;
-            }
-            else
-                ep.SetError(textboxcollege, "");
-            textboxcollege.Focus();
-            return bstatus;
-        }
+        
+      
+        
+    
 
-        //edu pursuing
-        private void textboxedupur_Validating(object sender, CancelEventArgs e)
-        {
-            Validateedupur();
 
-        }
-          private bool Validateedupur()
-        {
-            bool bstatus = true;
-            if (textboxedupur.Text == "")
-            {
-                ep.SetError(textboxedupur, "please enter  the education pursing");
-                bstatus = false;
-            }
-            else
-                ep.SetError(textboxedupur, "");
-            textboxedupur.Focus();
-            return bstatus;
-        }
+        
 
-        // validating branch
+        
 
-          private void textboxbranch_Validating(object sender, CancelEventArgs e)
-          {
-              Validatebranch();
-          }
+    
+        
 
-        private bool Validatebranch()
-          {
-              bool bstatus = true;
-              if (textboxbranch.Text == "")
-              {
-                  ep.SetError(textboxbranch, "please enter  the branch");
-                 
-                  bstatus = false;
-              }
-              else
-                  ep.SetError(textboxbranch, "");
-              textboxbranch.Focus();
-              return bstatus;
-          }
-        // validating phone no
-
-          private void textboxphoneno_Leave(object sender, EventArgs e)
-          {
-              try
-              {
-                  string pattern = @"(?<!\d)\d{10}(?!\d)";
-                  if (Regex.IsMatch(textboxphoneno.Text, pattern))
-                  {
-                      ep.Clear();
-                  }
-                  else
-                  {
-                      ep.SetError(this.textboxphoneno, "phone number must be of 10 digits");
-                      textboxphoneno.Focus();
-                      return;
-                  }
-              }
-              catch (Exception ex)
-              {
-                  MessageBox.Show("" + ex);
-              }
-          }
-
-          private void addToEnquiryList()
-          {
-              try
-              {
-                  con.Open();
-                  string query = " SELECT distinct course_name from course";
-                  MySqlCommand cmd = new MySqlCommand(query, con);
-                  MySqlDataReader reader = cmd.ExecuteReader();
-              
-                  while(reader.Read())
-                  {
-                      textboxcourseenquired.Items.Add(reader["course_name"].ToString());
-              }
-                  }
-              catch (Exception ex)
-              {
-
-                  MessageBox.Show("" + ex.Message);
-              }
-              finally
-              {
-                  con.Close();
-              }
-          }
        
 
+     
+
+    
+
+
+
         
-        }
-    }
+        
+    
+
 

@@ -44,6 +44,9 @@ namespace Dashboard
         }
          public void DisplayData()
         {
+            enquiryGridView.DataSource = null;
+            enquiryGridView.Rows.Clear();
+            enquiryGridView.Refresh();
             // Adding column with their properties
             enquiryGridView.ColumnCount = 9;
             

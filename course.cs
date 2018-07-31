@@ -17,11 +17,13 @@ namespace Dashboard
         string database;
         string uid;
         string password;
-        DataTable dt;
        
         public course()
         {
             InitializeComponent();
+
+            //Select the entire row rather than selecting only the individual blocks
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
         private void InitializeDb()
         {
@@ -39,47 +41,57 @@ namespace Dashboard
 
         private void course1_Load(object sender, EventArgs e)
         {
-            dgv.Visible = false;
-            add.Visible = false;
-            
-
             InitializeDb();
-
+            loadData();
         }
 
-       
-        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
+        private void loadData()
         {
-            dgv.Visible = true;
-            dt = new DataTable();
-            dgv.DataSource = dt;
-            dt.Columns.Add("id");
-            dt.Columns.Add("Name");
-            dt.Columns.Add("Fees");
-            dt.Columns.Add("Duration");
-            con.Open();
-            String query = "select * from course";
-            MySqlCommand cmd = new MySqlCommand(query, con);
-            MySqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            dgv.DataSource = null;
+            dgv.Rows.Clear();
+            dgv.Refresh();
+            // Adding column with their properties
+            dgv.ColumnCount = 4;
+
+            dgv.Columns[0].HeaderText = "ID";
+            dgv.Columns[0].Name = "id";
+
+            dgv.Columns[1].HeaderText = "COURSE NAME";
+            dgv.Columns[1].Name = "name";
+            dgv.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            dgv.Columns[2].HeaderText = "FEES";
+            dgv.Columns[2].Name = "fees";
+            dgv.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            dgv.Columns[3].HeaderText = "DURATION in Months";
+            dgv.Columns[3].Name = "duration";
+            dgv.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            try
             {
-                dt.Rows.Add(reader["course_id"].ToString(), reader["course_name"].ToString(), reader["course_fees"].ToString(), reader["course_duration"].ToString());
+                con.Open();
+                String query = "select * from course";
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    dgv.Rows.Add(reader["course_id"].ToString(), reader["course_name"].ToString(), reader["course_fees"].ToString(), reader["course_duration"].ToString());
+                }
             }
-            con.Close();
-
+            catch (Exception ex)
+            {
+                MessageBox.Show(""+ex.Message);
+            }
+            finally 
+            {
+                con.Close();
+            }            
         }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-    //    private void addToolStripMenuItem_Click(object sender, EventArgs e)
-       // {
-           // add.Visible = true;
-           // dgv.Visible = false;
 
-       // }
-
-        private void submit_Click(object sender, EventArgs e)
+        private void submit_Click_1(object sender, EventArgs e)
         {
-
-            string query = "insert into course(course_name,course_fees,course_duration)values('" + textBoxcoursenm.Text + "','" + textBoxcoursef.Text + "' ,'" + textBoxcoursed.Text + "')";
+            string query = "insert into course(course_name,course_fees,course_duration) values('" + textBoxcoursenm.Text + "','" + textBoxcoursef.Text + "' ,'" + textBoxcoursed.Text + "')";
             try
             {
                 con.Open();
@@ -94,19 +106,9 @@ namespace Dashboard
             finally
             {
                 con.Close();
-
+                loadData();
             }
-
         }
-
-        private void addToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            add.Visible = true;
-            dgv.Visible = false;
-
-        }
-
-        
         }
 
 

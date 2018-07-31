@@ -19,6 +19,7 @@ namespace Dashboard
         string database;
         string uid;
         string pwd;
+        string id;
 
         public batch()
         {
@@ -57,8 +58,6 @@ namespace Dashboard
             try
             {
                 con.Open();
-                //  string selected = this.cbbatchlist.GetItemText(this.cbbatchlist.SelectedItem);
-                // MessageBox.Show(selected);
 
                 string query = "SELECT stud_id,stud_name FROM student where stud_courseSelected='" + cbbatchlist.Text + "'";
                 MySqlCommand cmd = new MySqlCommand(query, con);
@@ -113,7 +112,7 @@ namespace Dashboard
                 con.Open();
                 foreach (string item in lbdisplay.Items) //for each checked item in the listbox
                 {
-                    string id = item.Trim(new Char[] {
+                    id = item.Trim(new Char[] {
       'a',
       'b',
       'c',
@@ -203,6 +202,41 @@ namespace Dashboard
                 resetForm();
             }
         }
+
+        private bool duplicateCheck()
+        {
+            string dupquery = " Select stud_id,stud_name,stud_course,batch_no from batch where stud_id= " + Convert.ToInt32(id) + "";
+            try
+            {
+                con.Open();
+                MySqlCommand cmddup = new MySqlCommand(dupquery, con);
+                MySqlDataReader reader = cmddup.ExecuteReader();
+                if (reader.Read())
+                {
+                    if (reader["stud_course"].ToString() == cbbatchlist.Text)
+                    {
+                        MessageBox.Show(reader["stud_name"].ToString() + " is already present in: " + reader["batch_no"].ToString());
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(""+ex.Message);
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+            
+            
+        }
         //validation for display listbox and batchtiming textbox
 
         private void validateBeforeBatchMaking(string batchname)
@@ -211,7 +245,15 @@ namespace Dashboard
             {
                 if (ValidateBatchTiming())
                 {
-                    makeBatch(batchname);
+                    if (duplicateCheck())
+                    {
+                        makeBatch(batchname);
+                    }
+                    else 
+                    {
+                        MessageBox.Show("Duplicate Exists");
+                    }
+                    
                 }
                 else
                 {
@@ -336,20 +378,25 @@ namespace Dashboard
         {
             try
             {
-                if (lbdisplay.Items.Contains(searchlistbox.SelectedItem.ToString()))
+                if (lbdisplay.Items.Contains(searchlistbox.Text))
                 {
                     MessageBox.Show("This name already exists!");
                 }
                 else
                 {
+                    lbdisplay.Items.Clear();
                     lbdisplay.Items.AddRange(searchlistbox.Items);
+                    MessageBox.Show("All items added");
+
                 }
+
                 // lbdisplay.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(""+ex.Message);
+                MessageBox.Show("" + ex.Message);
             }
+            
 
            
         }

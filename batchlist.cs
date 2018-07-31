@@ -228,7 +228,6 @@ namespace Dashboard
             else
             {
                 cmbBatch.Enabled = true;
-                
             }
             
         }
